@@ -133,7 +133,7 @@ public class LuceneIndexer implements Indexer {
         if(indexWriter.getConfig().getOpenMode() == IndexWriterConfig.OpenMode.CREATE){
                 indexWriter.addDocument(doc);
         } else {
-                indexWriter.updateDocument(new Term("ID", String.valueOf(sample.getId())), doc);
+                indexWriter.updateDocument(new Term("ID", "4"), doc);
         }
     }
     
