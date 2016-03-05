@@ -113,7 +113,6 @@ public class AntiVirusAnalysis implements Analysis,
     @Override
     public AnalisysView getAnalisisView() {
         AnalisysView result = new AnalisysView(this.getAnalysisName());
-        //Conservamos los antivirus para visualizar? FRAN
         MultivaluatedData antiVirusValues = new MultivaluatedData();
         for (String antivirus : this.antiVirusList) {
             antiVirusValues.addValue(new StringValueData(antivirus));

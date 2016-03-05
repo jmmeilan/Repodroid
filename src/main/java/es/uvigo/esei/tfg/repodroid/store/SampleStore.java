@@ -68,7 +68,7 @@ public class SampleStore {
     }
 
     public void removeSample(long sampleID) {
-        this.storer.removeSample(sampleID);
+       // this.storer.removeSample(sampleID);
         this.indexer.removeSample(sampleID);
     }
 

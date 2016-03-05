@@ -11,11 +11,14 @@ import es.uvigo.esei.tfg.repodroid.store.Indexer;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.LongField;
+import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
@@ -62,15 +65,23 @@ public class LuceneIndexer implements Indexer {
 
     @Override
     public void removeSample(long sampleID) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Deleting a document...");
+        try {
+            IndexWriter writer = new IndexWriter(this.indexDirectory, this.writerConfig);
+            //writer.deleteDocuments(new Term("ID", String.valueOf(sampleID)));
+            writer.deleteDocuments(new Term("ID","4"));
+            writer.close();
+        } catch (IOException ex) {
+            Logger.getLogger(LuceneIndexer.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
     }
 
     @Override
     public void updateSample(long sampleID, Sample sample) {
         System.out.println("Updating index of a sample...");
         try{
-            //OR CREATE_OR_APPEND?
-            this.writerConfig.setOpenMode(IndexWriterConfig.OpenMode.APPEND);
+            this.writerConfig.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
             IndexWriter writer = new IndexWriter(this.indexDirectory, this.writerConfig);
             indexAnalyses(writer, sample);
             writer.close();
@@ -88,7 +99,8 @@ public class LuceneIndexer implements Indexer {
                              Sample sample) throws IOException{
         Document doc = new Document();
         //TODO: a way to iterate over indexableAnalysis? Maybe that way we dont need every analysis type
-        doc.add(new LongField ("ID", sample.getId(), Field.Store.NO));
+        //doc.add(new LongField ("ID", sample.getId(), Field.Store.NO));
+        doc.add(new StringField("ID", "4", Field.Store.NO));
         for(Analysis an: sample.getAnalises().values()){
             switch(an.getAnalysisType()){
                 case OutputConnectionsAnalysis.TYPE: 
@@ -123,7 +135,6 @@ public class LuceneIndexer implements Indexer {
         } else {
                 indexWriter.updateDocument(new Term("ID", String.valueOf(sample.getId())), doc);
         }
-        indexWriter.close();
     }
     
 }

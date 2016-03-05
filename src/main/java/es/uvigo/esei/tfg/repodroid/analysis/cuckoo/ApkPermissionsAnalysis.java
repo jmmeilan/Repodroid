@@ -19,6 +19,7 @@ public class ApkPermissionsAnalysis implements Analysis,
     public final static String DESCRIPTION = "Permissions request by the apk in the manifest";
     public final static String TYPE = "ApkPermissionsAnalysis";
     
+    //AGREGAR SEVERIDAD DE LOS PERMISOS? REQUIERE CREAR ALGUNA CLASE O USAR MAPS!!
     private Set<String> permissions;
     
     public ApkPermissionsAnalysis () {
