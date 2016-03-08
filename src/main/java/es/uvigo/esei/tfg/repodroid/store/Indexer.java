@@ -8,7 +8,7 @@ public interface Indexer {
     public void initialize(String basePath);
     public void close();
     public void indexSample(Sample sample);
-    public void removeSample(long sampleID);
-    public void updateSample(long sampleID, Sample sample);      
-    public List<Long> search(SampleQuery query, int firstResult, int numberOfSamples);
+    public void removeSample(String sampleID);
+    public void updateSample(String sampleID, Sample sample);      
+    public List<String> search(SampleQuery query, int firstResult, int numberOfSamples);
 }

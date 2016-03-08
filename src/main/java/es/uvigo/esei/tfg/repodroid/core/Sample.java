@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Sample {
-    private long id;
+    private String id;
     private String path;
     private SampleType type;
     private Map<String, Analysis> analises;
@@ -18,11 +18,11 @@ public class Sample {
         this.analises = new HashMap<>();        
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

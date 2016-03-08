@@ -7,7 +7,7 @@ public interface Storer {
     public void initialize(String basePath);
     public void close();
     public void storeSample(Sample sample);
-    public Sample retrieveSample(long sampleID);
-    public void removeSample(long sampleID);
-    public void updateSample(long sampleID, Sample sample);      
+    public Sample retrieveSample(String sampleID);
+    public void removeSample(String sampleID);
+    public void updateSample(String sampleID, Sample sample);      
 }

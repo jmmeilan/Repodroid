@@ -27,13 +27,13 @@ public class Prueba {
         
         // Analizar una  muestra
        Sample sample = new Sample("/home/jmmeilan/Cuckoo/Malware/good_2C3CCE76067676A2CCAC9CC7546BF8AB.apk", SampleType.APK);
-       sample.setId(10L); //ELIMINAR! INTERESA QUE EL ID SEA LEIBLE?¿?¿?¿ LUCENE QUIERE INDICES EN STRING!!!
        List<Analysis> analyses = analyzer.analyzeSample(sample);
         for (Analysis analysis : analyses) {
             sample.addAnalysis(analysis.getAnalysisName(), analysis);
         }
-        store.removeSample(sample.getId());
-        //store.storeSample(sample);
+        //store.removeSample("4a46dc03-38d7-4677-bae9-bf607897e614");
+        store.storeSample(sample);
+        //store.updateSample("4a46dc03-38d7-4677-bae9-bf607897e614", sample);
         store.close();        
         analyzer.terminate();
     }

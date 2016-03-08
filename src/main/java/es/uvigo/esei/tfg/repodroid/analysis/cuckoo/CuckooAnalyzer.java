@@ -67,13 +67,14 @@ public class CuckooAnalyzer implements Analyzer {
         
         CloseableHttpClient httpclient = HttpClients.createDefault();
         CloseableHttpResponse response;
+        int sampleID = 0;
         try {
             response = httpclient.execute(httppost);
             HttpEntity entity = response.getEntity();
             if (entity != null) {
                 InputStream instream = entity.getContent();
                 JsonNode rootNode = mapper.readValue(instream, JsonNode.class); 
-                sample.setId(rootNode.path("task_id").asLong());
+                sampleID = rootNode.path("task_id").asLong(); 
             }
             response.close();
         } catch (IOException ex) {
@@ -83,7 +84,7 @@ public class CuckooAnalyzer implements Analyzer {
         //TODO: como hacer que el servidor me mande que ya esta listo por su cuenta?
         boolean analyzing = true;
         do {
-            HttpGet httpget = new HttpGet(this.urlView+sample.getId());
+            HttpGet httpget = new HttpGet(this.urlView+sampleID);
             try {
                 response = httpclient.execute(httpget);
                 HttpEntity entity = response.getEntity();
@@ -106,7 +107,7 @@ public class CuckooAnalyzer implements Analyzer {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         CloseableHttpResponse response;
         List<Analysis> toRet = new LinkedList<>();
-        HttpGet httpget = new HttpGet(this.urlReport+"4"/*sample.getId()*/);
+        HttpGet httpget = new HttpGet(this.urlReport+"4"/*sampleID*/);
         try {
             response = httpclient.execute(httpget);
             HttpEntity entity = response.getEntity();

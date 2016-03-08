@@ -56,32 +56,33 @@ public class SampleStore {
 
     //The sample comes already with an ID if cuckoo is used
     public void storeSample(Sample sample) {
-        //long id = computeNextSampleID();
-        //sample.setId(id);
+        sample.setId(computeNextSampleID());
+        System.out.println("EL ID ES: "+sample.getId());
         //this.storer.storeSample(sample);
         this.indexer.indexSample(sample);
 
     }
 
-    public Sample retrieveSample(long sampleID) {
+    public Sample retrieveSample(String sampleID) {
         return this.storer.retrieveSample(sampleID);
     }
 
-    public void removeSample(long sampleID) {
+    public void removeSample(String sampleID) {
        // this.storer.removeSample(sampleID);
         this.indexer.removeSample(sampleID);
     }
 
-    public void updateSample(long sampleID, Sample sample) {
+    public void updateSample(String sampleID, Sample sample) {
+        sample.setId(sampleID);
         //this.storer.updateSample(sampleID, sample);
         this.indexer.updateSample(sampleID, sample);
     }
 
     public List<Sample> search(SampleQuery query, int firstResult, int numberOfSamples) {
-        List<Long> sampleIDs = this.indexer.search(query, firstResult, numberOfSamples);
+        List<String> sampleIDs = this.indexer.search(query, firstResult, numberOfSamples);
         if ((sampleIDs != null) && (!sampleIDs.isEmpty())) {
             List<Sample> result = new ArrayList<>();
-            for (long sampleID : sampleIDs) {
+            for (String sampleID : sampleIDs) {
                 result.add(this.storer.retrieveSample(sampleID));
             }
             return result;
@@ -89,9 +90,8 @@ public class SampleStore {
        return Collections.emptyList();
     }
     
-    private long computeNextSampleID() {
+    private String computeNextSampleID() {
         // TODO Podria utilizarsela siguiente linea devolviendo un String
-        //String uniqueID = UUID.randomUUID().toString();
-        return 111111111;
+        return UUID.randomUUID().toString();
     }
 }

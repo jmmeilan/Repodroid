@@ -22,17 +22,17 @@ public class JSONStorer implements Storer {
     }
 
     @Override
-    public Sample retrieveSample(long sampleID) {
+    public Sample retrieveSample(String sampleID) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void removeSample(long sampleID) {
+    public void removeSample(String sampleID) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void updateSample(long sampleID, Sample sample) {
+    public void updateSample(String sampleID, Sample sample) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

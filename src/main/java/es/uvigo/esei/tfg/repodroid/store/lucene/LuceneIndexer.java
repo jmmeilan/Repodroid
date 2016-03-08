@@ -64,12 +64,12 @@ public class LuceneIndexer implements Indexer {
     }
 
     @Override
-    public void removeSample(long sampleID) {
+    public void removeSample(String sampleID) {
         System.out.println("Deleting a document...");
         try {
             IndexWriter writer = new IndexWriter(this.indexDirectory, this.writerConfig);
             //writer.deleteDocuments(new Term("ID", String.valueOf(sampleID)));
-            writer.deleteDocuments(new Term("ID","4"));
+            writer.deleteDocuments(new Term("ID", sampleID));
             writer.close();
         } catch (IOException ex) {
             Logger.getLogger(LuceneIndexer.class.getName()).log(Level.SEVERE, null, ex);
@@ -78,7 +78,7 @@ public class LuceneIndexer implements Indexer {
     }
 
     @Override
-    public void updateSample(long sampleID, Sample sample) {
+    public void updateSample(String sampleID, Sample sample) {
         System.out.println("Updating index of a sample...");
         try{
             this.writerConfig.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
@@ -91,7 +91,7 @@ public class LuceneIndexer implements Indexer {
     }
 
     @Override
-    public List<Long> search(SampleQuery query, int firstResult, int numberOfSamples) {
+    public List<String> search(SampleQuery query, int firstResult, int numberOfSamples) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
@@ -100,7 +100,7 @@ public class LuceneIndexer implements Indexer {
         Document doc = new Document();
         //TODO: a way to iterate over indexableAnalysis? Maybe that way we dont need every analysis type
         //doc.add(new LongField ("ID", sample.getId(), Field.Store.NO));
-        doc.add(new StringField("ID", "4", Field.Store.NO));
+        doc.add(new StringField("ID", sample.getId(), Field.Store.NO));
         for(Analysis an: sample.getAnalises().values()){
             switch(an.getAnalysisType()){
                 case OutputConnectionsAnalysis.TYPE: 
@@ -133,7 +133,7 @@ public class LuceneIndexer implements Indexer {
         if(indexWriter.getConfig().getOpenMode() == IndexWriterConfig.OpenMode.CREATE){
                 indexWriter.addDocument(doc);
         } else {
-                indexWriter.updateDocument(new Term("ID", "4"), doc);
+                indexWriter.updateDocument(new Term("ID", sample.getId()), doc);
         }
     }
     
