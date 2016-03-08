@@ -31,9 +31,9 @@ public class Prueba {
         for (Analysis analysis : analyses) {
             sample.addAnalysis(analysis.getAnalysisName(), analysis);
         }
-        //store.removeSample("4a46dc03-38d7-4677-bae9-bf607897e614");
-        store.storeSample(sample);
-        //store.updateSample("4a46dc03-38d7-4677-bae9-bf607897e614", sample);
+        //store.storeSample(sample);
+        Sample prueba = store.retrieveSample("14d3c039-b031-4dca-ae08-7b468278de3f");
+        System.out.println(prueba.getId() + " " + prueba.getPath() + " "+ prueba.getType());
         store.close();        
         analyzer.terminate();
     }

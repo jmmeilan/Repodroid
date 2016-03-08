@@ -57,8 +57,8 @@ public class SampleStore {
     //The sample comes already with an ID if cuckoo is used
     public void storeSample(Sample sample) {
         sample.setId(computeNextSampleID());
-        System.out.println("EL ID ES: "+sample.getId());
-        //this.storer.storeSample(sample);
+        System.out.println("EL ID ES: "+sample.getId()); //ELIMINAR
+        this.storer.storeSample(sample);
         this.indexer.indexSample(sample);
 
     }
