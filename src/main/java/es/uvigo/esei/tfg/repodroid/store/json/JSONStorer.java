@@ -1,6 +1,7 @@
 
 package es.uvigo.esei.tfg.repodroid.store.json;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import es.uvigo.esei.tfg.repodroid.core.Sample;
 import es.uvigo.esei.tfg.repodroid.store.Storer;
@@ -42,6 +43,8 @@ public class JSONStorer implements Storer {
        System.out.println("Retrieving a sample from a json file...");
        Sample sample = new Sample();
         try {
+            //CORRIGE QUE FALLE PQ NO ENCUENTRA ANALYSISNAME. VER MEJOR FORMA
+            mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             sample = this.mapper.readValue(new File(this.storerDirectory+File.separator+sampleID+".json"), Sample.class);
         } catch (IOException ex) {
             Logger.getLogger(JSONStorer.class.getName()).log(Level.SEVERE, null, ex);

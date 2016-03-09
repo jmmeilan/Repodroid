@@ -1,6 +1,7 @@
 package es.uvigo.esei.tfg.repodroid.pruebas;
 
 import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.CuckooAnalyzer;
+import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.OutputConnectionsAnalysis;
 import es.uvigo.esei.tfg.repodroid.core.Analysis;
 import es.uvigo.esei.tfg.repodroid.core.Sample;
 import es.uvigo.esei.tfg.repodroid.core.SampleType;
@@ -32,8 +33,21 @@ public class Prueba {
             sample.addAnalysis(analysis.getAnalysisName(), analysis);
         }
         //store.storeSample(sample);
-        Sample prueba = store.retrieveSample("14d3c039-b031-4dca-ae08-7b468278de3f");
+        Sample prueba = store.retrieveSample("a6755fa4-4cb1-414d-8bdf-a1868c0127c2");
         System.out.println(prueba.getId() + " " + prueba.getPath() + " "+ prueba.getType());
+        for (Analysis an: prueba.getAnalises().values()){
+            if (an.getAnalysisType().equals("OutputConnectionsAnalysis"))
+            {
+                OutputConnectionsAnalysis analysis = (OutputConnectionsAnalysis) an;
+                System.out.println(analysis.getAnalysisDescription()+" "+analysis.getAnalysisName()+" "+analysis.getAnalysisType());
+                for (String s: analysis.getDnsQueries()){
+                    System.out.println(s);
+                }
+                for (String s: analysis.getExternalHosts()){
+                    System.out.println(s);
+                }
+            }
+        }
         store.close();        
         analyzer.terminate();
     }
