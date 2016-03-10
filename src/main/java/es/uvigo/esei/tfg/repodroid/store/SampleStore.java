@@ -68,13 +68,13 @@ public class SampleStore {
     }
 
     public void removeSample(String sampleID) {
-       // this.storer.removeSample(sampleID);
+        this.storer.removeSample(sampleID);
         this.indexer.removeSample(sampleID);
     }
 
     public void updateSample(String sampleID, Sample sample) {
         sample.setId(sampleID);
-        //this.storer.updateSample(sampleID, sample);
+        this.storer.updateSample(sampleID, sample);
         this.indexer.updateSample(sampleID, sample);
     }
 
