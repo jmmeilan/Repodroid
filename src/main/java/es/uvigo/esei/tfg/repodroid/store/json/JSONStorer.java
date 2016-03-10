@@ -7,6 +7,9 @@ import es.uvigo.esei.tfg.repodroid.core.Sample;
 import es.uvigo.esei.tfg.repodroid.store.Storer;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -53,13 +56,24 @@ public class JSONStorer implements Storer {
     }
 
     @Override
-    public void removeSample(String sampleID) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void removeSample(String sampleID){
+       System.out.println("Deleting a json file...");
+       try {
+            Files.delete(Paths.get(this.storerDirectory+File.separator+sampleID+".json"));
+       }catch (NoSuchFileException x) {
+            System.err.format("%s: no such" + " file or directory%n", this.storerDirectory+File.separator+sampleID+".json");
+       }catch (IOException x) {
+            // File permission problems are caught here.
+        System.err.println(x);
+}
     }
 
+    //ELIMINAMOS Y VOLVEMOS A CREAR EL JSON¿?
     @Override
     public void updateSample(String sampleID, Sample sample) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Updating a json file...");
+        this.removeSample(sampleID);
+        this.storeSample(sample);
     }
     
 }

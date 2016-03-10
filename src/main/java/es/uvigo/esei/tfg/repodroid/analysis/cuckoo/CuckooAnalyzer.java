@@ -31,6 +31,7 @@ public class CuckooAnalyzer implements Analyzer {
     String urlView;
     String urlReport;
     ObjectMapper mapper;
+    List<String> analysesNames;
 
     @Override
     public void initialize() {
@@ -39,6 +40,11 @@ public class CuckooAnalyzer implements Analyzer {
         this.urlView = "http://localhost:8090/tasks/view/";
         this.urlReport= "http://localhost:8090/tasks/report/";
         this.mapper = new ObjectMapper();
+        this.analysesNames = new LinkedList();
+        this.analysesNames.add(OutputConnectionsAnalysis.NAME);
+        this.analysesNames.add(AntiVirusAnalysis.NAME);
+        this.analysesNames.add(ApkClassesAnalysis.NAME);
+        this.analysesNames.add(ApkPermissionsAnalysis.NAME);
     }
 
     @Override
@@ -48,13 +54,13 @@ public class CuckooAnalyzer implements Analyzer {
 
     @Override
     public List<String> getAnalysesNames() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.analysesNames;
     }
 
     @Override
     public List<Analysis> analyzeSample(Sample sample) {  
         //Enviamos un post multipart con el apk a analizar
-        /*HttpPost httppost = new HttpPost(this.urlCreate);
+        HttpPost httppost = new HttpPost(this.urlCreate);
         File apk = new File(sample.getPath());
         //Incluimos el apk a analizar
         HttpEntity multipart = MultipartEntityBuilder
@@ -74,7 +80,7 @@ public class CuckooAnalyzer implements Analyzer {
             if (entity != null) {
                 InputStream instream = entity.getContent();
                 JsonNode rootNode = mapper.readValue(instream, JsonNode.class); 
-                sampleID = rootNode.path("task_id").asLong(); 
+                sampleID = rootNode.path("task_id").asInt(); 
             }
             response.close();
         } catch (IOException ex) {
@@ -101,11 +107,8 @@ public class CuckooAnalyzer implements Analyzer {
                 Logger.getLogger(CuckooAnalyzer.class.getName()).log(Level.SEVERE, null, ex);
             }
         } while (analyzing);
-        */
-        //BORRAR SIG 2 LINEAS
+        
         //Extraemos la informacion relevante del informe
-        CloseableHttpClient httpclient = HttpClients.createDefault();
-        CloseableHttpResponse response;
         List<Analysis> toRet = new LinkedList<>();
         HttpGet httpget = new HttpGet(this.urlReport+"4"/*sampleID*/);
         try {

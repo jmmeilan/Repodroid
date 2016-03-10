@@ -56,7 +56,7 @@ public class AntiVirusAnalysis implements Analysis,
         return this.total;
     }
     
-    public Set getAntiVirusList(){
+    public Set<String> getAntiVirusList(){
         return this.antiVirusList;
     }
     

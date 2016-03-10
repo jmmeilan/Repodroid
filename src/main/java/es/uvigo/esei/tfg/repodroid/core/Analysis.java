@@ -8,6 +8,7 @@ import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.ApkClassesAnalysis;
 import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.ApkPermissionsAnalysis;
 import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.OutputConnectionsAnalysis;
 
+//Necesario para que json sepa como convertir un fichero json a sample
 @JsonTypeInfo(  
     use = JsonTypeInfo.Id.NAME,  
     include = JsonTypeInfo.As.PROPERTY,  

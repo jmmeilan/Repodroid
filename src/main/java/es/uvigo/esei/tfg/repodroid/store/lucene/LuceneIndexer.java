@@ -17,7 +17,6 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.document.LongField;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.IndexWriter;
@@ -68,7 +67,6 @@ public class LuceneIndexer implements Indexer {
         System.out.println("Deleting a document...");
         try {
             IndexWriter writer = new IndexWriter(this.indexDirectory, this.writerConfig);
-            //writer.deleteDocuments(new Term("ID", String.valueOf(sampleID)));
             writer.deleteDocuments(new Term("ID", sampleID));
             writer.close();
         } catch (IOException ex) {
@@ -99,7 +97,6 @@ public class LuceneIndexer implements Indexer {
                              Sample sample) throws IOException{
         Document doc = new Document();
         //TODO: a way to iterate over indexableAnalysis? Maybe that way we dont need every analysis type
-        //doc.add(new LongField ("ID", sample.getId(), Field.Store.NO));
         doc.add(new StringField("ID", sample.getId(), Field.Store.NO));
         for(Analysis an: sample.getAnalises().values()){
             switch(an.getAnalysisType()){

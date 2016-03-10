@@ -1,5 +1,8 @@
 package es.uvigo.esei.tfg.repodroid.pruebas;
 
+import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.AntiVirusAnalysis;
+import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.ApkClassesAnalysis;
+import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.ApkPermissionsAnalysis;
 import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.CuckooAnalyzer;
 import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.OutputConnectionsAnalysis;
 import es.uvigo.esei.tfg.repodroid.core.Analysis;
@@ -34,7 +37,11 @@ public class Prueba {
         }
         //store.storeSample(sample);
         Sample prueba = store.retrieveSample("a6755fa4-4cb1-414d-8bdf-a1868c0127c2");
-        System.out.println(prueba.getId() + " " + prueba.getPath() + " "+ prueba.getType());
+        store.close();        
+        analyzer.terminate();
+    }
+    
+    private void testJsonRetrieval(Sample prueba){
         for (Analysis an: prueba.getAnalises().values()){
             if (an.getAnalysisType().equals("OutputConnectionsAnalysis"))
             {
@@ -47,8 +54,31 @@ public class Prueba {
                     System.out.println(s);
                 }
             }
+            if (an.getAnalysisType().equals("AntiVirusAnalysis"))
+            {
+                AntiVirusAnalysis analysis = (AntiVirusAnalysis) an;
+                System.out.println(analysis.getAnalysisDescription()+" "+analysis.getAnalysisName()+" "+analysis.getAnalysisType());
+                for (String s: analysis.getAntiVirusList()){
+                    System.out.println(s);
+                }
+                System.out.println(analysis.getPositives()+" "+analysis.getTotal()+" "+analysis.getScanDate());
+            }
+            if (an.getAnalysisType().equals("ApkClassesAnalysis"))
+            {
+                ApkClassesAnalysis analysis = (ApkClassesAnalysis) an;
+                System.out.println(analysis.getAnalysisDescription()+" "+analysis.getAnalysisName()+" "+analysis.getAnalysisType());
+                for (String s: analysis.getClasses()){
+                    System.out.println(s);
+                }
+            }
+            if (an.getAnalysisType().equals("ApkPermissionsAnalysis"))
+            {
+                ApkPermissionsAnalysis analysis = (ApkPermissionsAnalysis) an;
+                System.out.println(analysis.getAnalysisDescription()+" "+analysis.getAnalysisName()+" "+analysis.getAnalysisType());
+                for (String s: analysis.getPermissions()){
+                    System.out.println(s);
+                }
+            }
         }
-        store.close();        
-        analyzer.terminate();
     }
 }
