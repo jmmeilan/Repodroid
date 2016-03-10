@@ -121,7 +121,6 @@ public class AntiVirusAnalysis implements Analysis,
         result.addValue("Scan date", new StringValueData(this.scanDate));
         result.addValue("Number of antiviruses", new StringValueData(String.valueOf(this.total)));
         result.addValue("Positives", new StringValueData(String.valueOf(this.positives)));
-        
         return result;
     }
 }

@@ -18,7 +18,6 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
-import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
@@ -104,25 +103,25 @@ public class LuceneIndexer implements Indexer {
                     OutputConnectionsAnalysis output = (OutputConnectionsAnalysis) an;
                     for (String s: output.getIndexableItems()){
                         //¿como diferenciar entre dns o host?¿Es importante? FRAN
-                        doc.add(new TextField("Output Analysis", s, Field.Store.YES)); //FIELD STORE NO?¿?¿?¿ FRAN
+                        doc.add(new StringField("Output Analysis", s, Field.Store.YES)); //FIELD STORE NO?¿?¿?¿ FRAN
                     }
                     break;
                 case AntiVirusAnalysis.TYPE:
                     AntiVirusAnalysis antivirus = (AntiVirusAnalysis) an;
                     for (String s: antivirus.getIndexableItems()){
-                        doc.add(new TextField("Antivirus Analysis", s, Field.Store.YES)); //FIELD STORE NO?¿?¿?¿
+                        doc.add(new StringField("Antivirus Analysis", s, Field.Store.YES)); //FIELD STORE NO?¿?¿?¿
                     }
                     break;
                 case ApkClassesAnalysis.TYPE:
                     ApkClassesAnalysis apkClassInfo = (ApkClassesAnalysis) an;
                     for (String s: apkClassInfo.getIndexableItems()){
-                        doc.add(new TextField("Apk classes Analysis", s, Field.Store.YES)); //FIELD STORE NO?¿?¿?¿
+                        doc.add(new StringField("Apk classes Analysis", s, Field.Store.YES)); //FIELD STORE NO?¿?¿?¿
                     }
                     break;
                 case ApkPermissionsAnalysis.TYPE:
                     ApkPermissionsAnalysis apkPermissionInfo = (ApkPermissionsAnalysis) an;
                     for (String s: apkPermissionInfo.getIndexableItems()){
-                        doc.add(new TextField("Apk permissions Analysis", s, Field.Store.YES)); //FIELD STORE NO?¿?¿?¿
+                        doc.add(new StringField("Apk permissions Analysis", s, Field.Store.YES)); //FIELD STORE NO?¿?¿?¿
                     }
                     break;
             }

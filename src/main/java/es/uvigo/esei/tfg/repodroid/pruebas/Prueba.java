@@ -31,14 +31,11 @@ public class Prueba {
         
         // Analizar una  muestra
        Sample sample = new Sample("/home/jmmeilan/Cuckoo/Malware/good_2C3CCE76067676A2CCAC9CC7546BF8AB.apk", SampleType.APK);
-       //List<Analysis> analyses = analyzer.analyzeSample(sample);
-        //for (Analysis analysis : analyses) {
-        //    sample.addAnalysis(analysis.getAnalysisName(), analysis);
-        //}
-        store.removeSample("a6755fa4-4cb1-414d-8bdf-a1868c0127c2");
-        //store.storeSample(sample);
-        //Sample prueba = store.retrieveSample("a6755fa4-4cb1-414d-8bdf-a1868c0127c2");
-        
+       List<Analysis> analyses = analyzer.analyzeSample(sample);
+        for (Analysis analysis : analyses) {
+            sample.addAnalysis(analysis.getAnalysisName(), analysis);
+        }
+        store.storeSample(sample);
         store.close();        
         analyzer.terminate();
     }
