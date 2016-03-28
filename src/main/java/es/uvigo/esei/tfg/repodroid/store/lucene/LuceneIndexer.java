@@ -10,6 +10,7 @@ import es.uvigo.esei.tfg.repodroid.core.SampleQuery;
 import es.uvigo.esei.tfg.repodroid.store.Indexer;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,9 +19,12 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
@@ -29,6 +33,7 @@ public class LuceneIndexer implements Indexer {
     private Directory indexDirectory;
     private Analyzer analyzer;
     private IndexWriterConfig writerConfig;
+    private String basePath;
     
     @Override
     public void initialize(String basePath) {
@@ -37,6 +42,7 @@ public class LuceneIndexer implements Indexer {
            this.indexDirectory = FSDirectory.open(Paths.get(basePath));
            this.analyzer = new StandardAnalyzer();
            this.writerConfig = new IndexWriterConfig(this.analyzer);
+           this.basePath = basePath;
        } catch (IOException e){
            System.out.println("EXCEPTION: IOException en LuceneIndexer");
        }
@@ -89,7 +95,14 @@ public class LuceneIndexer implements Indexer {
 
     @Override
     public List<String> search(SampleQuery query, int firstResult, int numberOfSamples) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Starting a new search...");
+        try {
+            IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get(this.basePath)));
+            IndexSearcher searcher = new IndexSearcher(reader);
+        } catch (IOException ex) {
+            Logger.getLogger(LuceneIndexer.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ArrayList<String>();
     }
     
     private void indexAnalyses(final IndexWriter indexWriter, 
