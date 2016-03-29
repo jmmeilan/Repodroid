@@ -8,6 +8,7 @@ import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.OutputConnectionsAnalysis;
 import es.uvigo.esei.tfg.repodroid.core.Analysis;
 import es.uvigo.esei.tfg.repodroid.core.Sample;
 import es.uvigo.esei.tfg.repodroid.core.SampleType;
+import es.uvigo.esei.tfg.repodroid.core.permissionInfo;
 import es.uvigo.esei.tfg.repodroid.store.SampleStore;
 import es.uvigo.esei.tfg.repodroid.store.json.JSONStorer;
 import es.uvigo.esei.tfg.repodroid.store.lucene.LuceneIndexer;
@@ -36,11 +37,12 @@ public class Prueba {
             sample.addAnalysis(analysis.getAnalysisName(), analysis);
         }
         store.storeSample(sample);
+        testJsonRetrieval(sample);
         store.close();        
         analyzer.terminate();
     }
     
-    private void testJsonRetrieval(Sample prueba){
+    private static void testJsonRetrieval(Sample prueba){
         for (Analysis an: prueba.getAnalises().values()){
             if (an.getAnalysisType().equals("OutputConnectionsAnalysis"))
             {
@@ -74,8 +76,8 @@ public class Prueba {
             {
                 ApkPermissionsAnalysis analysis = (ApkPermissionsAnalysis) an;
                 System.out.println(analysis.getAnalysisDescription()+" "+analysis.getAnalysisName()+" "+analysis.getAnalysisType());
-                for (String s: analysis.getPermissions()){
-                    System.out.println(s);
+                for (permissionInfo s: analysis.getPermissions()){
+                    System.out.println(s.toString());
                 }
             }
         }

@@ -109,7 +109,7 @@ public class CuckooAnalyzer implements Analyzer {
         } while (analyzing);
         //Extraemos la informacion relevante del informe
         List<Analysis> toRet = new LinkedList<>();
-        HttpGet httpget = new HttpGet(this.urlReport+"4"/*"sampleID"*/);
+        HttpGet httpget = new HttpGet(this.urlReport+sampleID);
         try {
             response = httpclient.execute(httpget);
             HttpEntity entity = response.getEntity();
@@ -120,7 +120,6 @@ public class CuckooAnalyzer implements Analyzer {
                 toRet.add(extractAntivirusAnalysis(rootNode.at("/virustotal")));
                 toRet.add(extractApkClassesAnalysis(rootNode.at("/apkinfo/files")));
                 toRet.add(extractApkPermissionsAnalysis(rootNode.at("/apkinfo/manifest/permissions")));
-            //TENGO MAS ANTIVIRUS Y CLASES DE LAS Q DEBERIA?
             }
                 response.close();
             } catch (IOException ex) {
@@ -180,12 +179,10 @@ public class CuckooAnalyzer implements Analyzer {
     }
     
     private ApkPermissionsAnalysis extractApkPermissionsAnalysis (JsonNode rootNode){
-        Set<String> permissions = new HashSet<>();
-        for(JsonNode n: rootNode){
-            permissions.add(n.path("name").asText());
-        }
         ApkPermissionsAnalysis permissionsAnalysis = new ApkPermissionsAnalysis();
-        permissionsAnalysis.setPermissions(permissions);
+        for(JsonNode n: rootNode){
+            permissionsAnalysis.addPermission(n.path("name").asText(), n.path("severity").asText());
+        }
         System.out.println("Returning apk permissions analysis...");
         return permissionsAnalysis;
     }

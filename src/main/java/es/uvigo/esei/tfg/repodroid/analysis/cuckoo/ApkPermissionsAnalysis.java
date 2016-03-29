@@ -6,6 +6,7 @@ import es.uvigo.esei.tfg.repodroid.core.IndexableAnalysis;
 import es.uvigo.esei.tfg.repodroid.core.MultivaluatedData;
 import es.uvigo.esei.tfg.repodroid.core.StringValueData;
 import es.uvigo.esei.tfg.repodroid.core.VisualizableAnalysis;
+import es.uvigo.esei.tfg.repodroid.core.permissionInfo;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -20,29 +21,30 @@ public class ApkPermissionsAnalysis implements Analysis,
     public final static String TYPE = "ApkPermissionsAnalysis";
     
     //AGREGAR SEVERIDAD DE LOS PERMISOS? REQUIERE CREAR ALGUNA CLASE O USAR MAPS!!
-    private Set<String> permissions;
+    private Set<permissionInfo> permissions;
     
     public ApkPermissionsAnalysis () {
         this.permissions = new HashSet();
     }
     
-    public ApkPermissionsAnalysis (Set<String> permissions) {
+    public ApkPermissionsAnalysis (Set<permissionInfo> permissions) {
         this.permissions = permissions;
     }
     
-    public Set<String> getPermissions() {
+    public Set<permissionInfo> getPermissions() {
         return permissions;
     }
 
-    public void setPermissions(Set<String> permissions) {
+    public void setPermissions(Set<permissionInfo> permissions) {
         this.permissions = permissions;
     }
     
-    public void addPermission(String permission) {
+    public void addPermission(String permission, String severity) {
         if (this.permissions == null) {
             this.permissions = new HashSet<>();
         }
-        this.permissions.add(permission);
+        permissionInfo perm = new permissionInfo(permission, severity);
+        this.permissions.add(perm);
     }
     
     @Override
@@ -64,7 +66,9 @@ public class ApkPermissionsAnalysis implements Analysis,
     public List<String> getIndexableItems() {
         List<String> result = new ArrayList<>();
         if (this.permissions != null) {
-            result.addAll(this.permissions);
+            for(permissionInfo p: this.permissions){
+                result.add(p.toString());
+            }
         }
         return result;
     }
@@ -73,10 +77,10 @@ public class ApkPermissionsAnalysis implements Analysis,
     public AnalisysView getAnalisisView() {
         AnalisysView result = new AnalisysView(this.getAnalysisName());
         MultivaluatedData permissionsValues = new MultivaluatedData();
-        for (String permission : this.permissions) {
-            permissionsValues.addValue(new StringValueData(permission));       }   
-        result.addValue("Permissions", permissionsValues);
-        
+        for (permissionInfo permission : this.permissions) {
+            permissionsValues.addValue(new StringValueData(permission.toString()));       
+        }   
+        result.addValue("Permissions", permissionsValues);      
         return result;
     }
 }
