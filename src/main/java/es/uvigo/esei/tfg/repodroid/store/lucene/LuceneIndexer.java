@@ -32,10 +32,12 @@ public class LuceneIndexer implements Indexer {
     private IndexWriterConfig writerConfig;
     private IndexWriter writer;
     private String basePath;
+    private Logger logger;
     
     @Override
-    public void initialize(String basePath) {
-       System.out.println("Initializing lucene indexer..."); //Cambiar system.out por un logger
+    public void initialize(String basePath, Logger l) {
+       this.logger = l;
+       this.logger.log(Level.INFO, "Initializing lucene indexer...");
        try {
            this.indexDirectory = FSDirectory.open(Paths.get(basePath));
            this.analyzer = new KeywordAnalyzer();
@@ -44,7 +46,7 @@ public class LuceneIndexer implements Indexer {
            this.basePath = basePath;
            this.writer = new IndexWriter(this.indexDirectory, this.writerConfig);
        } catch (IOException e){
-           System.out.println("EXCEPTION: IOException en LuceneIndexer");
+           this.logger.log(Level.INFO, "EXCEPTION: IOException while initializing LuceneIndexer"); 
        }
     }
 
@@ -53,52 +55,52 @@ public class LuceneIndexer implements Indexer {
         try {
             this.writer.commit();
             this.writer.close();
-            System.out.println("Terminating lucene indexer...");
+            this.logger.log(Level.INFO, "Terminating lucene indexer...");
         } catch (IOException ex) {
-            Logger.getLogger(LuceneIndexer.class.getName()).log(Level.SEVERE, null, ex);
+            this.logger.log(Level.SEVERE, null, ex);
         }
     }
 
     @Override
     public void indexSample(Sample sample) {
-        System.out.println("Indexing new sample...");
+        this.logger.log(Level.INFO, "Indexing new sample...");
         try{
             indexAnalyses(this.writer, sample);
         } catch (IOException e){
-            System.out.println("EXCEPTION: IOException while indexing...");
+            this.logger.log(Level.INFO, "EXCEPTION: IOException while indexing"); 
         }
 
     }
 
     @Override
     public void removeSample(String sampleID) {
-        System.out.println("Deleting a document...");
+        this.logger.log(Level.INFO, "Deleting a document...");
         try {
            this.writer.deleteDocuments(new Term("ID", sampleID));
         } catch (IOException ex) {
-            Logger.getLogger(LuceneIndexer.class.getName()).log(Level.SEVERE, null, ex);
+            this.logger.log(Level.SEVERE, null, ex);
         }
             
     }
 
     @Override
     public void updateSample(String sampleID, Sample sample) {
-        System.out.println("Updating index of a sample...");
+        this.logger.log(Level.INFO, "Updating index of a sample...");
         try{
             indexAnalyses(this.writer, sample);
         } catch (IOException e){
-            System.out.println("EXCEPTION: IOException while updating an index...");
+            this.logger.log(Level.INFO, "EXCEPTION: IOException while updating an index..."); 
         }
     }
 
     @Override
     public List<String> search(SampleQuery query, int firstResult, int numberOfSamples) {
-        System.out.println("Starting a new search...");
+        this.logger.log(Level.INFO, "Starting a new search...");
         try {
             IndexReader reader = DirectoryReader.open(this.writer, true); //TRUE OR FALSE? applyAllDeletes
             IndexSearcher searcher = new IndexSearcher(reader);
         } catch (IOException ex) {
-            Logger.getLogger(LuceneIndexer.class.getName()).log(Level.SEVERE, null, ex);
+            this.logger.log(Level.SEVERE, null, ex);
         }
         return new ArrayList<String>();
     }

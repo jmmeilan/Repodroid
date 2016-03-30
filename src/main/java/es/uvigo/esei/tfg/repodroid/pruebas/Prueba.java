@@ -12,27 +12,35 @@ import es.uvigo.esei.tfg.repodroid.core.permissionInfo;
 import es.uvigo.esei.tfg.repodroid.store.SampleStore;
 import es.uvigo.esei.tfg.repodroid.store.json.JSONStorer;
 import es.uvigo.esei.tfg.repodroid.store.lucene.LuceneIndexer;
+import java.io.IOException;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.Logger;
 
 
 public class Prueba {
-    public final static void main(String[] args) {
+    private static Handler fh;
+    private static Logger logger; //Pasar en el initialize de todo lo q lo use y cambiar system outs
+    
+    public final static void main(String[] args) throws IOException {
         // Inicializar almacen de muestras
+        fh = new FileHandler("/home/jmmeilan/Cuckoo/prueba.log");  
+        logger = Logger.getLogger("");
+        logger.addHandler(fh);
         SampleStore store = new SampleStore("/home/jmmeilan/Cuckoo/Sample_Store");
         JSONStorer jsonStorer = new JSONStorer();
         LuceneIndexer luceneIndexer = new LuceneIndexer();
         store.setStorer(jsonStorer);
         store.setIndexer(luceneIndexer);
-        store.initialize();
-                
-        
+        store.initialize(logger);
         // Inicializar el analizador
         CuckooAnalyzer analyzer = new CuckooAnalyzer();
-        analyzer.initialize();
+        analyzer.initialize(logger);
         
         // Analizar una  muestra
-       Sample sample = new Sample("/home/jmmeilan/Cuckoo/Malware/good_2C3CCE76067676A2CCAC9CC7546BF8AB.apk", SampleType.APK);
-       List<Analysis> analyses = analyzer.analyzeSample(sample);
+        Sample sample = new Sample("/home/jmmeilan/Cuckoo/Malware/good_2C3CCE76067676A2CCAC9CC7546BF8AB.apk", SampleType.APK);
+        List<Analysis> analyses = analyzer.analyzeSample(sample);
         for (Analysis analysis : analyses) {
             sample.addAnalysis(analysis.getAnalysisName(), analysis);
         }

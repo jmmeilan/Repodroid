@@ -27,15 +27,18 @@ import org.apache.http.impl.client.HttpClients;
 
 public class CuckooAnalyzer implements Analyzer {
 
-    String urlCreate;
-    String urlView;
-    String urlReport;
-    ObjectMapper mapper;
-    List<String> analysesNames;
+    private String urlCreate;
+    private String urlView;
+    private String urlReport;
+    private ObjectMapper mapper;
+    private List<String> analysesNames;
+    private Logger logger;
+    
 
     @Override
-    public void initialize() {
-        System.out.println("Initializing analyzer...");
+    public void initialize(Logger l) {
+        this.logger = l;
+        this.logger.log(Level.INFO, "Initializing analyzer..."); 
         this.urlCreate = "http://localhost:8090/tasks/create/file";
         this.urlView = "http://localhost:8090/tasks/view/";
         this.urlReport= "http://localhost:8090/tasks/report/";
@@ -49,7 +52,7 @@ public class CuckooAnalyzer implements Analyzer {
 
     @Override
     public void terminate() {
-        System.out.println("Terminating analyzer...");
+        this.logger.log(Level.INFO, "Terminating analyzer..."); 
     }
 
     @Override
@@ -59,6 +62,7 @@ public class CuckooAnalyzer implements Analyzer {
 
     @Override
     public List<Analysis> analyzeSample(Sample sample) {  
+        this.logger.log(Level.INFO, "Analyzing a new sample..."); 
         //Enviamos un post multipart con el apk a analizar
         HttpPost httppost = new HttpPost(this.urlCreate);
         File apk = new File(sample.getPath());
@@ -84,10 +88,10 @@ public class CuckooAnalyzer implements Analyzer {
             }
             response.close();
         } catch (IOException ex) {
-            Logger.getLogger(CuckooAnalyzer.class.getName()).log(Level.SEVERE, null, ex);
+            this.logger.log(Level.SEVERE, null, ex);
         }
         //Comprobamos que el analisis termine
-        //TODO: como hacer que el servidor me mande que ya esta listo por su cuenta?
+        //TODO: como hacer que el servidor me notifique que ya esta listo por su cuenta?
         boolean analyzing = true;
         do {
             HttpGet httpget = new HttpGet(this.urlView+sampleID);
@@ -99,12 +103,12 @@ public class CuckooAnalyzer implements Analyzer {
                     JsonNode rootNode = mapper.readValue(instream, JsonNode.class);
                     if(rootNode.path("task").path("status").asText().equals("reported"))
                         analyzing = false;
-                    System.out.println("Comprobando estado del analisis...");
-                    Thread.sleep(60000); 
+                    this.logger.log(Level.INFO, "Checking if the analysis is done..."); 
+                    Thread.sleep(30000); 
                 }
                 response.close();
             } catch (IOException | InterruptedException ex) {
-                Logger.getLogger(CuckooAnalyzer.class.getName()).log(Level.SEVERE, null, ex);
+                this.logger.log(Level.SEVERE, null, ex);
             }
         } while (analyzing);
         //Extraemos la informacion relevante del informe
@@ -123,7 +127,7 @@ public class CuckooAnalyzer implements Analyzer {
             }
                 response.close();
             } catch (IOException ex) {
-                Logger.getLogger(CuckooAnalyzer.class.getName()).log(Level.SEVERE, null, ex);
+                this.logger.log(Level.SEVERE, null, ex);
             }
        return toRet;
     }
@@ -143,7 +147,7 @@ public class CuckooAnalyzer implements Analyzer {
         OutputConnectionsAnalysis networkAnalysys = new OutputConnectionsAnalysis();
         networkAnalysys.setExternalHosts(externalHosts);
         networkAnalysys.setDnsQueries(dnsQueries);
-        System.out.println("Returning network analysis...");
+        this.logger.log(Level.INFO, "Returning network analysis..."); 
         return networkAnalysys;
     }
     
@@ -163,7 +167,7 @@ public class CuckooAnalyzer implements Analyzer {
         avAnalysis.setScanDate(rootNode.path("scan_date").asText());
         avAnalysis.setPositives(rootNode.path("positives").asInt());
         avAnalysis.setTotal(rootNode.path("total").asInt());
-        System.out.println("Returning antivirus analysis...");
+        this.logger.log(Level.INFO, "Returning antivirus analysis..."); 
         return avAnalysis;
     }
     
@@ -174,7 +178,7 @@ public class CuckooAnalyzer implements Analyzer {
         }
         ApkClassesAnalysis apkAnalysis = new ApkClassesAnalysis();
         apkAnalysis.setClasses(classes);
-        System.out.println("Returning apk classes analysis...");
+        this.logger.log(Level.INFO, "Returning apk classes analysis..."); 
         return apkAnalysis;
     }
     
@@ -183,7 +187,7 @@ public class CuckooAnalyzer implements Analyzer {
         for(JsonNode n: rootNode){
             permissionsAnalysis.addPermission(n.path("name").asText(), n.path("severity").asText());
         }
-        System.out.println("Returning apk permissions analysis...");
+        this.logger.log(Level.INFO, "Returning apk permissions analysis..."); 
         return permissionsAnalysis;
     }
 

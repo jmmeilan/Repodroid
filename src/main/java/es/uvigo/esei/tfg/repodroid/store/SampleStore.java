@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 public class SampleStore {
     private String basePath;
@@ -42,10 +43,10 @@ public class SampleStore {
 
     
     
-    public void initialize() {
+    public void initialize(Logger l) {
         System.out.println("Initializing sample store...");
-        this.storer.initialize(this.basePath + File.separator + "STORE");
-        this.indexer.initialize(this.basePath + File.separator + "INDEX");
+        this.storer.initialize(this.basePath + File.separator + "STORE" , l);
+        this.indexer.initialize(this.basePath + File.separator + "INDEX", l);
     }
 
     public void close() {
@@ -54,10 +55,8 @@ public class SampleStore {
         this.indexer.close();
     }
 
-    //The sample comes already with an ID if cuckoo is used
     public void storeSample(Sample sample) {
         sample.setId(computeNextSampleID());
-        System.out.println("EL ID ES: "+sample.getId()); //ELIMINAR
         this.storer.storeSample(sample);
         this.indexer.indexSample(sample);
 
