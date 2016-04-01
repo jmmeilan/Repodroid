@@ -22,6 +22,7 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
@@ -33,11 +34,13 @@ public class LuceneIndexer implements Indexer {
     private IndexWriter writer;
     private String basePath;
     private Logger logger;
+    private SampleQueryTranslator queryTranslator;
     
     @Override
     public void initialize(String basePath, Logger l) {
        this.logger = l;
        this.logger.log(Level.INFO, "Initializing lucene indexer...");
+       this.queryTranslator = new SampleQueryTranslator();
        try {
            this.indexDirectory = FSDirectory.open(Paths.get(basePath));
            this.analyzer = new KeywordAnalyzer();
@@ -99,6 +102,7 @@ public class LuceneIndexer implements Indexer {
         try {
             IndexReader reader = DirectoryReader.open(this.writer, true); //TRUE OR FALSE? applyAllDeletes
             IndexSearcher searcher = new IndexSearcher(reader);
+            Query luceneQuery = this.queryTranslator.getLuceneQuery(query);
         } catch (IOException ex) {
             this.logger.log(Level.SEVERE, null, ex);
         }

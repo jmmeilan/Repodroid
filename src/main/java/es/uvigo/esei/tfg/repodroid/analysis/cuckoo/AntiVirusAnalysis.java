@@ -86,9 +86,6 @@ public class AntiVirusAnalysis implements Analysis,
      @Override
     public List<String> getIndexableItems() {
         List<String> result = new ArrayList<>();
-        /*result.add(this.scanDate);
-        result.add(String.valueOf(this.positives));
-        result.add(String.valueOf(this.total));*/
         if(this.antiVirusList != null){
             result.addAll(this.antiVirusList);
         }
