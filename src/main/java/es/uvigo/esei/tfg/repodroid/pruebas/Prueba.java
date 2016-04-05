@@ -8,6 +8,7 @@ import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.OutputConnectionsAnalysis;
 import es.uvigo.esei.tfg.repodroid.core.Analysis;
 import es.uvigo.esei.tfg.repodroid.core.Sample;
 import es.uvigo.esei.tfg.repodroid.core.SampleType;
+import es.uvigo.esei.tfg.repodroid.core.SimilarityQuery;
 import es.uvigo.esei.tfg.repodroid.core.permissionInfo;
 import es.uvigo.esei.tfg.repodroid.store.SampleStore;
 import es.uvigo.esei.tfg.repodroid.store.json.JSONStorer;
@@ -45,7 +46,10 @@ public class Prueba {
             sample.addAnalysis(analysis.getAnalysisName(), analysis);
         }
         store.storeSample(sample);
-        testJsonRetrieval(sample);
+        /*List<Sample> result = store.search(new SimilarityQuery(sample, 50), 0, 5);
+        for(Sample s: result){
+            testJsonRetrieval(s);
+        }*/
         store.close();        
         analyzer.terminate();
     }

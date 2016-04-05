@@ -64,7 +64,7 @@ public class CuckooAnalyzer implements Analyzer {
     public List<Analysis> analyzeSample(Sample sample) {  
         this.logger.log(Level.INFO, "Analyzing a new sample..."); 
         //Enviamos un post multipart con el apk a analizar
-        HttpPost httppost = new HttpPost(this.urlCreate);
+       /* HttpPost httppost = new HttpPost(this.urlCreate);
         File apk = new File(sample.getPath());
         //Incluimos el apk a analizar
         HttpEntity multipart = MultipartEntityBuilder
@@ -110,10 +110,12 @@ public class CuckooAnalyzer implements Analyzer {
             } catch (IOException | InterruptedException ex) {
                 this.logger.log(Level.SEVERE, null, ex);
             }
-        } while (analyzing);
+        } while (analyzing);*/
         //Extraemos la informacion relevante del informe
+        CloseableHttpClient httpclient = HttpClients.createDefault();
+        CloseableHttpResponse response;
         List<Analysis> toRet = new LinkedList<>();
-        HttpGet httpget = new HttpGet(this.urlReport+sampleID);
+        HttpGet httpget = new HttpGet(this.urlReport+"10"/*sampleID*/);
         try {
             response = httpclient.execute(httpget);
             HttpEntity entity = response.getEntity();

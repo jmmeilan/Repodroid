@@ -1,5 +1,6 @@
 package es.uvigo.esei.tfg.repodroid.store.lucene;
 
+
 import es.uvigo.esei.tfg.repodroid.core.Analysis;
 import es.uvigo.esei.tfg.repodroid.core.IndexableAnalysis;
 import es.uvigo.esei.tfg.repodroid.core.Sample;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.core.KeywordAnalyzer;
+import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
@@ -23,8 +24,11 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.Version;
 
 public class LuceneIndexer implements Indexer {
 
@@ -40,10 +44,10 @@ public class LuceneIndexer implements Indexer {
     public void initialize(String basePath, Logger l) {
        this.logger = l;
        this.logger.log(Level.INFO, "Initializing lucene indexer...");
-       this.queryTranslator = new SampleQueryTranslator();
+       this.queryTranslator = new SampleQueryTranslator(this.logger);
        try {
            this.indexDirectory = FSDirectory.open(Paths.get(basePath));
-           this.analyzer = new KeywordAnalyzer();
+           this.analyzer = new WhitespaceAnalyzer();
            this.writerConfig = new IndexWriterConfig(this.analyzer);
            this.writerConfig.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
            this.basePath = basePath;
@@ -97,27 +101,41 @@ public class LuceneIndexer implements Indexer {
     }
 
     @Override
+    //QUe es firtResult?
     public List<String> search(SampleQuery query, int firstResult, int numberOfSamples) {
         this.logger.log(Level.INFO, "Starting a new search...");
+        List<String> result = new ArrayList<>();
         try {
             IndexReader reader = DirectoryReader.open(this.writer, true); //TRUE OR FALSE? applyAllDeletes
             IndexSearcher searcher = new IndexSearcher(reader);
             Query luceneQuery = this.queryTranslator.getLuceneQuery(query);
+            TopDocs results = searcher.search(luceneQuery, 5 * numberOfSamples);
+            ScoreDoc[] hits = results.scoreDocs;
+            int numTotalHits = results.totalHits;
+            System.out.println(numTotalHits);
+            for(int i = 0; i < numTotalHits; i++){
+                Document doc = searcher.doc(hits[i].doc);
+                System.out.println(doc.get("ID"));
+                result.add(doc.get("ID"));
+            }
         } catch (IOException ex) {
             this.logger.log(Level.SEVERE, null, ex);
         }
-        return new ArrayList<String>();
+        return result;
     }
     
     private void indexAnalyses(final IndexWriter indexWriter, 
                              Sample sample) throws IOException{
         Document doc = new Document();
-        doc.add(new StringField("ID", sample.getId(), Field.Store.NO));
+        doc.add(new StringField("ID", sample.getId(), Field.Store.YES));
         for(Analysis an: sample.getAnalises().values()){
             if (an instanceof IndexableAnalysis){
                 String fieldName = an.getAnalysisType();
                 String fieldValues = listToString(((IndexableAnalysis) an).getIndexableItems());
-                doc.add(new StringField(fieldName, fieldValues, Field.Store.NO)); 
+                System.out.println(fieldValues);
+                if(fieldValues.isEmpty() == false){
+                    doc.add(new StringField(fieldName, fieldValues, Field.Store.NO)); 
+                }
             }
         }
         indexWriter.updateDocument(new Term("ID", sample.getId()), doc);

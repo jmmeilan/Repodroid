@@ -7,12 +7,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class SampleStore {
     private String basePath;
     private Storer storer;
     private Indexer indexer;
+    private Logger logger;
 
     public SampleStore(String basePath) {
         this.basePath = basePath;
@@ -44,13 +46,14 @@ public class SampleStore {
     
     
     public void initialize(Logger l) {
-        System.out.println("Initializing sample store...");
+        this.logger = l;
+        this.logger.log(Level.INFO, "Initializing sample store..."); 
         this.storer.initialize(this.basePath + File.separator + "STORE" , l);
         this.indexer.initialize(this.basePath + File.separator + "INDEX", l);
     }
 
     public void close() {
-        System.out.println("Terminating sample store...");
+        this.logger.log(Level.INFO, "Terminating sample store..."); 
         this.storer.close();
         this.indexer.close();
     }
@@ -82,6 +85,7 @@ public class SampleStore {
         if ((sampleIDs != null) && (!sampleIDs.isEmpty())) {
             List<Sample> result = new ArrayList<>();
             for (String sampleID : sampleIDs) {
+                System.out.println("ID ENCONTRAOS: "+sampleID);
                 result.add(this.storer.retrieveSample(sampleID));
             }
             return result;
