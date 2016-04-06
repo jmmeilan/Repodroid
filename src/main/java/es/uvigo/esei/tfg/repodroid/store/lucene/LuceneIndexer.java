@@ -17,6 +17,7 @@ import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
+import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
@@ -72,7 +73,7 @@ public class LuceneIndexer implements Indexer {
     public void indexSample(Sample sample) {
         this.logger.log(Level.INFO, "Indexing new sample...");
         try{
-            indexAnalyses(this.writer, sample);
+            indexAnalyses(this.writer, sample,1);
         } catch (IOException e){
             this.logger.log(Level.INFO, "EXCEPTION: IOException while indexing"); 
         }
@@ -94,7 +95,7 @@ public class LuceneIndexer implements Indexer {
     public void updateSample(String sampleID, Sample sample) {
         this.logger.log(Level.INFO, "Updating index of a sample...");
         try{
-            indexAnalyses(this.writer, sample);
+            indexAnalyses(this.writer, sample,2);
         } catch (IOException e){
             this.logger.log(Level.INFO, "EXCEPTION: IOException while updating an index..."); 
         }
@@ -112,10 +113,8 @@ public class LuceneIndexer implements Indexer {
             TopDocs results = searcher.search(luceneQuery, 5 * numberOfSamples);
             ScoreDoc[] hits = results.scoreDocs;
             int numTotalHits = results.totalHits;
-            System.out.println(numTotalHits);
             for(int i = 0; i < numTotalHits; i++){
                 Document doc = searcher.doc(hits[i].doc);
-                System.out.println(doc.get("ID"));
                 result.add(doc.get("ID"));
             }
         } catch (IOException ex) {
@@ -125,20 +124,25 @@ public class LuceneIndexer implements Indexer {
     }
     
     private void indexAnalyses(final IndexWriter indexWriter, 
-                             Sample sample) throws IOException{
+                             Sample sample, int op) throws IOException{
         Document doc = new Document();
         doc.add(new StringField("ID", sample.getId(), Field.Store.YES));
         for(Analysis an: sample.getAnalises().values()){
             if (an instanceof IndexableAnalysis){
                 String fieldName = an.getAnalysisType();
                 String fieldValues = listToString(((IndexableAnalysis) an).getIndexableItems());
-                System.out.println(fieldValues);
-                if(fieldValues.isEmpty() == false){
-                    doc.add(new StringField(fieldName, fieldValues, Field.Store.NO)); 
+                if(!fieldValues.isEmpty()){
+                    doc.add(new TextField(fieldName, fieldValues, Field.Store.NO)); 
                 }
             }
         }
-        indexWriter.updateDocument(new Term("ID", sample.getId()), doc);
+        if(op==1){
+            indexWriter.addDocument(doc);    
+        } else {
+            if(op==2){
+                indexWriter.updateDocument(new Term("ID", sample.getId()), doc);   
+            } 
+        }
     }
 
     private String listToString(List<String> indexableItems) {

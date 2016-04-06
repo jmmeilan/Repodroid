@@ -6,6 +6,7 @@ import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.ApkPermissionsAnalysis;
 import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.CuckooAnalyzer;
 import es.uvigo.esei.tfg.repodroid.analysis.cuckoo.OutputConnectionsAnalysis;
 import es.uvigo.esei.tfg.repodroid.core.Analysis;
+import es.uvigo.esei.tfg.repodroid.core.ParametrizedQuery;
 import es.uvigo.esei.tfg.repodroid.core.Sample;
 import es.uvigo.esei.tfg.repodroid.core.SampleType;
 import es.uvigo.esei.tfg.repodroid.core.SimilarityQuery;
@@ -14,7 +15,10 @@ import es.uvigo.esei.tfg.repodroid.store.SampleStore;
 import es.uvigo.esei.tfg.repodroid.store.json.JSONStorer;
 import es.uvigo.esei.tfg.repodroid.store.lucene.LuceneIndexer;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Logger;
@@ -46,12 +50,28 @@ public class Prueba {
             sample.addAnalysis(analysis.getAnalysisName(), analysis);
         }
         store.storeSample(sample);
-        /*List<Sample> result = store.search(new SimilarityQuery(sample, 50), 0, 5);
-        for(Sample s: result){
-            testJsonRetrieval(s);
-        }*/
         store.close();        
         analyzer.terminate();
+    }
+    
+    private static void testSimilaritySearch(SampleStore store, Sample sample){
+        List<Sample> result = store.search(new SimilarityQuery(sample, 50), 0, 5);
+        for(Sample s: result){
+            testJsonRetrieval(s);
+        }
+    }
+    
+    private static void testParametrizedSearch(SampleStore store){
+        Map<String,List<String>> parameters= new HashMap();
+        List<String> values = new ArrayList();
+        values.add("Bkav");
+        values.add("McAfee");
+        values.add("Alibaba");
+        parameters.put("AntiVirusAnalysis", values);
+        List<Sample> result = store.search(new ParametrizedQuery(parameters), 5, 5);
+        for (Sample s: result){
+            testJsonRetrieval(s);
+        }
     }
     
     private static void testJsonRetrieval(Sample prueba){

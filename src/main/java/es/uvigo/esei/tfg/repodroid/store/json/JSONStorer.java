@@ -25,6 +25,8 @@ public class JSONStorer implements Storer {
        this.logger.log(Level.INFO, "Initializing json storer..."); 
        this.mapper = new ObjectMapper();
        this.storerDirectory = basePath;
+       File storerDir = new File(basePath);
+       storerDir.mkdirs();
     }
 
     @Override

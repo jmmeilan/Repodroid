@@ -26,12 +26,12 @@ public class ParametrizedQuery implements SampleQuery{
     
     @Override
     public String getSampleQueryName() {
-       return SimilarityQuery.NAME;
+       return ParametrizedQuery.NAME;
     }
 
     @Override
     public String getSampleQueryDescription() {
-       return SimilarityQuery.DESCRIPTION;
+       return ParametrizedQuery.DESCRIPTION;
     }
     
 }
