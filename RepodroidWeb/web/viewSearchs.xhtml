@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="globalTemplate.xhtml">
+        <ui:define name="contenido">
+            <!-- Inicio de div de formulario para enviar muestra-->
+            <div class="divAddSample">
+                <div class="jumbotron">
+                    <h3>Search samples in the repository!</h3>
+                    <p>You can search by uploading a sample and search for similar samples or you can select the information you want to include in the search.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <!-- inicio de formulario envio de muestras -->
+                        <h:form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="selectLabel" for="firstname text-center">Select the type of search you want to use</label>
+                            </div>
+                            <h:link value="Uploading a sample" 
+                                             outcome="similaritySearch.xhtml"
+                                             class="btn btn-default btn-primary btnCancelAddSample"/>
+                            <h:link value="Submitting information" 
+                                             outcome="informationSearch.xhtml"
+                                             class="btn btn-default btn-primary btnSubmitAddSample"/>
+                        </h:form>
+                        <!-- final de formulario de envio de muestras -->
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div> 
+            <!-- final div de envio de muestras-->
+        </ui:define>
+    </ui:composition>
+</html>
+
+

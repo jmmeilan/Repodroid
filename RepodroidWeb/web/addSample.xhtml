@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="globalTemplate.xhtml">
+        <ui:define name="contenido">
+            <!-- Inicio de div de formulario para enviar muestra-->
+            <div class="divAddSample">
+                <div class="jumbotron">
+                    <h3>Submit your samples now!</h3>
+                    <p>The samples you select will be analyzed and a report will be made available to you. As the analysis process takes a few minutes, and email will be sent to you when the analysis is done</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <!-- inicio de formulario envio de muestras -->
+                        <h:form class="form-horizontal" enctype="multipart/form-data" rendered="#{UserController.authenticated}">
+                            <div class="form-group">
+                                <label for="firstname">Upload your APK sample:</label>
+                                <b:inputText type="file" id="sample"></b:inputText>
+                            </div>
+                            <h:commandButton value="Cancel" 
+                                             action="possibleIndex.xhtml"
+                                             class="btn btn-default btn-primary btnCancelAddSample"/>
+                            <h:commandButton value="Submit" 
+                                             action="viewUser.xhtml"
+                                             class="btn btn-default btn-primary btn-success btnSubmitAddSample"/>
+                        </h:form>
+                        <!-- final de formulario de envio de muestras -->
+                        <!-- si no estamos logueados -->
+                        <h:outputText styleClass="submitSample" value="You must log in to submit a sample" rendered="#{!UserController.authenticated}"></h:outputText>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div> 
+            <!-- final div de envio de muestras-->
+        </ui:define>
+    </ui:composition>
+</html>
+
+

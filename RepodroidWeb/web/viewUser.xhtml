@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <ui:composition template="globalTemplate.xhtml">
+        <ui:define name="contenido">
+            <ui:fragment  rendered="#{UserController.authenticated}">
+                <!--INICIO PERFIL-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                        <h3>Troll</h3>
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3" align="center">
+                                <img alt="avatar" src="troll.png" class="img-circle img-responsive"></img>
+                            </div>
+                            <div class=" col-md-9 col-lg-9 "> 
+                                <table class="table">
+                                    <tbody>
+                                        <tr>    
+                                            <td>Username</td>
+                                            <td>Troll</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email:</td>
+                                            <td>trollface@gmail.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <a class="btn btn-primary buttonEditar" href="#">Editar</a>
+                            </div>
+                            <div class="col-md-12 col-lg-12 sampleCountDiv">
+                                <span class="tituloPosts"> Samples analyzed: 1 </span>
+                                <hr/>
+                            </div>
+                        </div>
+                        <!--Inicio samples usuarios-->
+                        <div id="divSamplesUsuario" class="row sampleList">
+                            <div class="col-md-9 col-lg-9 postUsuarioView">
+                                <span class="cuerpoPost"><a href="#">Sample name/id</a></span>
+                            </div>
+                            <div class="col-md-3 col-lg-3">
+                                <span>Fecha de análisis: xx/yy/zzzz</span>
+                            </div>
+                        </div>
+                        <!--Final post usuarios-->
+                    </div>
+                </div>
+            </ui:fragment>
+            <div class="divNotLogged">
+                <h:outputText styleClass="viewUser" value="You must log in to see your account information" rendered="#{!UserController.authenticated}"></h:outputText>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>
+
+

@@ -29,7 +29,6 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.util.Version;
 
 public class LuceneIndexer implements Indexer {
 
@@ -47,11 +46,11 @@ public class LuceneIndexer implements Indexer {
        this.logger.log(Level.INFO, "Initializing lucene indexer...");
        this.queryTranslator = new SampleQueryTranslator(this.logger);
        try {
-           this.indexDirectory = FSDirectory.open(Paths.get(basePath));
+           this.basePath = basePath;
+           this.indexDirectory = FSDirectory.open(Paths.get(this.basePath));
            this.analyzer = new WhitespaceAnalyzer();
            this.writerConfig = new IndexWriterConfig(this.analyzer);
            this.writerConfig.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
-           this.basePath = basePath;
            this.writer = new IndexWriter(this.indexDirectory, this.writerConfig);
        } catch (IOException e){
            this.logger.log(Level.INFO, "EXCEPTION: IOException while initializing LuceneIndexer"); 

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="globalTemplate.xhtml">
+        <ui:define name="contenido">
+            <!-- Inicio de div de formulario para enviar muestra-->
+            <div class="divAddSample">
+                <div class="jumbotron">
+                    <h3>Submit a sample</h3>
+                    <p>This sample will be used to search for similar samples in the repository</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <!-- inicio de formulario envio de muestras -->
+                        <h:form class="form-horizontal" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="firstname">APK sample:</label>
+                                <b:inputText type="file" id="sample"></b:inputText>
+                            </div>
+                            <div class="form-group">
+                                <label>Similarity percentage:</label>
+                                <b:inputText type="number"></b:inputText>
+                            </div>
+                            <h:commandButton value="Cancel" 
+                                             action="possibleIndex.xhtml"
+                                             class="btn btn-default btn-primary btnCancelAddSample"/>
+                            <h:commandButton value="Submit" 
+                                             action="possibleIndex.xhtml"
+                                             actionListener="#{SampleController.doSimilarityQuery()}"
+                                             class="btn btn-default btn-primary btn-success btnSubmitAddSample"/>
+                        </h:form>
+                        <!-- final de formulario de envio de muestras -->
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div> 
+            <!-- final div de envio de muestras-->
+        </ui:define>
+    </ui:composition>
+</html>
+
+

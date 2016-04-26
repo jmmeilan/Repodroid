@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="globalTemplate.xhtml">
+        <ui:define name="contenido">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Sample report</h3>
+                    <hr/> <!-- Poner de color negro -->
+                    <!-- INICIO GENERAL INFO -->
+                    <h4>General information</h4>
+                    <a id="hideGeneral" href="javascript:toggle2('generalInfoDiv','hideGeneral');">Hide</a>
+                    <div class="row" id="generalInfoDiv">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-7">
+                            <table class="table divAnalysis">
+                                <tbody>
+                                    <tr>
+                                        <td>Sample's id:</td>
+                                        <td>Un id bien largo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sample's type:</td>
+                                        <td>APK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Analysis' date:</td>
+                                        <td>25/03/2016</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:toggle('classList');">Apk's classes:</a></td>
+                                        <td>
+                                            <ul id="classList" class="list-group analysisList"> <!-- hacer ocultable -->
+                                                <li class="list-group-item">Class 1</li>
+                                                <li class="list-group-item">Class 2</li>
+                                                <li class="list-group-item">Class 3</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <!-- FIN GENERAL INFO -->
+                    <hr/> <!-- Poner de color negro -->
+                    <!-- ANTIVIRUS INFO INICIO -->
+                    <h4>Antivirus Analysis</h4>
+                    <a id="hideAntivirus" href="javascript:toggle2('antivirusInfoDiv','hideAntivirus');">Hide</a>
+                    <div class="row" id="antivirusInfoDiv">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-7">
+                            <table class="table divAnalysis"> 
+                                <tbody>
+                                    <tr>
+                                        <td>Number of antiviruses:</td>
+                                        <td>52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Number of positives:</td>
+                                        <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:toggle('antivirusList');">Positive antiviruses:</a></td>
+                                        <td> <!-- hacer ocultable -->
+                                            <div id="antivirusList" class="list-group analysisList">
+                                                <a href="#" class="list-group-item">Primer antivirus</a>
+                                                <a href="#" class="list-group-item">Segundo antivirus</a>
+                                                <a href="#" class="list-group-item">Tercer antivirus</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <!-- FIN ANTIVIRUS INFO -->
+                    <hr/> <!-- Poner de color negro -->
+                    <!-- INICIO PERMISSION INFO -->
+                    <h4>Application permissions</h4>
+                    <a id="hidePermissions" href="javascript:toggle2('apkPermissionsDiv','hidePermissions');">Hide</a>
+                    <div class="row" id="apkPermissionsDiv">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-7">
+                            <table class="table divAnalysis"> 
+                                <tbody>
+                                    <tr>
+                                        <td>Permission 1</td>
+                                        <td style="color: red">SEVERE</td> <!-- poner en rojo severo-->
+                                    </tr>
+                                    <tr>
+                                        <td>Permission 2</td>
+                                        <td style="color: orange">DANGEROUS</td> <!-- poner en amarillo -->
+                                    </tr>
+                                    <tr>
+                                        <td>Permission 3</td>
+                                        <td style="color: greenyellow">NORMAL</td> <!-- poner en verde -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <!-- FIN PERMISSIONS INFO-->
+                    <hr/> <!-- Poner de color negro -->
+                    <!-- INICIO NETWORK INFO -->
+                    <h4>Network information</h4>
+                    <a id="hideNetwork" href="javascript:toggle2('networkAnalysisDiv','hideNetwork');">Hide</a>
+                    <div class="row" id="networkAnalysisDiv">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-7">
+                            <div id="dnsQueriesDiv">
+                                <h5>DNS queries</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item">Query 1</li>
+                                    <li class="list-group-item">Query 2</li>
+                                    <li class="list-group-item">Query 3</li>
+                                </ul>
+                            </div>
+                            <hr/>
+                            <div id="externalHostsDiv">
+                                <h5>External Hosts</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item">Host 1</li>
+                                    <li class="list-group-item">Host 2</li>
+                                    <li class="list-group-item">Host 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>
+
+

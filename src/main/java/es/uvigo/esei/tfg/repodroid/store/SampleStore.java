@@ -58,8 +58,8 @@ public class SampleStore {
         this.indexer.close();
     }
 
+    //SAMPLE SHOULD COME WITH AN ID
     public void storeSample(Sample sample) {
-        sample.setId(computeNextSampleID());
         this.storer.storeSample(sample);
         this.indexer.indexSample(sample);
 
@@ -93,8 +93,7 @@ public class SampleStore {
        return Collections.emptyList();
     }
     
-    private String computeNextSampleID() {
-        // TODO Podria utilizarsela siguiente linea devolviendo un String
+    public String computeNextSampleID() {
         return UUID.randomUUID().toString();
     }
 }
