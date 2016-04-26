@@ -205,3 +205,8 @@ hr{
 .analysisList{
     display:none;
 }
+
+/* Estilo edit user */
+#editBody{
+    margin-top: 50px;
+}

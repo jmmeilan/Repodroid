@@ -92,13 +92,14 @@ public class SampleController {
                 this.sample.setSamplePath(samplePath);
                 this.sample.setUser(this.userBean.getCurrentUser());
                 Sample sampleToAnalyze = new Sample(samplePath, SampleType.APK);
+                sampleToAnalyze.setId(this.store.computeNextSampleID());
+                this.sample.setStorerID(sampleToAnalyze.getId());
                 Thread thread = (new Thread(new RepodroidAnalyzer(this.store, this.analyzer, sampleToAnalyze)));
                 thread.start();
                 this.sampleDao.create(this.sample);
                 this.apkSample.getInputStream().close();
-                /* DONDE HACE FALTA LLAMAR ESTO?¿?¿?¿
-                  store.close();
-                  analyzer.terminate()*/
+                this.store.close();
+                this.analyzer.terminate();
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {

@@ -17,23 +17,23 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.Part;
 
-@ManagedBean (name = "UserController")
+@ManagedBean(name = "UserController")
 @SessionScoped
 public class UserController {
-    
+
     private boolean authenticated;
     private User currentUser;
     private String userName;
     private String password;
     private String email;
     private Part picture;
-    
+
     @EJB
     private UserDao userDAO;
-    
-    public UserController(){
+
+    public UserController() {
     }
-    
+
     @PostConstruct
     public void inicializar() {
         this.authenticated = false;
@@ -87,7 +87,7 @@ public class UserController {
     public void setPicture(Part picture) {
         this.picture = picture;
     }
-    
+
     public void doLogin() {
         if (this.email.equals("") || this.password.equals("")) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "You need to introduce your email and password in order to log in", ""));
@@ -98,49 +98,89 @@ public class UserController {
                     FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Login successful", ""));
                 } else {
                     FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Wrong email or password", ""));
-                }  
-            } 
+                }
+            }
         }
     }
-    
-    
+
+    public void edit() {
+        if (this.password == null) {
+            this.password = this.currentUser.getPassword();
+        }
+        String picturePath;
+        if (this.picture != null) {
+            picturePath = "/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/"
+                    + "web/resources/webResources/img/"
+                    + this.currentUser.getUsername() + "_"
+                    + this.picture.getSubmittedFileName();
+            try (InputStream input = this.picture.getInputStream()) {
+                File img = new File(picturePath);
+                if (!img.exists()) {
+                    Files.copy(input, img.toPath());
+                }
+                this.picture.getInputStream().close();
+                picturePath = "img/" + this.currentUser.getUsername() + "_"
+                        + this.picture.getSubmittedFileName();
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            picturePath = this.currentUser.getPicturePath();
+        }
+        this.userDAO.updatePassword(this.currentUser.getNumUser(), this.password);
+        User edited = this.userDAO.updatePicture(this.currentUser.getNumUser(), picturePath);
+        if (edited == null) {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "There was an error while editing", ""));
+        }
+        this.currentUser = this.userDAO.searchByEmail(this.currentUser.getEmail());
+    }
+
     //Returns true if the registration was done successfully ESTO SOBRA?
-    public boolean register(){
+    public boolean register() {
         boolean registered = false;
-        if (this.email == null || this.password == null){
+        if (this.email == null || this.password == null) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "You must introduce your email and password", ""));
         } else {
             String picturePath;
-            if(this.picture != null){
-                picturePath = "/home/jmmeilan/Cuckoo/Pictures/"+this.picture.getSubmittedFileName();
-                try(InputStream input = this.picture.getInputStream()){
-                    Files.copy(input, new File ("/home/jmmeilan/Cuckoo/Pictures/"+picture.getSubmittedFileName()).toPath());
+            if (this.picture != null) {
+                picturePath = "/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/"
+                        + "web/resources/webResources/img/"
+                        + this.currentUser.getUsername() + "_"
+                        + this.picture.getSubmittedFileName();
+                try (InputStream input = this.picture.getInputStream()) {
+                    File img = new File(picturePath);
+                    if (!img.exists()) {
+                        Files.copy(input, img.toPath());
+                    }
                     this.picture.getInputStream().close();
+                    picturePath = "img/" + this.currentUser.getUsername() + "_"
+                            + this.picture.getSubmittedFileName();
                 } catch (FileNotFoundException ex) {
                     Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex){
+                } catch (IOException ex) {
                     Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-                } 
+                }
             } else {
-                picturePath = "/home/jmmeilan/Cuckoo/Pictures/default.png";
+                picturePath = "img/default.png";
             }
-            
-            User toRegister = new User(this.userName, 
-                                       this.password, 
-                                       this.email,
-                                       picturePath);
+
+            User toRegister = new User(this.userName,
+                    this.password,
+                    this.email,
+                    picturePath);
             registered = this.userDAO.register(toRegister);
-            
         }
-        if (!registered){
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "There was an error in the registration", ""));
+        if (!registered) {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "There was an error in the registration", ""));
         }
         return registered;
     }
-    
-    private boolean authenticate(int userId, 
-                         String unencryptedPass) {
-        if (this.userDAO.authenticateUser(userId, unencryptedPass)){
+
+    private boolean authenticate(int userId,
+            String unencryptedPass) {
+        if (this.userDAO.authenticateUser(userId, unencryptedPass)) {
             this.authenticated = true;
             this.currentUser = this.userDAO.searchById(userId);
             return true;
@@ -150,9 +190,8 @@ public class UserController {
             return false;
         }
     }
-   
+
     public String doLogOut() {
-        //usuarioDAO.actualizarUltimoAcceso(usuarioActual.getId()); Meto un último acceso¿?
         this.authenticated = false;
         this.currentUser = null;
 
@@ -162,5 +201,5 @@ public class UserController {
         // Volver a la página principal
         return "/index?faces-redirect=true"; //Como funciona esto¿?
     }
-    
+
 }

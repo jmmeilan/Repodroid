@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="globalTemplate.xhtml">
+        <ui:define name="contenido">
+            <!-- Main div para el formulario de edición -->
+            <div class="col-lg-2 col-md-2"></div>
+            <div id="editBody" class="col-lg-8 col-md-8">
+                <h:form class="form-horizontal" enctype="multipart/form-data">
+                    <div id="divThumbnail" class="thumbnail"><!-- CAMBIAR COLOR DEL BORDE-->
+                        <fieldset>
+                            <div class="control-group">
+                                <!-- Password-->
+                                <label class="control-label" for="password"> Password</label>
+                                <div class="controls">
+                                    <b:inputText type="password" id="contraseña" class="input-xlarge" required="true" placeholder="#{UserController.currentUser.password}" value="#{UserController.password}"></b:inputText>
+                                    <p class="help-block">Password must be...</p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label for="avatar">Account picture</label>
+                                <div class="controls">
+                                    <!-- VER UPLOADER DE BOOTSTRAP -->
+                                    <h:inputFile id="avatar" value="#{UserController.picture}"></h:inputFile>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div  class="controls buttonRegistro">
+                                    <h:commandButton class="btn btn-success btnRegister" value="Submit" action="index.xhtml" actionListener="#{UserController.edit()}"></h:commandButton>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </h:form>
+            </div>
+            <div class="col-lg-2 col-md-2"></div>
+        </ui:define>
+    </ui:composition>
+</html>

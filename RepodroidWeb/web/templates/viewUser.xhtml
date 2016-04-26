@@ -9,34 +9,34 @@
                 <!--INICIO PERFIL-->
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-                        <h3>Troll</h3>
+                        <h3>#{UserController.currentUser.username}</h3>
                         <div class="row">
                             <div class="col-md-3 col-lg-3" align="center">
-                                <img alt="avatar" src="troll.png" class="img-circle img-responsive"></img>
+                                <h:graphicImage library="webResources" name="#{UserController.currentUser.picturePath}" class="img-circle img-responsive" />
                             </div>
                             <div class=" col-md-9 col-lg-9 "> 
                                 <table class="table">
                                     <tbody>
                                         <tr>    
-                                            <td>Username</td>
-                                            <td>Troll</td>
+                                            <td>Username:</td>
+                                            <td>#{UserController.currentUser.username}</td>
                                         </tr>
                                         <tr>
                                             <td>Email:</td>
-                                            <td>trollface@gmail.com</td>
+                                            <td>#{UserController.currentUser.email}</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="col-md-12 text-right">
-                                <a class="btn btn-primary buttonEditar" href="#">Editar</a>
+                                <a class="btn btn-primary buttonEditar" href="editUser.xhtml">Editar</a>
                             </div>
                             <div class="col-md-12 col-lg-12 sampleCountDiv">
                                 <span class="tituloPosts"> Samples analyzed: 1 </span>
                                 <hr/>
                             </div>
                         </div>
-                        <!--Inicio samples usuarios-->
+                        <!--Inicio samples usuarios,ESTO DEBE HACERLO CON TABLAS DE PRIMEFACES-->
                         <div id="divSamplesUsuario" class="row sampleList">
                             <div class="col-md-9 col-lg-9 postUsuarioView">
                                 <span class="cuerpoPost"><a href="#">Sample name/id</a></span>
