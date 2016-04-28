@@ -18,7 +18,7 @@ import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.servlet.http.Part;
 
-@Named("UserController")
+@Named(value="UserController")
 @SessionScoped
 public class UserController implements Serializable{
 

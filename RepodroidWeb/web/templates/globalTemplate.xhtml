@@ -35,9 +35,9 @@
             <div class="container">
                 <div class="navbar-header">
                     <ul class="nav navbar-nav">
-                        <a class="navbar-brand logo" href="../index.xhtml">Repodroid</a>
-                        <a class="navbar-brand navbarItem" href="addSample.xhtml">Submit a sample</a>
-                        <a class="navbar-brand navbarItem" href="viewSearchs.xhtml">Search</a>
+                        <a href="../index.xhtml" class="navbar-brand logo">Repodroid</a>
+                        <h:link class="navbar-brand navbarItem" outcome="addSample">Submit a sample</h:link>
+                        <h:link class="navbar-brand navbarItem" outcome="viewSearchs.xhtml">Search</h:link>
                     </ul> 
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
@@ -56,7 +56,7 @@
                     </h:form>
                     <h:form id="formLogOut" styleClass="navbar-form navbar-right"  rendered="#{UserController.authenticated}">
                         <div class="form-group">
-                            <h:outputLabel styleClass="navbar-brand navbarItem userName">#{UserController.currentUser.username}</h:outputLabel>
+                            <h:link class="navbar-brand navbarItem userName" outcome="viewUser">#{UserController.currentUser.username}</h:link>
                         </div>
                         <div class="form-group"> <!-- cambiar color-->
                             <b:commandButton icon="chevron-right" iconAlign="right" action="#{UserController.doLogOut()}" look="success" value="Log out"></b:commandButton>

@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Level;
@@ -28,7 +30,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.Part;
 
-@Named("SampleController")
+@Named(value="SampleController")
 //DEBE SER ESTO REQUESTSCOPED O CONVERSATIONSCOPED???? 
 @SessionScoped
 public class SampleController implements Serializable{
@@ -161,6 +163,11 @@ public class SampleController implements Serializable{
         } else {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "You must submit an .apk file", ""));
         }
+    }
+    
+    public List<SampleReference> getSamplesFromUser(){
+       List<SampleReference> currentUserSamples = this.sampleDao.getAllSamplesFromUser(this.userBean.getCurrentUser().getNumUser());
+        return currentUserSamples;
     }
 
     public void doSimilarityQuery() {
