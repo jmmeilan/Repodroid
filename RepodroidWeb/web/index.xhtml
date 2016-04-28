@@ -4,8 +4,8 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:b="http://bootsfaces.net/ui">
     <h:head>
-        <title>Pruebas Inutiles</title>
-        <meta name="author" content="The Author"></meta>
+        <title>Repodroid</title>
+        <meta name="author" content="Jose Miguel Meilan Maldonado"></meta>
         <h:outputStylesheet library="webResources" name="css/style.css"/>
         <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
@@ -35,9 +35,9 @@
             <div class="container">
                 <div class="navbar-header">
                     <ul class="nav navbar-nav">
-                        <a class="navbar-brand logo" href="index.xhtml">Repodroid</a>
-                        <a class="navbar-brand navbarItem" href="templates/addSample.xhtml">Submit a sample</a>
-                        <a class="navbar-brand navbarItem" href="templates/viewSearchs.xhtml">Search</a>
+                        <h:outputLink class="navbar-brand logo" value="index.xhtml">Repodroid</h:outputLink>
+                        <h:outputLink class="navbar-brand navbarItem" value="templates/addSample.xhtml">Submit a sample</h:outputLink>
+                        <h:outputLink class="navbar-brand navbarItem" value="templates/viewSearchs.xhtml">Search</h:outputLink>
                     </ul> 
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
@@ -50,7 +50,7 @@
                         </div> 
                         #{' '}
                         <span class="btn-group">
-                            <b:commandButton value="Sign in" action="index.xhtml"  actionListener="#{UserController.doLogin()}" look="success" icon="chevron-right" iconAlign="right"/>
+                            <b:commandButton value="Log in" action="index.xhtml"  actionListener="#{UserController.doLogin()}" look="success" icon="chevron-right" iconAlign="right"/>
                             <b:commandButton value="" action="templates/register.xhtml" iconAlign="right">Sign up  <b:iconAwesome name="fa-angle-double-right" size="lg"/></b:commandButton>
                         </span>
                     </h:form>
