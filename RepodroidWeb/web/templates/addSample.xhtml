@@ -19,7 +19,7 @@
                         <h:form class="form-horizontal" enctype="multipart/form-data" rendered="#{UserController.authenticated}">
                             <div class="form-group">
                                 <label for="firstname">Upload your APK sample:</label>
-                                <b:inputText type="file" id="sample" value="#{SampleController.apkSample}"></b:inputText>
+                                <h:inputFile id="sample" value="#{SampleController.apkSample}"></h:inputFile>
                             </div>
                             <h:commandButton value="Cancel" 
                                              action="../index.xhtml"

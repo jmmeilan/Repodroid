@@ -12,6 +12,8 @@ public class RepodroidAnalyzer implements Runnable{
     private final CuckooAnalyzer analyzer;
     private final Sample sampleToAnalyze;
     
+    
+    //DEBERIA INICIALIZAR LAS COSAS PRA EL ANALISIS AQUI EN LUGAR DE RECIBIRLAS¿?¿ FRAN
     public RepodroidAnalyzer (SampleStore s, 
                               CuckooAnalyzer c,
                               Sample sample){
@@ -27,6 +29,9 @@ public class RepodroidAnalyzer implements Runnable{
             this.sampleToAnalyze.addAnalysis(analysis.getAnalysisName(), analysis);
         }
         store.storeSample(this.sampleToAnalyze);
+        this.store.close();
+        this.analyzer.terminate();
+        //AGREGAR COMUNICACION POR CORREO ELECTRONICO
     }
     
 }
