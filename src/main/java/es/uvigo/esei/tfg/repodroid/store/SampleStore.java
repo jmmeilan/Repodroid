@@ -93,7 +93,7 @@ public class SampleStore {
        return Collections.emptyList();
     }
     
-    public String computeNextSampleID() {
+    public static String computeNextSampleID() {
         return UUID.randomUUID().toString();
     }
 }

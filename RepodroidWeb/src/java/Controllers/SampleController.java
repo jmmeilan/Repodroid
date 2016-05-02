@@ -10,12 +10,12 @@ import es.uvigo.esei.tfg.repodroid.store.SampleStore;
 import es.uvigo.esei.tfg.repodroid.store.json.JSONStorer;
 import es.uvigo.esei.tfg.repodroid.store.lucene.LuceneIndexer;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.nio.file.Files;
 import java.util.List;
+import java.util.UUID;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Level;
@@ -29,10 +29,10 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.Part;
 
-@Named(value="SampleController")
+@Named(value = "SampleController")
 //DEBE SER ESTO REQUESTSCOPED O CONVERSATIONSCOPED???? 
 @SessionScoped
-public class SampleController implements Serializable{
+public class SampleController implements Serializable {
 
     private static Handler fh;
     private static Logger logger;
@@ -47,9 +47,8 @@ public class SampleController implements Serializable{
     private String classes;
     private String outputConnections;
     private String antiViruses;
-
-    /* TODO: METER LOS PATHS ESTATICOS EN UN FICHERO APARTE PARA SU ACCESO Y MODIFICACION MAS FACIL*/
-    @Inject private UserController userBean;
+    @Inject
+    private UserController userBean;
 
     @EJB
     private SampleReferenceDao sampleDao;
@@ -124,52 +123,45 @@ public class SampleController implements Serializable{
         this.store.setIndexer(luceneIndexer);
         this.store.initialize(logger);
         this.analyzer = new CuckooAnalyzer();
-        analyzer.initialize(logger);
-
+        this.analyzer.initialize(logger);
     }
 
     public void submitSample() {
         String extension = this.apkSample.getSubmittedFileName()
-                .substring(apkSample.getSubmittedFileName().lastIndexOf(".") + 1
-                            , apkSample.getSubmittedFileName().length());
+                .substring(apkSample.getSubmittedFileName().lastIndexOf(".") + 1, apkSample.getSubmittedFileName().length());
         if ((this.apkSample != null)
                 && (extension.equals("apk"))) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Entre al if", ""));
             String samplePath = "/home/jmmeilan/Descargas/Repodroid/"
                     + "RepodroidWeb/web/resources/sampleStore/SAMPLES/"
                     + this.userBean.getCurrentUser().getUsername() + "_"
                     + this.apkSample.getSubmittedFileName();
             try (InputStream input = this.apkSample.getInputStream()) {
-                FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Entre al try", ""));
                 File samp = new File(samplePath);
                 if (!samp.exists()) {
-                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Copie el apk", ""));
                     Files.copy(input, samp.toPath());
                 }
                 this.sample.setSamplePath(samplePath);
                 this.sample.setUser(this.userBean.getCurrentUser());
                 Sample sampleToAnalyze = new Sample(samplePath, SampleType.APK);
-                sampleToAnalyze.setId(this.store.computeNextSampleID());
+                sampleToAnalyze.setId(UUID.randomUUID().toString());
                 this.sample.setStorerID(sampleToAnalyze.getId());
-                FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "lanze el hilo", ""));
                 Thread thread = (new Thread(
-                        new RepodroidAnalyzer(
-                                this.store, this.analyzer, sampleToAnalyze)));
+                        new RepodroidAnalyzer(this.store, this.analyzer, 
+                                              sampleToAnalyze, 
+                                              this.userBean.getCurrentUser().getEmail())));
                 thread.start();
                 this.sampleDao.create(this.sample);
                 this.apkSample.getInputStream().close();
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
-                Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+                Logger.getLogger(SampleController.class.getName()).log(Level.SEVERE, null, ex);
+            } 
         } else {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "You must submit an .apk file", ""));
         }
     }
-    
-    public List<SampleReference> getSamplesFromUser(){
-       List<SampleReference> currentUserSamples = this.sampleDao.getAllSamplesFromUser(this.userBean.getCurrentUser().getNumUser());
+
+    public List<SampleReference> getSamplesFromUser() {
+        List<SampleReference> currentUserSamples = this.sampleDao.getAllSamplesFromUser(this.userBean.getCurrentUser().getNumUser());
         return currentUserSamples;
     }
 

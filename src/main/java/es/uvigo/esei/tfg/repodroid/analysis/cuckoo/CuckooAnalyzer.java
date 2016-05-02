@@ -10,6 +10,7 @@ import es.uvigo.esei.tfg.repodroid.analysis.Analyzer;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -25,7 +26,7 @@ import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
-public class CuckooAnalyzer implements Analyzer {
+public class CuckooAnalyzer implements Analyzer, Serializable {
 
     private String urlCreate;
     private String urlView;
