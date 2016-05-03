@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
-@Entity @Table(name="Samples_References")
+@Entity @Table(name="Sample_References")
 public class SampleReference implements Serializable{
     
     @Id @GeneratedValue(strategy=GenerationType.AUTO)
@@ -23,6 +23,9 @@ public class SampleReference implements Serializable{
     private String samplePath;
     @Column(name="STORER_ID")
     private String storerID;
+    @Column(name="SAMPLE_NAME")
+    private String sampleName;
+    //METER AQUI NOMBRE DEL SAMPLE
     
     public SampleReference() {
     }
@@ -55,6 +58,16 @@ public class SampleReference implements Serializable{
     public String getStorerID() {
         return storerID;
     }
+
+    public String getSampleName() {
+        return sampleName;
+    }
+
+    public void setSampleName(String sampleName) {
+        this.sampleName = sampleName;
+    }
+    
+    
 
     public void setStorerID(String storerID) {
         this.storerID = storerID;

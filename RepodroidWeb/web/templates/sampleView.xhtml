@@ -3,12 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:b="http://bootsfaces.net/ui"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
     <ui:composition template="globalTemplate.xhtml">
         <ui:define name="contenido">
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Sample report</h3>
+                    <h3>Sample report: #{SampleController.toShow.sampleName}</h3>
                     <hr/> <!-- Poner de color negro -->
                     <!-- INICIO GENERAL INFO -->
                     <h4>General information</h4>
@@ -20,7 +21,7 @@
                                 <tbody>
                                     <tr>
                                         <td>Sample's id:</td>
-                                        <td>Un id bien largo</td>
+                                        <td>#{SampleController.toShow.numSample}</td>
                                     </tr>
                                     <tr>
                                         <td>Sample's type:</td>
@@ -28,16 +29,17 @@
                                     </tr>
                                     <tr>
                                         <td>Analysis' date:</td>
-                                        <td>25/03/2016</td>
+                                        <td>#{SampleController.representation.scanDate}</td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:toggle('classList');">Apk's classes:</a></td>
+                                        <td><a href="javascript:toggle('tablaClases');">Apk's classes:</a></td>
                                         <td>
-                                            <ul id="classList" class="list-group analysisList"> <!-- hacer ocultable -->
-                                                <li class="list-group-item">Class 1</li>
-                                                <li class="list-group-item">Class 2</li>
-                                                <li class="list-group-item">Class 3</li>
-                                            </ul>
+                                            <p:dataTable id="tablaClases" var="class" styleClass="" emptyMessage="This sample doesn't have any classes."
+                                                         value="${SampleController.representation.classes}">
+                                                <p:column headerText="Classes" styleClass="">
+                                                    <h:outputLabel value="${class}"/>
+                                                </p:column>
+                                            </p:dataTable>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -57,20 +59,21 @@
                                 <tbody>
                                     <tr>
                                         <td>Number of antiviruses:</td>
-                                        <td>52</td>
+                                        <td>#{SampleController.representation.numberAntiviruses}</td>
                                     </tr>
                                     <tr>
                                         <td>Number of positives:</td>
-                                        <td>40</td>
+                                        <td>#{SampleController.representation.positives}</td>
                                     </tr>
                                     <tr>
-                                        <td><a href="javascript:toggle('antivirusList');">Positive antiviruses:</a></td>
+                                        <td><a href="javascript:toggle('tablaAntivirus');">Positive antiviruses:</a></td>
                                         <td> <!-- hacer ocultable -->
-                                            <div id="antivirusList" class="list-group analysisList">
-                                                <a href="#" class="list-group-item">Primer antivirus</a>
-                                                <a href="#" class="list-group-item">Segundo antivirus</a>
-                                                <a href="#" class="list-group-item">Tercer antivirus</a>
-                                            </div>
+                                            <p:dataTable id="tablaAntivirus" var="antivirus" styleClass="" emptyMessage="This sample was not detected as a virus."
+                                                         value="${SampleController.representation.antiViruses}">
+                                                <p:column headerText="Positive antiviruses" styleClass="">
+                                                    <h:outputLabel value="${antivirus}"/>
+                                                </p:column>
+                                            </p:dataTable>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -89,16 +92,17 @@
                             <table class="table divAnalysis"> 
                                 <tbody>
                                     <tr>
-                                        <td>Permission 1</td>
-                                        <td style="color: red">SEVERE</td> <!-- poner en rojo severo-->
-                                    </tr>
-                                    <tr>
-                                        <td>Permission 2</td>
-                                        <td style="color: orange">DANGEROUS</td> <!-- poner en amarillo -->
-                                    </tr>
-                                    <tr>
-                                        <td>Permission 3</td>
-                                        <td style="color: greenyellow">NORMAL</td> <!-- poner en verde -->
+                                        <td>
+                                            <p:dataTable id="tablaPermisos" var="permiso" styleClass="" emptyMessage="This sample does not ask for permissions."
+                                                         value="${SampleController.representation.permissions}">
+                                                <p:column headerText="Permission" styleClass="">
+                                                    <h:outputLabel value="${permiso}"/>
+                                                </p:column>
+                                                <p:column headerText="Severity" styleClass="">
+                                                    <h:outputLabel value="SEVERE"/> <!-- PONERLE COLORES -->
+                                                </p:column>
+                                            </p:dataTable>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -115,20 +119,22 @@
                         <div class="col-md-7">
                             <div id="dnsQueriesDiv">
                                 <h5>DNS queries</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item">Query 1</li>
-                                    <li class="list-group-item">Query 2</li>
-                                    <li class="list-group-item">Query 3</li>
-                                </ul>
+                                <p:dataTable id="tablaDNS" var="dns" styleClass="" emptyMessage="This sample doesn't have DNS queries."
+                                             value="${SampleController.representation.dnsQueries}">
+                                    <p:column headerText="" styleClass="">
+                                        <h:outputLabel value="${dns}"/>
+                                    </p:column>
+                                </p:dataTable>
                             </div>
                             <hr/>
                             <div id="externalHostsDiv">
                                 <h5>External Hosts</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item">Host 1</li>
-                                    <li class="list-group-item">Host 2</li>
-                                    <li class="list-group-item">Host 3</li>
-                                </ul>
+                                <p:dataTable id="tablaHosts" var="host" styleClass="" emptyMessage="This sample doesn't connect with external hosts."
+                                             value="${SampleController.representation.externalHosts}">
+                                    <p:column headerText="" styleClass="">
+                                        <h:outputLabel value="${host}"/>
+                                    </p:column>
+                                </p:dataTable>
                             </div>
                         </div>
                         <div class="col-md-2"></div>

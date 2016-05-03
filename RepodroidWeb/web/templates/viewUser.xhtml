@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:composition template="globalTemplate.xhtml">
         <ui:define name="contenido">
             <ui:fragment  rendered="#{UserController.authenticated}">
@@ -32,18 +34,28 @@
                                 <a class="btn btn-primary buttonEditar" href="editUser.xhtml">Editar</a>
                             </div>
                             <div class="col-md-12 col-lg-12 sampleCountDiv">
-                                <span class="tituloPosts"> Samples analyzed: 1 </span>
+                                <span class="tituloPosts"> Samples analyzed: #{SampleController.currentUserSamples.size()} </span>
                                 <hr/>
                             </div>
                         </div>
                         <!--Inicio samples usuarios,ESTO DEBE HACERLO CON TABLAS DE PRIMEFACES-->
                         <div id="divSamplesUsuario" class="row sampleList">
-                            <div class="col-md-9 col-lg-9 postUsuarioView">
+                            <p:dataTable id="tablaMuestras" var="muestra" styleClass="" emptyMessage="You don't have any samples yet."
+                                         value="${SampleController.currentUserSamples}">
+                                <p:column headerText="Samples" styleClass="">
+                                    <h:form>
+                                        <p:commandLink action="#{SampleController.showSample()}" value="#{muestra.sampleName}">
+                                            <f:setPropertyActionListener value="${muestra}" target="${SampleController.toShow}" />
+                                        </p:commandLink>
+                                    </h:form>
+                                </p:column>
+                            </p:dataTable>
+                            <!--<div class="col-md-9 col-lg-9 postUsuarioView">
                                 <span class="cuerpoPost"><a href="#">Sample name/id</a></span>
                             </div>
                             <div class="col-md-3 col-lg-3">
                                 <span>Fecha de análisis: xx/yy/zzzz</span>
-                            </div>
+                            </div>-->
                         </div>
                         <!--Final post usuarios-->
                     </div>

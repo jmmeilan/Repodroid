@@ -57,7 +57,7 @@
                     <h:form id="formLogOut" styleClass="navbar-form navbar-right"  rendered="#{UserController.authenticated}">
                         <div class="form-group">
                             <!-- que este username lleve a tu usuario -->
-                            <h:link class="navbar-brand navbarItem userName" outcome="templates/viewUser">#{UserController.currentUser.username}</h:link>
+                            <h:link class="navbar-brand navbarItem userName" outcome="templates/#{SampleController.getSamplesFromUser()}">#{UserController.currentUser.username}</h:link>
                         </div>
                         <div class="form-group"> <!-- cambiar color-->
                             <b:commandButton look="success" icon="chevron-right" iconAlign="right" action="#{UserController.doLogOut()}" value="Log out"></b:commandButton>
