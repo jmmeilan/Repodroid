@@ -49,7 +49,7 @@ public class Prueba {
         for (Analysis analysis : analyses) {
             sample.addAnalysis(analysis.getAnalysisName(), analysis);
         }
-        sample.setId(store.computeNextSampleID());
+        //sample.setId(store.computeNextSampleID());
         store.storeSample(sample);
         store.close();        
         analyzer.terminate();
