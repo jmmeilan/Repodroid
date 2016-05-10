@@ -30,7 +30,7 @@ public class RepodroidAnalyzer implements Runnable {
     }
 
     private void sendNotification() {
-        String to = "josemeilan242@gmail.com";//this.email
+        String to = this.email;//this.email
         String from = "repodroidnotifications@gmail.com";
         final String username = "repodroidnotifications";
         final String password = "canesten";

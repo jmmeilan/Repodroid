@@ -87,8 +87,8 @@
                     <h4>Application permissions</h4>
                     <a id="hidePermissions" href="javascript:toggle2('apkPermissionsDiv','hidePermissions');">Hide</a>
                     <div class="row" id="apkPermissionsDiv">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-7">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
                             <table class="table divAnalysis"> 
                                 <tbody>
                                     <tr>
@@ -98,8 +98,13 @@
                                                 <p:column headerText="Permission" styleClass="">
                                                     <h:outputLabel value="${permiso}"/>
                                                 </p:column>
+                                            </p:dataTable>
+                                        </td>
+                                        <td>
+                                            <p:dataTable id="tablaSeveridad" var="severidad" styleClass="" emptyMessage="This sample does not ask for permissions."
+                                                         value="${SampleController.representation.severities}">
                                                 <p:column headerText="Severity" styleClass="">
-                                                    <h:outputLabel value="SEVERE"/> <!-- PONERLE COLORES -->
+                                                    <h:outputLabel value="${severidad}"/> <!-- PONERLE COLORES -->
                                                 </p:column>
                                             </p:dataTable>
                                         </td>
@@ -107,7 +112,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-md-2"></div>
+                        <div class="col-md-1"></div>
                     </div>
                     <!-- FIN PERMISSIONS INFO-->
                     <hr/> <!-- Poner de color negro -->
@@ -129,12 +134,14 @@
                             <hr/>
                             <div id="externalHostsDiv">
                                 <h5>External Hosts</h5>
-                                <p:dataTable id="tablaHosts" var="host" styleClass="" emptyMessage="This sample doesn't connect with external hosts."
-                                             value="${SampleController.representation.externalHosts}">
-                                    <p:column headerText="" styleClass="">
-                                        <h:outputLabel value="${host}"/>
-                                    </p:column>
-                                </p:dataTable>
+                                <div class="table-responsive">
+                                    <p:dataTable id="tablaHosts" var="host" tableStyleClass="" emptyMessage="This sample doesn't connect with external hosts."
+                                                 value="${SampleController.representation.externalHosts}">
+                                        <p:column headerText="" styleClass="">
+                                            <h:outputLabel value="${host}"/>
+                                        </p:column>
+                                    </p:dataTable>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-2"></div>

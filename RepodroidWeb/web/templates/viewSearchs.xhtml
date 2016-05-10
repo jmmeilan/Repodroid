@@ -10,7 +10,7 @@
             <div class="divAddSample">
                 <div class="jumbotron">
                     <h3>Search samples in the repository!</h3>
-                    <p>You can search by uploading a sample and search for similar samples or you can select the information you want to include in the search.</p>
+                    <p>You can search by using a previous uploaded sample to search for similar samples or you can select the information you want to include in the search.</p>
                 </div>
                 <div class="row">
                     <div class="col-md-3"></div>
@@ -20,8 +20,8 @@
                             <div class="form-group">
                                 <label class="selectLabel" for="firstname text-center">Select the type of search you want to use</label>
                             </div>
-                            <h:link value="Uploading a sample" 
-                                             outcome="similaritySearch.xhtml"
+                            <h:link value="Uploaded samples" 
+                                    outcome="#{SampleController.prepareSimilarityQuery()}"
                                              class="btn btn-default btn-primary btnCancelAddSample"/>
                             <h:link value="Submitting information" 
                                              outcome="informationSearch.xhtml"

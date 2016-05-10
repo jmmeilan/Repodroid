@@ -22,10 +22,10 @@
                                 <h:inputFile id="sample" value="#{SampleController.apkSample}"></h:inputFile>
                             </div>
                             <h:commandButton value="Cancel" 
-                                             action="../index.xhtml"
+                                             action="/index?faces-redirect=true"
                                              class="btn btn-default btn-primary btnCancelAddSample"/>
                             <h:commandButton value="Submit" 
-                                             action="../index.xhtml"
+                                             action="/index?faces-redirect=true"
                                              actionListener="#{SampleController.submitSample()}"
                                              class="btn btn-default btn-primary btn-success btnSubmitAddSample"/>
                         </h:form>

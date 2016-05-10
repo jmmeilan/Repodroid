@@ -28,4 +28,18 @@ public class SampleReferenceDao extends GenericDao<SampleReference> {
         return (searchById(sampleId) != null);
     }
 
+    public SampleReference getReferenceFromStoreId(String id) {
+        Query q = em.createQuery("SELECT s FROM SampleReference s "
+                + "WHERE s.storerID = :id");
+        q.setParameter("id", id);
+        return getUniqueResult(q);
+    }
+    
+    public SampleReference search(int id) {
+        Query q = em.createQuery("SELECT s FROM SampleReference s "
+                + "WHERE s.numSample = :id");
+        q.setParameter("id", id);
+        return getUniqueResult(q);
+    }
+
 }

@@ -20,6 +20,7 @@ public class SampleRepresentation {
     private List<String> antiViruses;
     private List<String> classes;
     private List<String> permissions;
+    private List<String> severities;
     private List<String> externalHosts;
     private List<String> dnsQueries;
     
@@ -27,6 +28,7 @@ public class SampleRepresentation {
         this.antiViruses =  new ArrayList();
         this.classes =  new ArrayList();
         this.permissions =  new ArrayList();
+        this.severities = new ArrayList();
         this.externalHosts =  new ArrayList();
         this.dnsQueries =  new ArrayList();
     }
@@ -94,7 +96,26 @@ public class SampleRepresentation {
     public void setDnsQueries(List<String> dnsQueries) {
         this.dnsQueries = dnsQueries;
     }
+
+    public List<String> getSeverities() {
+        return severities;
+    }
+
+    public void setSeverities(List<String> severities) {
+        this.severities = severities;
+    }
     
+    public void separatePermissions(){
+        List <String> newPermissions = new ArrayList();
+        for(String p: this.permissions){
+            if(p.contains(":")){
+                String [] parts = p.split(":");
+                newPermissions.add(parts[0]);
+                this.severities.add(parts[1]);
+            }
+        }
+        this.permissions = newPermissions;
+    }
     
 
 }

@@ -1,0 +1,2044 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2016-05-10T12:14:37</date>
+  <millis>1462875277824</millis>
+  <sequence>258</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Initializing sample store...</message>
+</record>
+<record>
+  <date>2016-05-10T12:14:37</date>
+  <millis>1462875277827</millis>
+  <sequence>260</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Initializing json storer...</message>
+</record>
+<record>
+  <date>2016-05-10T12:14:37</date>
+  <millis>1462875277996</millis>
+  <sequence>262</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Initializing lucene indexer...</message>
+</record>
+<record>
+  <date>2016-05-10T12:14:38</date>
+  <millis>1462875278476</millis>
+  <sequence>264</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Initializing analyzer...</message>
+</record>
+<record>
+  <date>2016-05-10T12:14:45</date>
+  <millis>1462875285698</millis>
+  <sequence>266</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>114</thread>
+  <message>Retrieving a sample from a json file...</message>
+</record>
+<record>
+  <date>2016-05-10T12:14:45</date>
+  <millis>1462875285865</millis>
+  <sequence>268</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>114</thread>
+  <message>output connections</message>
+</record>
+<record>
+  <date>2016-05-10T12:14:45</date>
+  <millis>1462875285865</millis>
+  <sequence>269</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>114</thread>
+  <message>antivirus analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:14:45</date>
+  <millis>1462875285866</millis>
+  <sequence>271</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>114</thread>
+  <message>Apk classes analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:14:45</date>
+  <millis>1462875285866</millis>
+  <sequence>272</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>114</thread>
+  <message>Apk permissions analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:04</date>
+  <millis>1462875304951</millis>
+  <sequence>276</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Retrieving a sample from a json file...</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:04</date>
+  <millis>1462875304986</millis>
+  <sequence>278</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>output connections</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:04</date>
+  <millis>1462875304987</millis>
+  <sequence>279</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>antivirus analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:04</date>
+  <millis>1462875304987</millis>
+  <sequence>280</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Apk classes analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:04</date>
+  <millis>1462875304987</millis>
+  <sequence>282</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Apk permissions analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:54</date>
+  <millis>1462875354313</millis>
+  <sequence>286</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>Starting a new search...</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:54</date>
+  <millis>1462875354548</millis>
+  <sequence>288</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>Creating a lucene query...</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:54</date>
+  <millis>1462875354663</millis>
+  <sequence>290</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>ID ENCONTRAOS: 306b9d4d-4769-4a8b-922f-01a3fad10bdf</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:54</date>
+  <millis>1462875354664</millis>
+  <sequence>292</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>Retrieving a sample from a json file...</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:54</date>
+  <millis>1462875354667</millis>
+  <sequence>294</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>ID ENCONTRAOS: ed89280c-2c43-428b-b4b2-cb5c1a4cc670</message>
+</record>
+<record>
+  <date>2016-05-10T12:15:54</date>
+  <millis>1462875354668</millis>
+  <sequence>296</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>Retrieving a sample from a json file...</message>
+</record>
+<record>
+  <date>2016-05-10T12:16:06</date>
+  <millis>1462875366076</millis>
+  <sequence>298</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>114</thread>
+  <message>Starting a new search...</message>
+</record>
+<record>
+  <date>2016-05-10T12:16:06</date>
+  <millis>1462875366080</millis>
+  <sequence>300</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>114</thread>
+  <message>Creating a lucene query...</message>
+</record>
+<record>
+  <date>2016-05-10T12:16:42</date>
+  <millis>1462875402556</millis>
+  <sequence>302</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>Retrieving a sample from a json file...</message>
+</record>
+<record>
+  <date>2016-05-10T12:16:42</date>
+  <millis>1462875402559</millis>
+  <sequence>304</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>output connections</message>
+</record>
+<record>
+  <date>2016-05-10T12:16:42</date>
+  <millis>1462875402559</millis>
+  <sequence>305</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>antivirus analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:16:42</date>
+  <millis>1462875402559</millis>
+  <sequence>306</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>Apk classes analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:16:42</date>
+  <millis>1462875402559</millis>
+  <sequence>308</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>112</thread>
+  <message>Apk permissions analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:00</date>
+  <millis>1462875420440</millis>
+  <sequence>312</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Starting a new search...</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:00</date>
+  <millis>1462875420441</millis>
+  <sequence>314</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Creating a lucene query...</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:00</date>
+  <millis>1462875420444</millis>
+  <sequence>317</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>Retrieving a sample from a json file...</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:00</date>
+  <millis>1462875420444</millis>
+  <sequence>316</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>111</thread>
+  <message>ID ENCONTRAOS: ed89280c-2c43-428b-b4b2-cb5c1a4cc670</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:03</date>
+  <millis>1462875423113</millis>
+  <sequence>320</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>110</thread>
+  <message>Retrieving a sample from a json file...</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:03</date>
+  <millis>1462875423115</millis>
+  <sequence>322</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>110</thread>
+  <message>output connections</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:03</date>
+  <millis>1462875423115</millis>
+  <sequence>323</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>110</thread>
+  <message>antivirus analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:03</date>
+  <millis>1462875423115</millis>
+  <sequence>324</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>110</thread>
+  <message>Apk classes analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:03</date>
+  <millis>1462875423115</millis>
+  <sequence>326</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>110</thread>
+  <message>Apk permissions analysis</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:04</date>
+  <millis>1462875424100</millis>
+  <sequence>330</sequence>
+  <logger>javax.enterprise.web.core</logger>
+  <level>INFO</level>
+  <class>org.apache.catalina.session.ManagerBase</class>
+  <method>log</method>
+  <thread>44</thread>
+  <message>Cannot serialize session attribute WELD_S#15 for session a279153978ad264d07d3c10e03a8</message>
+  <exception>
+    <message>java.io.NotSerializableException: java.util.logging.LogManager$RootLogger</message>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeObject0</method>
+      <line>1184</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>defaultWriteFields</method>
+      <line>1548</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeSerialData</method>
+      <line>1509</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeOrdinaryObject</method>
+      <line>1432</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeObject0</method>
+      <line>1178</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>defaultWriteFields</method>
+      <line>1548</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeSerialData</method>
+      <line>1509</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeOrdinaryObject</method>
+      <line>1432</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeObject0</method>
+      <line>1178</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>defaultWriteFields</method>
+      <line>1548</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeSerialData</method>
+      <line>1509</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeOrdinaryObject</method>
+      <line>1432</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeObject0</method>
+      <line>1178</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeObject</method>
+      <line>348</line>
+    </frame>
+    <frame>
+      <class>org.apache.catalina.session.StandardSession</class>
+      <method>writeObject</method>
+      <line>2196</line>
+    </frame>
+    <frame>
+      <class>sun.reflect.NativeMethodAccessorImpl</class>
+      <method>invoke0</method>
+    </frame>
+    <frame>
+      <class>sun.reflect.NativeMethodAccessorImpl</class>
+      <method>invoke</method>
+      <line>62</line>
+    </frame>
+    <frame>
+      <class>sun.reflect.DelegatingMethodAccessorImpl</class>
+      <method>invoke</method>
+      <line>43</line>
+    </frame>
+    <frame>
+      <class>java.lang.reflect.Method</class>
+      <method>invoke</method>
+      <line>497</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectStreamClass</class>
+      <method>invokeWriteObject</method>
+      <line>988</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeSerialData</method>
+      <line>1496</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeOrdinaryObject</method>
+      <line>1432</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeObject0</method>
+      <line>1178</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectOutputStream</class>
+      <method>writeObject</method>
+      <line>348</line>
+    </frame>
+    <frame>
+      <class>org.apache.catalina.session.StandardManager</class>
+      <method>writeSessions</method>
+      <line>762</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.web.WebModule</class>
+      <method>saveSessions</method>
+      <line>1730</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.web.WebContainer</class>
+      <method>unloadWebModule</method>
+      <line>2438</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.web.WebContainer</class>
+      <method>unloadWebModule</method>
+      <line>2394</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.web.WebApplication</class>
+      <method>stop</method>
+      <line>190</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.internal.data.EngineRef</class>
+      <method>stop</method>
+      <line>161</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.internal.data.ModuleInfo</class>
+      <method>stop</method>
+      <line>324</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.internal.data.ApplicationInfo</class>
+      <method>stop</method>
+      <line>380</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.server.ApplicationLifecycle</class>
+      <method>unload</method>
+      <line>1059</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.server.ApplicationLifecycle</class>
+      <method>undeploy</method>
+      <line>1099</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.deployment.admin.UndeployCommand</class>
+      <method>execute</method>
+      <line>412</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>539</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>535</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2</class>
+      <method>execute</method>
+      <line>534</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>565</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>557</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>556</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>1464</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>access$1300</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1846</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1722</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.deployment.admin.DeployCommand</class>
+      <method>handleRedeploy</method>
+      <line>724</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.deployment.admin.DeployCommand</class>
+      <method>execute</method>
+      <line>365</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>539</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>535</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2</class>
+      <method>execute</method>
+      <line>534</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>565</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>557</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>556</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>1464</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>access$1300</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1846</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1722</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.deployment.admin.ReDeployCommand</class>
+      <method>execute</method>
+      <line>131</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>539</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>535</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2</class>
+      <method>execute</method>
+      <line>534</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>565</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>557</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>556</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>1464</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>access$1300</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1846</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1722</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.AdminAdapter</class>
+      <method>doCommand</method>
+      <line>534</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.AdminAdapter</class>
+      <method>onMissingResource</method>
+      <line>224</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.http.server.StaticHttpHandlerBase</class>
+      <method>service</method>
+      <line>189</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable</class>
+      <method>call</method>
+      <line>459</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.services.impl.ContainerMapper</class>
+      <method>service</method>
+      <line>167</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.http.server.HttpHandler</class>
+      <method>runService</method>
+      <line>206</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.http.server.HttpHandler</class>
+      <method>doHandle</method>
+      <line>180</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.http.server.HttpServerFilter</class>
+      <method>handleRead</method>
+      <line>235</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.ExecutorResolver$9</class>
+      <method>execute</method>
+      <line>119</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.DefaultFilterChain</class>
+      <method>executeFilter</method>
+      <line>283</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.DefaultFilterChain</class>
+      <method>executeChainPart</method>
+      <line>200</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.DefaultFilterChain</class>
+      <method>execute</method>
+      <line>132</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.DefaultFilterChain</class>
+      <method>process</method>
+      <line>111</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.ProcessorExecutor</class>
+      <method>execute</method>
+      <line>77</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.nio.transport.TCPNIOTransport</class>
+      <method>fireIOEvent</method>
+      <line>536</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.strategies.AbstractIOStrategy</class>
+      <method>fireIOEvent</method>
+      <line>112</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.strategies.WorkerThreadIOStrategy</class>
+      <method>run0</method>
+      <line>117</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.strategies.WorkerThreadIOStrategy</class>
+      <method>access$100</method>
+      <line>56</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable</class>
+      <method>run</method>
+      <line>137</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker</class>
+      <method>doWork</method>
+      <line>591</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker</class>
+      <method>run</method>
+      <line>571</line>
+    </frame>
+    <frame>
+      <class>java.lang.Thread</class>
+      <method>run</method>
+      <line>745</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2016-05-10T12:17:04</date>
+  <millis>1462875424222</millis>
+  <sequence>332</sequence>
+  <logger>javax.enterprise.system.container.ejb.org.glassfish.ejb.startup</logger>
+  <level>INFO</level>
+  <class>org.glassfish.ejb.startup.EjbApplication</class>
+  <method>stop</method>
+  <thread>44</thread>
+  <message>keepstate options resolved to true, saving appId 95870748860416000 for application RepodroidWeb.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:04</date>
+  <millis>1462875424264</millis>
+  <sequence>334</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>44</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU logout successful</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:05</date>
+  <millis>1462875425665</millis>
+  <sequence>336</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426126</millis>
+  <sequence>338</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426182</millis>
+  <sequence>340</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426284</millis>
+  <sequence>342</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426291</millis>
+  <sequence>344</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426293</millis>
+  <sequence>346</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426294</millis>
+  <sequence>348</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426298</millis>
+  <sequence>350</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426300</millis>
+  <sequence>352</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426301</millis>
+  <sequence>354</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426303</millis>
+  <sequence>356</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426304</millis>
+  <sequence>358</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426307</millis>
+  <sequence>360</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426311</millis>
+  <sequence>362</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426313</millis>
+  <sequence>364</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426314</millis>
+  <sequence>366</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426316</millis>
+  <sequence>368</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426319</millis>
+  <sequence>370</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426332</millis>
+  <sequence>372</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426336</millis>
+  <sequence>374</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426339</millis>
+  <sequence>376</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426568</millis>
+  <sequence>378</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU</logger>
+  <level>INFO</level>
+  <thread>44</thread>
+  <message>EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150605-31e8258</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426797</millis>
+  <sequence>380</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>44</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU login successful</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426854</millis>
+  <sequence>382</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>44</thread>
+  <message>Portable JNDI names for EJB SampleReferenceDao: [java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>SampleReferenceDao</param>
+  <param>[java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</param>
+</record>
+<record>
+  <date>2016-05-10T12:17:06</date>
+  <millis>1462875426888</millis>
+  <sequence>384</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>44</thread>
+  <message>Portable JNDI names for EJB UserDao: [java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>UserDao</param>
+  <param>[java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</param>
+</record>
+<record>
+  <date>2016-05-10T12:17:07</date>
+  <millis>1462875427794</millis>
+  <sequence>386</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:07</date>
+  <millis>1462875427805</millis>
+  <sequence>388</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:07</date>
+  <millis>1462875427814</millis>
+  <sequence>390</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:07</date>
+  <millis>1462875427828</millis>
+  <sequence>392</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:07</date>
+  <millis>1462875427830</millis>
+  <sequence>394</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:07</date>
+  <millis>1462875427849</millis>
+  <sequence>396</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:07</date>
+  <millis>1462875427851</millis>
+  <sequence>398</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:07</date>
+  <millis>1462875427869</millis>
+  <sequence>400</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:10</date>
+  <millis>1462875430675</millis>
+  <sequence>402</sequence>
+  <logger>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</logger>
+  <level>INFO</level>
+  <class>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</class>
+  <method>onStartup</method>
+  <thread>44</thread>
+  <message>Registering WebSocket filter for url pattern /*</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:10</date>
+  <millis>1462875430676</millis>
+  <sequence>404</sequence>
+  <logger>org.omnifaces.ApplicationInitializer</logger>
+  <level>INFO</level>
+  <class>org.omnifaces.ApplicationInitializer</class>
+  <method>logOmniFacesVersion</method>
+  <thread>44</thread>
+  <message>Using OmniFaces version 2.3</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:10</date>
+  <millis>1462875430746</millis>
+  <sequence>406</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.config</logger>
+  <level>INFO</level>
+  <class>com.sun.faces.config.ConfigureListener</class>
+  <method>contextInitialized</method>
+  <thread>44</thread>
+  <message>Inicializando Mojarra 2.2.12 ( 20150720-0848 https://svn.java.net/svn/mojarra~svn/tags/2.2.12@14885) para el contexto '/RepodroidWeb'</message>
+  <key>jsf.config.listener.version</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-05-10T12:17:11</date>
+  <millis>1462875431324</millis>
+  <sequence>408</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>44</thread>
+  <message>This application is running on BootsFaces 0.9.0.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:11</date>
+  <millis>1462875431325</millis>
+  <sequence>410</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>44</thread>
+  <message>net.bootsfaces.listeners.AddResourcesListener ready for use.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:11</date>
+  <millis>1462875431378</millis>
+  <sequence>412</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.managedbean</logger>
+  <level>WARNING</level>
+  <class>com.sun.faces.mgbean.BeanManager</class>
+  <method>addBean</method>
+  <thread>44</thread>
+  <message>JSF1074: ya se ha registrado el bean administrado denominado 'now'.  Sustituyendo el tipo de clase de bean administrado java.util.Date existente por java.util.Date.</message>
+  <key>jsf.managed.bean.duplicate</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>now</param>
+  <param>java.util.Date</param>
+  <param>java.util.Date</param>
+</record>
+<record>
+  <date>2016-05-10T12:17:11</date>
+  <millis>1462875431987</millis>
+  <sequence>414</sequence>
+  <logger>org.primefaces.webapp.PostConstructApplicationEventListener</logger>
+  <level>INFO</level>
+  <class>org.primefaces.webapp.PostConstructApplicationEventListener</class>
+  <method>processEvent</method>
+  <thread>44</thread>
+  <message>Running on PrimeFaces 5.3</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:12</date>
+  <millis>1462875432187</millis>
+  <sequence>416</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>WARNING</level>
+  <class>com.sun.enterprise.web.WebModule</class>
+  <method>loadSessions</method>
+  <thread>44</thread>
+  <message>Unable to restore sessions for web module [/RepodroidWeb] from previous deployment</message>
+  <exception>
+    <message>java.lang.ClassCastException: cannot assign instance of java.lang.String to field es.uvigo.esei.tfg.repodroid.analysis.cuckoo.CuckooAnalyzer.logger of type java.util.logging.Logger in instance of es.uvigo.esei.tfg.repodroid.analysis.cuckoo.CuckooAnalyzer</message>
+    <frame>
+      <class>java.io.ObjectStreamClass$FieldReflector</class>
+      <method>setObjFieldValues</method>
+      <line>2089</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectStreamClass</class>
+      <method>setObjFieldValues</method>
+      <line>1261</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>defaultReadFields</method>
+      <line>1999</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readSerialData</method>
+      <line>1918</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readOrdinaryObject</method>
+      <line>1801</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject0</method>
+      <line>1351</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>defaultReadFields</method>
+      <line>1993</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readSerialData</method>
+      <line>1918</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readOrdinaryObject</method>
+      <line>1801</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject0</method>
+      <line>1351</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>defaultReadFields</method>
+      <line>1993</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readSerialData</method>
+      <line>1918</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readOrdinaryObject</method>
+      <line>1801</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject0</method>
+      <line>1351</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject</method>
+      <line>371</line>
+    </frame>
+    <frame>
+      <class>org.apache.catalina.session.StandardSession</class>
+      <method>readRemainingObject</method>
+      <line>2079</line>
+    </frame>
+    <frame>
+      <class>org.apache.catalina.session.StandardSession</class>
+      <method>readObject</method>
+      <line>1987</line>
+    </frame>
+    <frame>
+      <class>sun.reflect.NativeMethodAccessorImpl</class>
+      <method>invoke0</method>
+    </frame>
+    <frame>
+      <class>sun.reflect.NativeMethodAccessorImpl</class>
+      <method>invoke</method>
+      <line>62</line>
+    </frame>
+    <frame>
+      <class>sun.reflect.DelegatingMethodAccessorImpl</class>
+      <method>invoke</method>
+      <line>43</line>
+    </frame>
+    <frame>
+      <class>java.lang.reflect.Method</class>
+      <method>invoke</method>
+      <line>497</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectStreamClass</class>
+      <method>invokeReadObject</method>
+      <line>1017</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readSerialData</method>
+      <line>1896</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readOrdinaryObject</method>
+      <line>1801</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject0</method>
+      <line>1351</line>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject</method>
+      <line>371</line>
+    </frame>
+    <frame>
+      <class>org.apache.catalina.session.StandardSession</class>
+      <method>deserialize</method>
+      <line>1274</line>
+    </frame>
+    <frame>
+      <class>org.apache.catalina.session.StandardManager</class>
+      <method>readSessions</method>
+      <line>556</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.web.WebModule</class>
+      <method>loadSessions</method>
+      <line>1762</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.web.WebContainer</class>
+      <method>loadWebModule</method>
+      <line>2288</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.web.WebContainer</class>
+      <method>loadWebModule</method>
+      <line>1932</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.web.WebApplication</class>
+      <method>start</method>
+      <line>139</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.internal.data.EngineRef</class>
+      <method>start</method>
+      <line>122</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.internal.data.ModuleInfo</class>
+      <method>start</method>
+      <line>291</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.internal.data.ApplicationInfo</class>
+      <method>start</method>
+      <line>352</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.server.ApplicationLifecycle</class>
+      <method>deploy</method>
+      <line>500</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.server.ApplicationLifecycle</class>
+      <method>deploy</method>
+      <line>219</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.deployment.admin.DeployCommand</class>
+      <method>execute</method>
+      <line>491</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>539</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>535</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2</class>
+      <method>execute</method>
+      <line>534</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>565</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>557</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>556</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>1464</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>access$1300</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1846</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1722</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.deployment.admin.ReDeployCommand</class>
+      <method>execute</method>
+      <line>131</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>539</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>535</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2</class>
+      <method>execute</method>
+      <line>534</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>565</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$3</class>
+      <method>run</method>
+      <line>557</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>556</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>doCommand</method>
+      <line>1464</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl</class>
+      <method>access$1300</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1846</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext</class>
+      <method>execute</method>
+      <line>1722</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.AdminAdapter</class>
+      <method>doCommand</method>
+      <line>534</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.AdminAdapter</class>
+      <method>onMissingResource</method>
+      <line>224</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.http.server.StaticHttpHandlerBase</class>
+      <method>service</method>
+      <line>189</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable</class>
+      <method>call</method>
+      <line>459</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.services.impl.ContainerMapper</class>
+      <method>service</method>
+      <line>167</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.http.server.HttpHandler</class>
+      <method>runService</method>
+      <line>206</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.http.server.HttpHandler</class>
+      <method>doHandle</method>
+      <line>180</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.http.server.HttpServerFilter</class>
+      <method>handleRead</method>
+      <line>235</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.ExecutorResolver$9</class>
+      <method>execute</method>
+      <line>119</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.DefaultFilterChain</class>
+      <method>executeFilter</method>
+      <line>283</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.DefaultFilterChain</class>
+      <method>executeChainPart</method>
+      <line>200</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.DefaultFilterChain</class>
+      <method>execute</method>
+      <line>132</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.filterchain.DefaultFilterChain</class>
+      <method>process</method>
+      <line>111</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.ProcessorExecutor</class>
+      <method>execute</method>
+      <line>77</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.nio.transport.TCPNIOTransport</class>
+      <method>fireIOEvent</method>
+      <line>536</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.strategies.AbstractIOStrategy</class>
+      <method>fireIOEvent</method>
+      <line>112</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.strategies.WorkerThreadIOStrategy</class>
+      <method>run0</method>
+      <line>117</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.strategies.WorkerThreadIOStrategy</class>
+      <method>access$100</method>
+      <line>56</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable</class>
+      <method>run</method>
+      <line>137</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker</class>
+      <method>doWork</method>
+      <line>591</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker</class>
+      <method>run</method>
+      <line>571</line>
+    </frame>
+    <frame>
+      <class>java.lang.Thread</class>
+      <method>run</method>
+      <line>745</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2016-05-10T12:17:12</date>
+  <millis>1462875432198</millis>
+  <sequence>418</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebApplication</class>
+  <method>start</method>
+  <thread>44</thread>
+  <message>Loading application [RepodroidWeb] at [/RepodroidWeb]</message>
+  <key>AS-WEB-GLUE-00172</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>RepodroidWeb</param>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-05-10T12:17:12</date>
+  <millis>1462875432299</millis>
+  <sequence>420</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>org.glassfish.deployment.admin.DeployCommand</class>
+  <method>execute</method>
+  <thread>44</thread>
+  <message>RepodroidWeb was successfully deployed in 8.353 milliseconds.</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448039</millis>
+  <sequence>422</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.admin.StopServer</class>
+  <method>doExecute</method>
+  <thread>153</thread>
+  <message>Server shutdown initiated</message>
+  <key>NCLS-CORE-00092</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448056</millis>
+  <sequence>424</sequence>
+  <logger>javax.enterprise.bootstrap</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl</class>
+  <method>unregisterService</method>
+  <thread>153</thread>
+  <message>Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@258ee7de from service registry.</message>
+  <key>NCLS-BOOTSTRAP-00028</key>
+  <catalog>com.sun.enterprise.glassfish.bootstrap.LogMessages</catalog>
+  <param>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@258ee7de</param>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448057</millis>
+  <sequence>426</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>153</thread>
+  <message>FileMonitoring shutdown</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448076</millis>
+  <sequence>428</sequence>
+  <logger>javax.enterprise.system.jmx</logger>
+  <level>INFO</level>
+  <class>org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread</class>
+  <method>shutdown</method>
+  <thread>153</thread>
+  <message>JMXStartupService: Stopped JMXConnectorServer: null</message>
+  <key>NCLS-JMX-00002</key>
+  <catalog>org.glassfish.admin.mbeanserver.LogMessages</catalog>
+  <param>???</param>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448080</millis>
+  <sequence>430</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.admin.StopServer</class>
+  <method>doExecute</method>
+  <thread>154</thread>
+  <message>Server shutdown initiated</message>
+  <key>NCLS-CORE-00092</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448080</millis>
+  <sequence>432</sequence>
+  <logger>javax.enterprise.system.jmx</logger>
+  <level>INFO</level>
+  <class>org.glassfish.admin.mbeanserver.JMXStartupService</class>
+  <method>shutdown</method>
+  <thread>153</thread>
+  <message>JMXStartupService and JMXConnectors have been shut down.</message>
+  <key>NCLS-JMX-00001</key>
+  <catalog>org.glassfish.admin.mbeanserver.LogMessages</catalog>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448080</millis>
+  <sequence>434</sequence>
+  <logger>javax.enterprise.bootstrap</logger>
+  <level>WARNING</level>
+  <class>com.sun.enterprise.glassfish.bootstrap.LogFacade</class>
+  <method>log</method>
+  <thread>154</thread>
+  <message>Exception while unregistering: </message>
+  <key>NCLS-BOOTSTRAP-00029</key>
+  <catalog>com.sun.enterprise.glassfish.bootstrap.LogMessages</catalog>
+  <param>java.lang.IllegalStateException: Service already unregistered.</param>
+  <exception>
+    <message>java.lang.IllegalStateException: Service already unregistered.</message>
+    <frame>
+      <class>org.apache.felix.framework.ServiceRegistrationImpl</class>
+      <method>unregister</method>
+      <line>123</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl</class>
+      <method>unregisterService</method>
+      <line>93</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl</class>
+      <method>stop</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.StopServer</class>
+      <method>doExecute</method>
+      <line>78</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.StopDomainCommand</class>
+      <method>execute</method>
+      <line>96</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>539</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1</class>
+      <method>run</method>
+      <line>535</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>javax.security.auth.Subject</class>
+      <method>doAs</method>
+      <line>360</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.admin.CommandRunnerImpl$2</class>
+      <method>execute</method>
+      <line>534</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.api.AsyncImpl$1$1</class>
+      <method>run</method>
+      <line>76</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448339</millis>
+  <sequence>436</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>156</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU logout successful</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448430</millis>
+  <sequence>438</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>156</thread>
+  <message>JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]</message>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448446</millis>
+  <sequence>440</sequence>
+  <logger>javax.enterprise.resource.resourceadapter.com.sun.enterprise.connectors.service</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.connectors.service.ResourceAdapterAdminServiceImpl</class>
+  <method>sendStopToResourceAdapter</method>
+  <thread>162</thread>
+  <message>RAR7094: __ds_jdbc_ra shutdown successful.</message>
+  <key>ra.stop-successful</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>__ds_jdbc_ra</param>
+</record>
+<record>
+  <date>2016-05-10T12:17:28</date>
+  <millis>1462875448450</millis>
+  <sequence>442</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.server.AppServerStartup</class>
+  <method>stop</method>
+  <thread>153</thread>
+  <message>Shutdown procedure finished</message>
+  <key>NCLS-CORE-00013</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+</record>
+</log>

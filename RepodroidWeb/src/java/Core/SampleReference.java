@@ -1,6 +1,7 @@
 package Core;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,26 +11,26 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+@Entity
+@Table(name = "Sample_References")
+public class SampleReference implements Serializable {
 
-@Entity @Table(name="Sample_References")
-public class SampleReference implements Serializable{
-    
-    @Id @GeneratedValue(strategy=GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "NUM_SAMPLE")
     private int numSample;
-    @ManyToOne @JoinColumn(name="USERID")
+    @ManyToOne
+    @JoinColumn(name = "USERID")
     private User user;
-    @Column(name="SAMPLE_PATH")
+    @Column(name = "SAMPLE_PATH")
     private String samplePath;
-    @Column(name="STORER_ID")
+    @Column(name = "STORER_ID")
     private String storerID;
-    @Column(name="SAMPLE_NAME")
+    @Column(name = "SAMPLE_NAME")
     private String sampleName;
-    //METER AQUI NOMBRE DEL SAMPLE
-    
+
     public SampleReference() {
     }
-
 
     public String getSamplePath() {
         return samplePath;
@@ -66,12 +67,36 @@ public class SampleReference implements Serializable{
     public void setSampleName(String sampleName) {
         this.sampleName = sampleName;
     }
-    
-    
 
     public void setStorerID(String storerID) {
         this.storerID = storerID;
     }
-    
-    
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.numSample);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final SampleReference other = (SampleReference) obj;
+        if (!Objects.equals(this.numSample, other.numSample)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Sample{" + "id=" + this.getNumSample() + ", name=" + this.sampleName + "}";
+    }
+
 }

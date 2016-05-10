@@ -1,3 +1,7 @@
+.ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td {
+    border-style: none;
+}
+
 .body {
     padding: 0 !important;
 }
