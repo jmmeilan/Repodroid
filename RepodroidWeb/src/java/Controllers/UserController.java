@@ -18,9 +18,9 @@ import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.servlet.http.Part;
 
-@Named(value="UserController")
+@Named(value = "UserController")
 @SessionScoped
-public class UserController implements Serializable{
+public class UserController implements Serializable {
 
     private boolean authenticated;
     private User currentUser;
@@ -102,9 +102,12 @@ public class UserController implements Serializable{
                 }
             }
         }
+        this.email = "";
+        this.password = "";
+        this.userName = "";
     }
 
-    public void edit() {
+    public String edit() {
         if (this.password == null) {
             this.password = this.currentUser.getPassword();
         }
@@ -136,13 +139,18 @@ public class UserController implements Serializable{
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "There was an error while editing", ""));
         }
         this.currentUser = this.userDAO.searchByEmail(this.currentUser.getEmail());
+        this.email = "";
+        this.password = "";
+        this.userName = "";
+        return "/index?faces-redirect=true";
     }
 
-    //Returns true if the registration was done successfully ESTO SOBRA?
-    public boolean register() {
+    public String register() {
         boolean registered = false;
         if (this.email == null || this.password == null) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "You must introduce your email and password", ""));
+        } else if (this.userDAO.checkData(this.userName, this.email)) {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "That email or username is not available", ""));
         } else {
             String picturePath;
             if (this.picture != null) {
@@ -172,11 +180,20 @@ public class UserController implements Serializable{
                     this.email,
                     picturePath);
             registered = this.userDAO.register(toRegister);
+            if (!registered) {
+                FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "There was an error in the registration", ""));
+            }
         }
-        if (!registered) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "There was an error in the registration", ""));
+
+        this.email = "";
+        this.password = "";
+        this.userName = "";
+
+        if (registered) {
+            return "/index?faces-redirect=true";
+        } else {
+            return "register.xhtml";
         }
-        return registered;
     }
 
     private boolean authenticate(int userId,
@@ -195,12 +212,15 @@ public class UserController implements Serializable{
     public String doLogOut() {
         this.authenticated = false;
         this.currentUser = null;
+        this.email = "";
+        this.password = "";
+        this.userName = "";
 
         // End the session        
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 
         // Volver a la página principal
-        return "/index?faces-redirect=true"; //Como funciona esto¿?
+        return "/index?faces-redirect=true";
     }
 
 }

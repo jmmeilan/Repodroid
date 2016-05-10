@@ -34,7 +34,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
-import javax.enterprise.context.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
@@ -43,7 +43,7 @@ import javax.servlet.http.Part;
 
 @Named(value = "SampleController")
 //DEBE SER ESTO REQUESTSCOPED O CONVERSATIONSCOPED???? 
-@SessionScoped
+@RequestScoped
 public class SampleController implements Serializable {
 
     private static Handler fh;
@@ -287,8 +287,11 @@ public class SampleController implements Serializable {
     }
 
     public String prepareSimilarityQuery() {
-        this.currentUserSamples = this.sampleDao.getAllSamplesFromUser(this.userBean.getCurrentUser().getNumUser());
-        return "similaritySearch.xhtml";
+        if (this.userBean.isAuthenticated()) {
+            this.currentUserSamples = this.sampleDao.getAllSamplesFromUser(this.userBean.getCurrentUser().getNumUser());
+            return "similaritySearch.xhtml";
+        }
+        return "/index?faces-redirect=true";
     }
 
     public String doSimilarityQuery() {

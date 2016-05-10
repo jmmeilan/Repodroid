@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:b="http://bootsfaces.net/ui"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:composition template="globalTemplate.xhtml">
         <ui:define name="contenido">
             <!-- Main div para el formulario de registro -->
@@ -21,24 +22,27 @@
                                 <label class="control-label"  for="username">Username</label>
                                 <div class="controls">
                                     <b:inputText type="text" id="nombreUsuario" class="input-xlarge" required="true" value="#{UserController.userName}"></b:inputText>
-                                    <p class="help-block">Your username</p>
+                                    <p class="help-block">The username you will have in Repodroid</p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <!-- Password-->
                                 <label class="control-label" for="password">Password</label>
                                 <div class="controls">
-                                    <b:inputText type="password" id="contraseña" class="input-xlarge" required="true" value="#{UserController.password}"></b:inputText>
-                                    <!--COMPROBAR CON JS Y EN BEAN-->
-                                    <p class="help-block">Password must be at least 6 characters long</p>
+                                    <b:inputText validatorMessage="The password did not meet the requirements" type="password" id="contraseña" class="input-xlarge" required="true" value="#{UserController.password}">
+                                         <f:validateRegex pattern="((?=.*\d)(?=.*[@#$%]).{6,20})" />
+                                    </b:inputText>
+                                    <p class="help-block">Password must be at least 6 characters long and it must include at least one number and one special symbol (@#~%)</p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <!-- E-mail -->
                                 <label class="control-label" for="email">Email</label>
                                 <div class="controls">
-                                    <b:inputText type="text" id="email" placeholder="" class="input-xlarge" required="true" value="#{UserController.email}"></b:inputText>
-                                    <p class="help-block">Your email</p>
+                                    <b:inputText validatorMessage="That is not a valid email address" type="text" id="email" class="input-xlarge" required="true" value="#{UserController.email}">
+                                         <f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+                                    </b:inputText>
+                                    <p class="help-block">A valid email address</p>
                                 </div>
                             </div>
                             <div class="control-group">
@@ -50,7 +54,7 @@
                             </div>
                             <div class="control-group">
                                 <div  class="controls buttonRegistro">
-                                    <h:commandButton class="btn btn-success btnRegister" value="Register" action="index.xhtml" actionListener="#{UserController.register()}"></h:commandButton>
+                                    <h:commandButton class="btn btn-success btnRegister" value="Register" action="#{UserController.register()}"></h:commandButton>
                                 </div>
                             </div>
                         </fieldset>

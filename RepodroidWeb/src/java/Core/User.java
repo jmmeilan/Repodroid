@@ -21,7 +21,7 @@ public class User implements Serializable{
     private String username;
     @Column(name = "PASSWORD")
     private String password;
-    @Column(name = "EMAIL")
+    @Column(name = "EMAIL", unique = true)
     private String email;
     @Column(name = "IMAGE_PATH")
     private String picturePath;
