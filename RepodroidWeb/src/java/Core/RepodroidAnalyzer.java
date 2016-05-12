@@ -15,6 +15,10 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class RepodroidAnalyzer implements Runnable {
+    
+    public static String email_sender = "repodroidnotifications@gmail.com";
+    public static String username =  "repodroidnotifications";
+    public static String password = "canesten";
 
     private SampleStore store;
     private CuckooAnalyzer analyzer;
@@ -30,11 +34,6 @@ public class RepodroidAnalyzer implements Runnable {
     }
 
     private void sendNotification() {
-        String to = this.email;//this.email
-        String from = "repodroidnotifications@gmail.com";
-        final String username = "repodroidnotifications";
-        final String password = "canesten";
-
         // Assuming you are sending email through relay.jangosmtp.net
         String host = "smtp.gmail.com";
 
@@ -53,13 +52,13 @@ public class RepodroidAnalyzer implements Runnable {
         });
         try {
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(from));
+            message.setFrom(new InternetAddress(email_sender));
             message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse(to));
+                    InternetAddress.parse(this.email));
             message.setSubject("Analysis complete");
             message.setText("The analysis you submitted is ready."
                     + "You can check the report by accesing your account "
-                    + "information in Repodroid,");
+                    + "information in Repodroid.");
             Transport.send(message);
         } catch (MessagingException e) {
             throw new RuntimeException(e);
@@ -73,8 +72,6 @@ public class RepodroidAnalyzer implements Runnable {
             this.sampleToAnalyze.addAnalysis(analysis.getAnalysisName(), analysis);
         }
         this.store.storeSample(this.sampleToAnalyze);
-        this.store.close();
-        this.analyzer.terminate();
         //Codigo para enviar un email de notificacion
         sendNotification();
     }

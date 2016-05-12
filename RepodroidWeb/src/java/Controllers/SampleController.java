@@ -33,8 +33,9 @@ import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.ejb.EJB;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
@@ -43,8 +44,13 @@ import javax.servlet.http.Part;
 
 @Named(value = "SampleController")
 //DEBE SER ESTO REQUESTSCOPED O CONVERSATIONSCOPED???? 
-@RequestScoped
+@SessionScoped
 public class SampleController implements Serializable {
+
+    public static String logPath = "/home/jmmeilan/Descargas/Repodroid/"
+            + "RepodroidWeb/web/resources/webResources/log/system.log";
+    public static String sampleStorePath = "/home/jmmeilan/Descargas/Repodroid/"
+            + "RepodroidWeb/web/resources/sampleStore";
 
     private static Handler fh;
     private static Logger logger;
@@ -157,15 +163,13 @@ public class SampleController implements Serializable {
     public void inicializar() {
         this.sample = new SampleReference();
         try {
-            fh = new FileHandler("/home/jmmeilan/Descargas/Repodroid/"
-                    + "RepodroidWeb/web/resources/webResources/log/system.log");
+            fh = new FileHandler(logPath);
             logger = Logger.getLogger("");
             logger.addHandler(fh);
         } catch (IOException | SecurityException ex) {
             logger.log(Level.SEVERE, null, ex);
         }
-        this.store = new SampleStore("/home/jmmeilan/Descargas/Repodroid/"
-                + "RepodroidWeb/web/resources/sampleStore");
+        this.store = new SampleStore(sampleStorePath);
         this.jsonStorer = new JSONStorer();
         this.luceneIndexer = new LuceneIndexer();
         this.store.setStorer(jsonStorer);
@@ -175,39 +179,48 @@ public class SampleController implements Serializable {
         this.analyzer.initialize(logger);
     }
 
-    public void submitSample() {
-        String extension = this.apkSample.getSubmittedFileName()
-                .substring(apkSample.getSubmittedFileName().lastIndexOf(".") + 1, apkSample.getSubmittedFileName().length());
-        if ((this.apkSample != null)
-                && (extension.equals("apk"))) {
-            String samplePath = "/home/jmmeilan/Descargas/Repodroid/"
-                    + "RepodroidWeb/web/resources/sampleStore/SAMPLES/"
-                    + this.userBean.getCurrentUser().getUsername() + "_"
-                    + this.apkSample.getSubmittedFileName();
-            try (InputStream input = this.apkSample.getInputStream()) {
-                File samp = new File(samplePath);
-                if (!samp.exists()) {
-                    Files.copy(input, samp.toPath());
+    @PreDestroy
+    public void finalize() {
+        this.store.close();
+        this.analyzer.terminate();
+    }
+
+    public String submitSample() {
+        if (this.apkSample != null) {
+            String extension = this.apkSample.getSubmittedFileName()
+                    .substring(apkSample.getSubmittedFileName().lastIndexOf(".") + 1, apkSample.getSubmittedFileName().length());
+            if (extension.equals("apk")) {
+                String samplePath = sampleStorePath + "/SAMPLES/"
+                        + this.userBean.getCurrentUser().getUsername() + "_"
+                        + this.apkSample.getSubmittedFileName();
+                try (InputStream input = this.apkSample.getInputStream()) {
+                    File samp = new File(samplePath);
+                    if (!samp.exists()) {
+                        Files.copy(input, samp.toPath());
+                    }
+                    this.sample.setSamplePath(samplePath);
+                    this.sample.setUser(this.userBean.getCurrentUser());
+                    Sample sampleToAnalyze = new Sample(samplePath, SampleType.APK);
+                    sampleToAnalyze.setId(SampleStore.computeNextSampleID());
+                    this.sample.setStorerID(sampleToAnalyze.getId());
+                    this.sample.setSampleName(this.apkSample.getSubmittedFileName());
+                    Thread thread = (new Thread(
+                            new RepodroidAnalyzer(this.store, this.analyzer,
+                                    sampleToAnalyze,
+                                    this.userBean.getCurrentUser().getEmail())));
+                    thread.start();
+                    this.sampleDao.create(this.sample);
+                    this.apkSample.getInputStream().close();
+                } catch (IOException ex) {
+                    Logger.getLogger(SampleController.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                this.sample.setSamplePath(samplePath);
-                this.sample.setUser(this.userBean.getCurrentUser());
-                Sample sampleToAnalyze = new Sample(samplePath, SampleType.APK);
-                sampleToAnalyze.setId(SampleStore.computeNextSampleID());
-                this.sample.setStorerID(sampleToAnalyze.getId());
-                this.sample.setSampleName(this.apkSample.getSubmittedFileName());
-                Thread thread = (new Thread(
-                        new RepodroidAnalyzer(this.store, this.analyzer,
-                                sampleToAnalyze,
-                                this.userBean.getCurrentUser().getEmail())));
-                thread.start();
-                this.sampleDao.create(this.sample);
-                this.apkSample.getInputStream().close();
-            } catch (IOException ex) {
-                Logger.getLogger(SampleController.class.getName()).log(Level.SEVERE, null, ex);
+            } else {
+                FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "The submitted file does not have the extension apk", ""));
             }
         } else {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "You must submit an .apk file", ""));
         }
+        return "/index.xhtml";
     }
 
     public String getSamplesFromUser() {

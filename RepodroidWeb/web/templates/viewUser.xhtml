@@ -21,11 +21,11 @@
                                     <tbody>
                                         <tr>    
                                             <td>Username:</td>
-                                            <td>#{UserController.currentUser.username}</td>
+                                            <td><h:outputText value="#{UserController.currentUser.username}"/></td>
                                         </tr>
                                         <tr>
                                             <td>Email:</td>
-                                            <td>#{UserController.currentUser.email}</td>
+                                            <td><h:outputText value="#{UserController.currentUser.email}"/></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -38,7 +38,6 @@
                                 <hr/>
                             </div>
                         </div>
-                        <!--Inicio samples usuarios,ESTO DEBE HACERLO CON TABLAS DE PRIMEFACES-->
                         <div id="divSamplesUsuario" class="row sampleList">
                             <p:dataTable id="tablaMuestras" var="muestra" styleClass="" emptyMessage="You don't have any samples yet."
                                          value="${SampleController.currentUserSamples}">
@@ -50,12 +49,6 @@
                                     </h:form>
                                 </p:column>
                             </p:dataTable>
-                            <!--<div class="col-md-9 col-lg-9 postUsuarioView">
-                                <span class="cuerpoPost"><a href="#">Sample name/id</a></span>
-                            </div>
-                            <div class="col-md-3 col-lg-3">
-                                <span>Fecha de análisis: xx/yy/zzzz</span>
-                            </div>-->
                         </div>
                         <!--Final post usuarios-->
                     </div>

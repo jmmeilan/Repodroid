@@ -1,6 +1,5 @@
 package Core;
 
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;

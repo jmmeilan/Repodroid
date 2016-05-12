@@ -22,12 +22,18 @@ import javax.servlet.http.Part;
 @SessionScoped
 public class UserController implements Serializable {
 
+    public static String picturesDir = "/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/"
+            + "web/resources/webResources/img/";
+
     private boolean authenticated;
     private User currentUser;
     private String userName;
     private String password;
     private String email;
     private Part picture;
+    //Para el formulario
+    private String form_pass;
+    private String form_email;
 
     @EJB
     private UserDao userDAO;
@@ -89,7 +95,23 @@ public class UserController implements Serializable {
         this.picture = picture;
     }
 
-    public void doLogin() {
+    public String getForm_pass() {
+        return form_pass;
+    }
+
+    public void setForm_pass(String form_pass) {
+        this.form_pass = form_pass;
+    }
+
+    public String getForm_email() {
+        return form_email;
+    }
+
+    public void setForm_email(String form_email) {
+        this.form_email = form_email;
+    }
+
+    public String doLogin() {
         if (this.email.equals("") || this.password.equals("")) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "You need to introduce your email and password in order to log in", ""));
         } else {
@@ -98,23 +120,22 @@ public class UserController implements Serializable {
                 if (authenticate(user.getNumUser(), this.password)) {
                     FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Login successful", ""));
                 } else {
-                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Wrong email or password", ""));
+                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Wrong email or password", ""));
                 }
+            } else {
+                FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Wrong email or password", ""));
             }
         }
-        this.email = "";
-        this.password = "";
-        this.userName = "";
+        return "/index.xhtml";
     }
 
     public String edit() {
-        if (this.password == null) {
-            this.password = this.currentUser.getPassword();
+        if (this.form_pass == null) {
+            this.form_pass = this.currentUser.getPassword();
         }
         String picturePath;
         if (this.picture != null) {
-            picturePath = "/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/"
-                    + "web/resources/webResources/img/"
+            picturePath = picturesDir
                     + this.currentUser.getUsername() + "_"
                     + this.picture.getSubmittedFileName();
             try (InputStream input = this.picture.getInputStream()) {
@@ -133,30 +154,26 @@ public class UserController implements Serializable {
         } else {
             picturePath = this.currentUser.getPicturePath();
         }
-        this.userDAO.updatePassword(this.currentUser.getNumUser(), this.password);
+        this.userDAO.updatePassword(this.currentUser.getNumUser(), this.form_pass);
         User edited = this.userDAO.updatePicture(this.currentUser.getNumUser(), picturePath);
         if (edited == null) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "There was an error while editing", ""));
         }
         this.currentUser = this.userDAO.searchByEmail(this.currentUser.getEmail());
-        this.email = "";
-        this.password = "";
-        this.userName = "";
         return "/index?faces-redirect=true";
     }
 
     public String register() {
         boolean registered = false;
-        if (this.email == null || this.password == null) {
+        if (this.form_email == null || this.form_pass == null) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "You must introduce your email and password", ""));
-        } else if (this.userDAO.checkData(this.userName, this.email)) {
+        } else if (this.userDAO.checkData(this.userName, this.form_email)) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "That email or username is not available", ""));
         } else {
             String picturePath;
             if (this.picture != null) {
-                picturePath = "/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/"
-                        + "web/resources/webResources/img/"
-                        + this.currentUser.getUsername() + "_"
+                picturePath = picturesDir
+                        + this.userName + "_"
                         + this.picture.getSubmittedFileName();
                 try (InputStream input = this.picture.getInputStream()) {
                     File img = new File(picturePath);
@@ -164,7 +181,7 @@ public class UserController implements Serializable {
                         Files.copy(input, img.toPath());
                     }
                     this.picture.getInputStream().close();
-                    picturePath = "img/" + this.currentUser.getUsername() + "_"
+                    picturePath = "img/" + this.userName + "_"
                             + this.picture.getSubmittedFileName();
                 } catch (FileNotFoundException ex) {
                     Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
@@ -176,18 +193,14 @@ public class UserController implements Serializable {
             }
 
             User toRegister = new User(this.userName,
-                    this.password,
-                    this.email,
+                    this.form_pass,
+                    this.form_email,
                     picturePath);
             registered = this.userDAO.register(toRegister);
             if (!registered) {
                 FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "There was an error in the registration", ""));
             }
         }
-
-        this.email = "";
-        this.password = "";
-        this.userName = "";
 
         if (registered) {
             return "/index?faces-redirect=true";

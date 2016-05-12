@@ -50,14 +50,16 @@
                         </div> 
                         #{' '}
                         <span class="btn-group">
-                            <b:commandButton value="Log in" action="index.xhtml"  actionListener="#{UserController.doLogin()}" look="success" icon="chevron-right" iconAlign="right"/>
-                            <b:commandButton value="" action="templates/register.xhtml" iconAlign="right">Sign up  <b:iconAwesome name="fa-angle-double-right" size="lg"/></b:commandButton>
+                            <b:commandButton value="Log in" action="#{UserController.doLogin()}" look="success" icon="chevron-right" iconAlign="right"/>
+                            <b:button value="Sign up" outcome="templates/register.xhtml" iconAlign="right" iconAwesome="fa-angle-double-right"></b:button>                                                       
                         </span>
                     </h:form>
                     <h:form id="formLogOut" styleClass="navbar-form navbar-right"  rendered="#{UserController.authenticated}">
                         <div class="form-group">
                             <!-- que este username lleve a tu usuario -->
-                            <h:link class="navbar-brand navbarItem userName" outcome="templates/#{SampleController.getSamplesFromUser()}">#{UserController.currentUser.username}</h:link>
+                            <h:link class="navbar-brand navbarItem userName" outcome="templates/#{SampleController.getSamplesFromUser()}">
+                                <h:outputText value="#{UserController.currentUser.username}"/>
+                            </h:link>
                         </div>
                         <div class="form-group"> <!-- cambiar color-->
                             <b:commandButton look="success" icon="chevron-right" iconAlign="right" action="#{UserController.doLogOut()}" value="Log out"></b:commandButton>

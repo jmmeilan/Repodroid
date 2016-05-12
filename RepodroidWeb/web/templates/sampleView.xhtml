@@ -9,7 +9,7 @@
         <ui:define name="contenido">
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Sample report: #{SampleController.toShow.sampleName}</h3>
+                    <h3><h:outputText value="Sample report: #{SampleController.toShow.sampleName}"/></h3>
                     <hr/> <!-- Poner de color negro -->
                     <!-- INICIO GENERAL INFO -->
                     <h4>General information</h4>
@@ -21,7 +21,7 @@
                                 <tbody>
                                     <tr>
                                         <td>Sample's id:</td>
-                                        <td>#{SampleController.toShow.numSample}</td>
+                                        <td><h:outputText value="#{SampleController.toShow.numSample}"/></td>
                                     </tr>
                                     <tr>
                                         <td>Sample's type:</td>
@@ -29,7 +29,7 @@
                                     </tr>
                                     <tr>
                                         <td>Analysis' date:</td>
-                                        <td>#{SampleController.representation.scanDate}</td>
+                                        <td><h:outputText value="#{SampleController.representation.scanDate}"/></td>
                                     </tr>
                                     <tr>
                                         <td><a href="javascript:toggle('tablaClases');">Apk's classes:</a></td>
@@ -59,11 +59,11 @@
                                 <tbody>
                                     <tr>
                                         <td>Number of antiviruses:</td>
-                                        <td>#{SampleController.representation.numberAntiviruses}</td>
+                                        <td><h:outputText value="#{SampleController.representation.numberAntiviruses}"/></td>
                                     </tr>
                                     <tr>
                                         <td>Number of positives:</td>
-                                        <td>#{SampleController.representation.positives}</td>
+                                        <td><h:outputText value="#{SampleController.representation.positives}"/></td>
                                     </tr>
                                     <tr>
                                         <td><a href="javascript:toggle('tablaAntivirus');">Positive antiviruses:</a></td>

@@ -50,13 +50,15 @@
                         </div> 
                         #{' '}
                         <span class="btn-group">
-                            <b:commandButton value="Sign in" action="/index?faces-redirect=true"  actionListener="#{UserController.doLogin()}" look="success" icon="chevron-right" iconAlign="right"/>
-                            <b:commandButton value="" action="register.xhtml" iconAlign="right">Sign up  <b:iconAwesome name="fa-angle-double-right" size="lg"/></b:commandButton>
+                            <b:commandButton value="Sign in" action="#{UserController.doLogin()}" look="success" icon="chevron-right" iconAlign="right"/>
+                            <b:button value="Sign up" outcome="register.xhtml" iconAlign="right" iconAwesome="angle-double-right"></b:button>
                         </span>
                     </h:form>
                     <h:form id="formLogOut" styleClass="navbar-form navbar-right"  rendered="#{UserController.authenticated}">
                         <div class="form-group">
-                            <h:link class="navbar-brand navbarItem userName" outcome="#{SampleController.getSamplesFromUser()}">#{UserController.currentUser.username}</h:link>
+                            <h:link class="navbar-brand navbarItem userName" outcome="#{SampleController.getSamplesFromUser()}">
+                                <h:outputText value="#{UserController.currentUser.username}"/>
+                            </h:link>
                         </div>
                         <div class="form-group"> <!-- cambiar color-->
                             <b:commandButton icon="chevron-right" iconAlign="right" action="#{UserController.doLogOut()}" look="success" value="Log out"></b:commandButton>
