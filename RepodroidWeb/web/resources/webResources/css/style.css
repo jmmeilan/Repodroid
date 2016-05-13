@@ -1,5 +1,17 @@
-.ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td {
-    border-style: none;
+.ui-datatable tbody td, .ui-datatable tfoot td {
+    border-bottom: 1px solid #ddd !important;
+    padding: 15px;
+    text-align: center;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.ui-datatable thead th{
+    border-style: none !important;
+}
+
+.sample-table > tbody > tr > td{
+    border: none;
 }
 
 .body {
@@ -83,7 +95,7 @@ footer a:hover{
 }
 
 .index{
-    background-image: url(http://wallpaperus.org/wallpapers/08/281/cellphones-smartphones-2560x1600-wallpaper-2419294.jpg);
+    background-image: url(http://randomwallpapers.net/smartphones-android-1920x1200-wallpaper76857.jpg);
     background-size: cover;
     height: 100vh;
     width: 100vw !important;
@@ -188,6 +200,11 @@ background-image: linear-gradient(to bottom, #4F4F4F 0%, #1A1A1A 100%);
 }
 
 /*Estilo para el sampleview*/
+.output-connection{
+    margin-left: 42%;
+    font-size: 15px;
+}
+
 .divAnalysis{
     padding-top: 10px;
 }

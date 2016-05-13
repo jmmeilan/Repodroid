@@ -39,16 +39,20 @@
                             </div>
                         </div>
                         <div id="divSamplesUsuario" class="row sampleList">
-                            <p:dataTable id="tablaMuestras" var="muestra" styleClass="" emptyMessage="You don't have any samples yet."
-                                         value="${SampleController.currentUserSamples}">
-                                <p:column headerText="Samples" styleClass="">
-                                    <h:form>
-                                        <p:commandLink action="#{SampleController.showSample()}" value="#{muestra.sampleName}">
-                                            <f:setPropertyActionListener value="${muestra}" target="${SampleController.toShow}" />
-                                        </p:commandLink>
-                                    </h:form>
-                                </p:column>
-                            </p:dataTable>
+                            <div class="col-md-1"/>
+                            <div class="table-responsive col-md-10">
+                                <p:dataTable id="tablaMuestras" var="muestra" tableStyleClass="table table-hover" emptyMessage="You don't have any samples yet."
+                                             value="${SampleController.currentUserSamples}">
+                                    <p:column headerText="Samples" styleClass="">
+                                        <h:form>
+                                            <p:commandLink action="#{SampleController.showSample()}" value="#{muestra.sampleName}">
+                                                <f:setPropertyActionListener value="${muestra}" target="${SampleController.toShow}" />
+                                            </p:commandLink>
+                                        </h:form>
+                                    </p:column>
+                                </p:dataTable>
+                            </div>
+                            <div class="col-md-1"/>
                         </div>
                         <!--Final post usuarios-->
                     </div>

@@ -34,9 +34,9 @@
                                     <tr>
                                         <td><a href="javascript:toggle('tablaClases');">Apk's classes:</a></td>
                                         <td>
-                                            <p:dataTable id="tablaClases" var="class" styleClass="" emptyMessage="This sample doesn't have any classes."
+                                            <p:dataTable id="tablaClases" var="class" tableStyleClass="sample-table" emptyMessage="This sample doesn't have any classes."
                                                          value="${SampleController.representation.classes}">
-                                                <p:column headerText="Classes" styleClass="">
+                                                <p:column headerText="" styleClass="">
                                                     <h:outputLabel value="${class}"/>
                                                 </p:column>
                                             </p:dataTable>
@@ -68,9 +68,9 @@
                                     <tr>
                                         <td><a href="javascript:toggle('tablaAntivirus');">Positive antiviruses:</a></td>
                                         <td> <!-- hacer ocultable -->
-                                            <p:dataTable id="tablaAntivirus" var="antivirus" styleClass="" emptyMessage="This sample was not detected as a virus."
+                                            <p:dataTable id="tablaAntivirus" var="antivirus" tableStyleClass="sample-table" emptyMessage="This sample was not detected as a virus."
                                                          value="${SampleController.representation.antiViruses}">
-                                                <p:column headerText="Positive antiviruses" styleClass="">
+                                                <p:column headerText="" styleClass="">
                                                     <h:outputLabel value="${antivirus}"/>
                                                 </p:column>
                                             </p:dataTable>
@@ -93,15 +93,15 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <p:dataTable id="tablaPermisos" var="permiso" styleClass="" emptyMessage="This sample does not ask for permissions."
+                                            <p:dataTable id="tablaPermisos" var="permiso" tableStyleClass="sample-table" emptyMessage="This sample does not ask for permissions."
                                                          value="${SampleController.representation.permissions}">
-                                                <p:column headerText="Permission" styleClass="">
+                                                <p:column headerText="Permissions" styleClass="">
                                                     <h:outputLabel value="${permiso}"/>
                                                 </p:column>
                                             </p:dataTable>
                                         </td>
                                         <td>
-                                            <p:dataTable id="tablaSeveridad" var="severidad" styleClass="" emptyMessage="This sample does not ask for permissions."
+                                            <p:dataTable id="tablaSeveridad" var="severidad" tableStyleClass="sample-table" emptyMessage="This sample does not ask for permissions."
                                                          value="${SampleController.representation.severities}">
                                                 <p:column headerText="Severity" styleClass="">
                                                     <h:outputLabel value="${severidad}"/> <!-- PONERLE COLORES -->
@@ -120,22 +120,22 @@
                     <h4>Network information</h4>
                     <a id="hideNetwork" href="javascript:toggle2('networkAnalysisDiv','hideNetwork');">Hide</a>
                     <div class="row" id="networkAnalysisDiv">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-7">
+                        <div class="col-md-6">
                             <div id="dnsQueriesDiv">
-                                <h5>DNS queries</h5>
-                                <p:dataTable id="tablaDNS" var="dns" styleClass="" emptyMessage="This sample doesn't have DNS queries."
+                                <span class="output-connection">DNS queries</span>
+                                <p:dataTable id="tablaDNS" var="dns" tableStyleClass="sample-table" emptyMessage="This sample doesn't have DNS queries."
                                              value="${SampleController.representation.dnsQueries}">
                                     <p:column headerText="" styleClass="">
                                         <h:outputLabel value="${dns}"/>
                                     </p:column>
                                 </p:dataTable>
                             </div>
-                            <hr/>
+                        </div>
+                        <div class="col-md-6">
                             <div id="externalHostsDiv">
-                                <h5>External Hosts</h5>
+                                <span class="output-connection">External Hosts</span>
                                 <div class="table-responsive">
-                                    <p:dataTable id="tablaHosts" var="host" tableStyleClass="" emptyMessage="This sample doesn't connect with external hosts."
+                                    <p:dataTable id="tablaHosts" var="host" tableStyleClass="sample-table" emptyMessage="This sample doesn't connect with external hosts."
                                                  value="${SampleController.representation.externalHosts}">
                                         <p:column headerText="" styleClass="">
                                             <h:outputLabel value="${host}"/>
@@ -144,7 +144,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2"></div>
                     </div>
                 </div>
             </div>
