@@ -130,12 +130,15 @@ public class LuceneIndexer implements Indexer {
             if (an instanceof IndexableAnalysis){
                 String fieldName = an.getAnalysisType();
                 List<String> l = new ArrayList();
+                String fieldValues = "";
                 if(fieldName.equals("ApkPermissionsAnalysis")){
                     for (String s : ((IndexableAnalysis) an).getIndexableItems()){
                         l.add(s.split(":")[0]);
                     }
-                }
-                String fieldValues = listToString(l);
+                    fieldValues = listToString(l);
+                } else {
+                    fieldValues = listToString(((IndexableAnalysis) an).getIndexableItems());
+                }                
                 if(!fieldValues.isEmpty()){
                     doc.add(new TextField(fieldName, fieldValues, Field.Store.NO)); 
                 }
