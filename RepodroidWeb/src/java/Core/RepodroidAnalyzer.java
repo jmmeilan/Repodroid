@@ -15,9 +15,9 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class RepodroidAnalyzer implements Runnable {
-    
+
     public static String email_sender = "repodroidnotifications@gmail.com";
-    public static String username =  "repodroidnotifications";
+    public static String username = "repodroidnotifications";
     public static String password = "canesten";
 
     private SampleStore store;
@@ -26,7 +26,6 @@ public class RepodroidAnalyzer implements Runnable {
     private String email;
 
     public RepodroidAnalyzer(SampleStore s, CuckooAnalyzer c, Sample sample, String email) {
-        /* TODO: METER LOS PATHS ESTATICOS EN UN FICHERO APARTE PARA SU ACCESO Y MODIFICACION MAS FACIL*/
         this.analyzer = c;
         this.store = s;
         this.sampleToAnalyze = sample;

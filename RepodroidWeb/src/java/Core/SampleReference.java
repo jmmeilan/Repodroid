@@ -16,7 +16,7 @@ import javax.persistence.Table;
 public class SampleReference implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "NUM_SAMPLE")
     private int numSample;
     @ManyToOne
@@ -30,6 +30,15 @@ public class SampleReference implements Serializable {
     private String sampleName;
 
     public SampleReference() {
+        this.numSample = -1;
+    }
+
+    public SampleReference(int numSample, User user, String samplePath, String storerID, String sampleName) {
+        this.numSample = numSample;
+        this.user = user;
+        this.samplePath = samplePath;
+        this.storerID = storerID;
+        this.sampleName = sampleName;
     }
 
     public String getSamplePath() {
@@ -37,6 +46,9 @@ public class SampleReference implements Serializable {
     }
 
     public void setSamplePath(String samplePath) {
+        if (samplePath == null) {
+            throw new IllegalArgumentException("The path is null");
+        }
         this.samplePath = samplePath;
     }
 
@@ -53,6 +65,9 @@ public class SampleReference implements Serializable {
     }
 
     public void setUser(User user) {
+        if (user == null) {
+            throw new IllegalArgumentException("The user is null");
+        }
         this.user = user;
     }
 
