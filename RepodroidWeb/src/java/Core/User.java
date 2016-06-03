@@ -1,7 +1,5 @@
 package Core;
 
-
-
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Column;
@@ -11,10 +9,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity @Table(name="Users")
-public class User implements Serializable{
-    
-    @Id @GeneratedValue(strategy=GenerationType.AUTO)
+@Entity
+@Table(name = "Users")
+public class User implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID_USER")
     private int idUser;
     @Column(name = "USERNAME", unique = true)
@@ -25,7 +25,25 @@ public class User implements Serializable{
     private String email;
     @Column(name = "IMAGE_PATH")
     private String picturePath;
-        
+
+    public User() {
+    }
+
+    public User(String username, String password, String email, String pic) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.picturePath = pic;
+    }
+
+    public User(int id, String username, String password, String email, String pic) {
+        this.idUser = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.picturePath = pic;
+    }
+
     public int getNumUser() {
         return idUser;
     }
@@ -39,6 +57,9 @@ public class User implements Serializable{
     }
 
     public void setEmail(String email) {
+        if (email == null) {
+            throw new IllegalArgumentException("The email is null");
+        }
         this.email = email;
     }
 
@@ -47,17 +68,10 @@ public class User implements Serializable{
     }
 
     public void setPicturePath(String picturePath) {
+        if (picturePath == null) {
+            throw new IllegalArgumentException("The path is null");
+        }
         this.picturePath = picturePath;
-    }
-
-    public User() {
-    }
-    
-    public User(String username, String password, String email, String pic) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.picturePath = pic;
     }
 
     public String getUsername() {
@@ -65,6 +79,9 @@ public class User implements Serializable{
     }
 
     public void setUsername(String username) {
+        if (username == null) {
+            throw new IllegalArgumentException("The username is null");
+        }
         this.username = username;
     }
 
@@ -73,9 +90,12 @@ public class User implements Serializable{
     }
 
     public void setPassword(String password) {
+        if (password == null) {
+            throw new IllegalArgumentException("The password is null");
+        }
         this.password = password;
     }
-    /* HACE FALTA ESTO¿?*/
+
     @Override
     public int hashCode() {
         int hash = 5;

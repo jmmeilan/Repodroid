@@ -43,7 +43,6 @@ public class TestSampleReference {
                 "/path",
                 "storeId",
                 "sampleName");
-        reference.setNumSample(1);
         assertThat(1, is(equalTo(reference.getNumSample())));
     }
 

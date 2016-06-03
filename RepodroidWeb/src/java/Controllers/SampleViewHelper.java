@@ -1,6 +1,7 @@
 package Controllers;
 
 import Core.SampleRepresentation;
+import Core.WrongAnalysisViewException;
 import es.uvigo.esei.tfg.repodroid.core.AnalisysView;
 import es.uvigo.esei.tfg.repodroid.core.Analysis;
 import es.uvigo.esei.tfg.repodroid.core.Sample;
@@ -24,72 +25,140 @@ public class SampleViewHelper {
     }
 
     public void setSample(Sample sample) {
+        if (sample == null) {
+            throw new IllegalArgumentException("The sample is null");
+        }
         this.sample = sample;
     }
 
-    public SampleRepresentation extractRepresentation() throws WrongValueDataException{
+    public void extractAntiVirusAnalysis(AnalisysView aV,
+            SampleRepresentation representation)
+            throws WrongValueDataException,
+            WrongAnalysisViewException {
+
+        if (aV == null || representation == null) {
+            throw new IllegalArgumentException("EXCEPTION: Parameters must not be null");
+        } else {
+            if (aV.getValues().get("Antiviruses") == null) {
+                throw new WrongAnalysisViewException("EXCEPTION: Wrong ttype of Analysis view");
+            }
+            Map<String, ValueData> data = aV.getValues();
+            Set<ValueData> s = data.get("Antiviruses").asMultivaluatedData().getValues();
+            if (s != null) {
+                for (ValueData v : s) {
+                    if (v.isString()) {
+                        List<String> lista = representation.getAntiViruses();
+                        lista.add(v.asString());
+                        representation.setAntiViruses(lista);
+                    }
+                }
+            }
+            representation.setScanDate(data.get("Scan date").asString());
+            representation.setNumberAntiviruses(data.get("Number of antiviruses").asString());
+            representation.setPositives(data.get("Positives").asString());
+        }
+    }
+
+    public void extractClassesAnalysis(AnalisysView aV,
+            SampleRepresentation representation)
+            throws WrongValueDataException,
+            WrongAnalysisViewException {
+
+        if (aV == null || representation == null) {
+            throw new IllegalArgumentException("EXCEPTION: Parameters must not be null");
+        } else {
+            if (aV.getValues().get("Name of the classes") == null) {
+                throw new WrongAnalysisViewException("EXCEPTION: Wrong type of Analysis view");
+            }
+            Map<String, ValueData> data = aV.getValues();
+            Set<ValueData> s = data.get("Name of the classes").asMultivaluatedData().getValues();
+            for (ValueData v : s) {
+                if (v.isString()) {
+                    List<String> lista = representation.getClasses();
+                    lista.add(v.asString());
+                    representation.setClasses(lista);
+                }
+            }
+        }
+    }
+
+    public void extractPermissionsAnalysis(AnalisysView aV,
+            SampleRepresentation representation)
+            throws WrongValueDataException,
+            WrongAnalysisViewException {
+
+        if (aV == null || representation == null) {
+            throw new IllegalArgumentException("EXCEPTION: Parameters must not be null");
+        } else {
+            if (aV.getValues().get("Permissions") == null) {
+                throw new WrongAnalysisViewException("EXCEPTION: Wrong type of Analysis view");
+            }
+            Map<String, ValueData> data = aV.getValues();
+            Set<ValueData> s = data.get("Permissions").asMultivaluatedData().getValues();
+            for (ValueData v : s) {
+                if (v.isString()) {
+                    List<String> lista = representation.getPermissions();
+                    lista.add(v.asString());
+                    representation.setPermissions(lista);
+                }
+            }
+        }
+    }
+
+    public void extractConnectionsAnalysis(AnalisysView aV,
+            SampleRepresentation representation)
+            throws WrongValueDataException,
+            WrongAnalysisViewException {
+
+        if (aV == null || representation == null) {
+            throw new IllegalArgumentException("EXCEPTION: Parameters must not be null");
+        } else {
+            if (aV.getValues().get("external hosts") == null) {
+                throw new WrongAnalysisViewException("EXCEPTION: Wrong type of Analysis view");
+            }
+            Map<String, ValueData> data = aV.getValues();
+            Set<ValueData> s = data.get("external hosts").asMultivaluatedData().getValues();
+            for (ValueData v : s) {
+                if (v.isString()) {
+                    List<String> lista = representation.getExternalHosts();
+                    lista.add(v.asString());
+                    representation.setExternalHosts(lista);
+                }
+            }
+            s = data.get("dns queries").asMultivaluatedData().getValues();
+            for (ValueData v : s) {
+                if (v.isString()) {
+                    List<String> lista = representation.getDnsQueries();
+                    lista.add(v.asString());
+                    representation.setDnsQueries(lista);
+                }
+            }
+        }
+    }
+
+    public SampleRepresentation extractRepresentation() {
         SampleRepresentation representation = new SampleRepresentation();
         Map<String, Analysis> map = this.sample.getAnalises();
         for (Analysis value : map.values()) {
             if (value instanceof VisualizableAnalysis) {
                 AnalisysView aV = ((VisualizableAnalysis) value).getAnalisisView();
-                if (aV.getName().equals("antivirus analysis")) {
-                    Map<String, ValueData> data = aV.getValues();
-                    Set<ValueData> s = data.get("Antiviruses").asMultivaluatedData().getValues();
-                    if (s != null) {
-                        for (ValueData v : s) {
-                            if (v.isString()) {
-                                List<String> lista = representation.getAntiViruses();
-                                lista.add(v.asString());
-                                representation.setAntiViruses(lista);
-                            }
-                        }
+                try {
+                    if (aV.getName().equals("antivirus analysis")) {
+                        extractAntiVirusAnalysis(aV, representation);
                     }
-                    representation.setScanDate(data.get("Scan date").asString());
-                    representation.setNumberAntiviruses(data.get("Number of antiviruses").asString());
-                    representation.setPositives(data.get("Positives").asString());
+                    if (aV.getName().equals("Apk classes analysis")) {
+                        extractClassesAnalysis(aV, representation);
+                    }
+                    if (aV.getName().equals("Apk permissions analysis")) {
+                        extractPermissionsAnalysis(aV, representation);
+                    }
+                    if (aV.getName().equals("output connections")) {
+                        extractConnectionsAnalysis(aV, representation);
+                    }
+                } catch (WrongValueDataException | WrongAnalysisViewException e) {
+                    System.out.println(e.getMessage());
                 }
-                if (aV.getName().equals("Apk classes analysis")) {
-                    Map<String, ValueData> data = aV.getValues();
-                    Set<ValueData> s = data.get("Name of the classes").asMultivaluatedData().getValues();
-                    for (ValueData v : s) {
-                        if (v.isString()) {
-                            List<String> lista = representation.getClasses();
-                            lista.add(v.asString());
-                            representation.setClasses(lista);
-                        }
-                    }
-                }
-                if (aV.getName().equals("Apk permissions analysis")) {
-                    Map<String, ValueData> data = aV.getValues();
-                    Set<ValueData> s = data.get("Permissions").asMultivaluatedData().getValues();
-                    for (ValueData v : s) {
-                        if (v.isString()) {
-                            List<String> lista = representation.getPermissions();
-                            lista.add(v.asString());
-                            representation.setPermissions(lista);
-                        }
-                    }
-                }
-                if (aV.getName().equals("output connections")) {
-                    Map<String, ValueData> data = aV.getValues();
-                    Set<ValueData> s = data.get("external hosts").asMultivaluatedData().getValues();
-                    for (ValueData v : s) {
-                        if (v.isString()) {
-                            List<String> lista = representation.getExternalHosts();
-                            lista.add(v.asString());
-                            representation.setExternalHosts(lista);
-                        }
-                    }
-                    s = data.get("dns queries").asMultivaluatedData().getValues();
-                    for (ValueData v : s) {
-                        if (v.isString()) {
-                            List<String> lista = representation.getDnsQueries();
-                            lista.add(v.asString());
-                            representation.setDnsQueries(lista);
-                        }
-                    }
-                }
+
             }
         }
         if (representation.getSeverities().isEmpty()) {

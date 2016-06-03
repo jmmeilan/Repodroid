@@ -70,6 +70,10 @@ public class RepodroidService {
     public Sample retrieveSample(String id) {
         return this.store.retrieveSample(id);
     }
+    
+    public void saveSample(Sample s){
+        this.store.storeSample(s);
+    }
 
     public List<Sample> similaritySearch(Sample s) {
         return this.store.search(new SimilarityQuery(s, 50), 0, 5);

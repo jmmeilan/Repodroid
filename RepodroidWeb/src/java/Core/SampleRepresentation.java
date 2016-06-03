@@ -23,14 +23,14 @@ public class SampleRepresentation {
     private List<String> severities;
     private List<String> externalHosts;
     private List<String> dnsQueries;
-    
-    public SampleRepresentation(){
-        this.antiViruses =  new ArrayList();
-        this.classes =  new ArrayList();
-        this.permissions =  new ArrayList();
+
+    public SampleRepresentation() {
+        this.antiViruses = new ArrayList();
+        this.classes = new ArrayList();
+        this.permissions = new ArrayList();
         this.severities = new ArrayList();
-        this.externalHosts =  new ArrayList();
-        this.dnsQueries =  new ArrayList();
+        this.externalHosts = new ArrayList();
+        this.dnsQueries = new ArrayList();
     }
 
     public String getScanDate() {
@@ -38,6 +38,9 @@ public class SampleRepresentation {
     }
 
     public void setScanDate(String scanDate) {
+        if (scanDate == null) {
+            throw new IllegalArgumentException("The scanDate is null");
+        }
         this.scanDate = scanDate;
     }
 
@@ -46,6 +49,9 @@ public class SampleRepresentation {
     }
 
     public void setNumberAntiviruses(String numberAntiviruses) {
+        if (numberAntiviruses == null) {
+            throw new IllegalArgumentException("The number of antiviruses is null");
+        }
         this.numberAntiviruses = numberAntiviruses;
     }
 
@@ -54,6 +60,9 @@ public class SampleRepresentation {
     }
 
     public void setPositives(String positives) {
+        if (positives == null) {
+            throw new IllegalArgumentException("The number of positives is null");
+        }
         this.positives = positives;
     }
 
@@ -62,6 +71,9 @@ public class SampleRepresentation {
     }
 
     public void setAntiViruses(List<String> antiViruses) {
+        if (antiViruses == null) {
+            throw new IllegalArgumentException("The list of antiviruses is null");
+        }
         this.antiViruses = antiViruses;
     }
 
@@ -70,6 +82,9 @@ public class SampleRepresentation {
     }
 
     public void setClasses(List<String> classes) {
+        if (classes == null) {
+            throw new IllegalArgumentException("The list of classes is null");
+        }
         this.classes = classes;
     }
 
@@ -78,6 +93,9 @@ public class SampleRepresentation {
     }
 
     public void setPermissions(List<String> permissions) {
+        if (permissions == null) {
+            throw new IllegalArgumentException("The list of permissions is null");
+        }
         this.permissions = permissions;
     }
 
@@ -86,6 +104,9 @@ public class SampleRepresentation {
     }
 
     public void setExternalHosts(List<String> externalHosts) {
+        if (externalHosts == null) {
+            throw new IllegalArgumentException("The list of external hosts is null");
+        }
         this.externalHosts = externalHosts;
     }
 
@@ -94,6 +115,9 @@ public class SampleRepresentation {
     }
 
     public void setDnsQueries(List<String> dnsQueries) {
+        if (dnsQueries == null) {
+            throw new IllegalArgumentException("The list of dns queries is null");
+        }
         this.dnsQueries = dnsQueries;
     }
 
@@ -102,20 +126,24 @@ public class SampleRepresentation {
     }
 
     public void setSeverities(List<String> severities) {
+        if (severities == null) {
+            throw new IllegalArgumentException("The list of severities is null");
+        }
         this.severities = severities;
     }
-    
-    public void separatePermissions(){
-        List <String> newPermissions = new ArrayList();
-        for(String p: this.permissions){
-            if(p.contains(":")){
-                String [] parts = p.split(":");
+
+    public void separatePermissions() {
+        List<String> newPermissions = new ArrayList();
+        for (String p : this.permissions) {
+            if (p.contains(":")) {
+                String[] parts = p.split(":");
                 newPermissions.add(parts[0]);
                 this.severities.add(parts[1]);
+            } else {
+                newPermissions.add(p);
             }
         }
         this.permissions = newPermissions;
     }
-    
 
 }

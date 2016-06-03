@@ -6,7 +6,6 @@ import Core.SampleRepresentation;
 import Services.RepodroidService;
 import es.uvigo.esei.tfg.repodroid.core.Sample;
 import es.uvigo.esei.tfg.repodroid.core.SampleType;
-import es.uvigo.esei.tfg.repodroid.core.WrongValueDataException;
 import es.uvigo.esei.tfg.repodroid.store.SampleStore;
 import java.io.File;
 import java.io.IOException;
@@ -151,6 +150,12 @@ public class SampleController implements Serializable {
                             this.userBean.getCurrentUser().getEmail());
                     this.sampleDao.create(sample);
                     this.apkSample.getInputStream().close();
+                    FacesContext.getCurrentInstance().addMessage(null, 
+                            new FacesMessage(FacesMessage.SEVERITY_INFO, 
+                                "Your sample is being analyzed, you will receive"
+                                        + " a notification at the email" 
+                                        + this.userBean.getCurrentUser().getEmail()
+                                        +" when the analysis is done", ""));
                 } catch (IOException ex) {
                     Logger.getLogger(SampleController.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -171,11 +176,7 @@ public class SampleController implements Serializable {
     public String showSample() {
         this.representation = new SampleRepresentation();
         Sample samp = this.repodroidService.retrieveSample(this.toShow.getStorerID());
-        try {
             this.representation = new SampleViewHelper(samp).extractRepresentation();
-        } catch (WrongValueDataException e) {
-              System.out.println("EXCEPTION: WrongValueDataException while extracting view of a sample");
-        }
         return "sampleView.xhtml";
     }
 
