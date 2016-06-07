@@ -12,6 +12,9 @@ public class UserDao extends GenericDao<User> {
 
     //Methods specific only to users
     public User searchByEmail(String email) {
+        if (email == null) {
+            throw new IllegalArgumentException("The email is null");
+        }
         Query q = em.createQuery("SELECT u FROM User u "
                 + "WHERE u.email = :email");
         q.setParameter("email", email);
@@ -19,6 +22,9 @@ public class UserDao extends GenericDao<User> {
     }
 
     public Boolean checkData(String username, String email) {
+        if (username == null || email == null) {
+            throw new IllegalArgumentException("The arguments can't be null");
+        }
         Query q = em.createQuery("SELECT u FROM User u "
                 + "WHERE u.username = :username OR u.email = :email");
         q.setParameter("username", username);
@@ -28,6 +34,9 @@ public class UserDao extends GenericDao<User> {
     }
 
     public boolean authenticateUser(int userId, String password) {
+        if (password == null) {
+            throw new IllegalArgumentException("The password is null");
+        }
         User user;
         boolean toRet = false;
 
@@ -44,6 +53,9 @@ public class UserDao extends GenericDao<User> {
     }
 
     public User updatePassword(int userId, String password) {
+        if (password == null) {
+            throw new IllegalArgumentException("The password is null");
+        }
         User user = searchById(userId);
 
         BasicPasswordEncryptor passwordEncryptor = new BasicPasswordEncryptor();
@@ -54,6 +66,9 @@ public class UserDao extends GenericDao<User> {
     }
 
     public User updateEmail(int userId, String email) {
+        if (email == null) {
+            throw new IllegalArgumentException("The email is null");
+        }
         User user = searchById(userId);
         user.setEmail(email);
         return update(user);
@@ -70,6 +85,9 @@ public class UserDao extends GenericDao<User> {
     }
 
     public boolean register(User user) {
+        if (user == null) {
+            throw new IllegalArgumentException("The user is null");
+        }
         User usuarioRegistrado = user;
         BasicPasswordEncryptor passwordEncryptor = new BasicPasswordEncryptor();
         String encryptedPassword = passwordEncryptor.encryptPassword(usuarioRegistrado.getPassword());

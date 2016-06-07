@@ -23,6 +23,12 @@
                                     </p:commandLink>
                                 </h:form>
                             </p:column>
+                            <p:column headerText="Submit date" styleClass="">
+                                <h:outputText value="#{muestra.submitDate}" />
+                            </p:column>
+                            <p:column headerText="Description" styleClass="">
+                                <h:outputText value="#{muestra.sampleDescription}"/>
+                            </p:column>
                         </p:dataTable>                   
                     </div>
                     <div class="col-md-2"></div>

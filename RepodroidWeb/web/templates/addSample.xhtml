@@ -17,8 +17,13 @@
                         <!-- inicio de formulario envio de muestras -->
                         <h:form class="form-horizontal" enctype="multipart/form-data" rendered="#{UserController.authenticated}">
                             <div class="form-group">
-                                <label for="firstname">Upload your APK sample:</label>
+                                <label for="apk">Upload your APK sample:</label>
                                 <h:inputFile id="sample" value="#{SampleController.apkSample}"></h:inputFile>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Add a description for the sample: </label>
+                                <br/>
+                                <h:inputTextarea value = "#{SampleController.description}" rows ="5" cols="60"/>
                             </div>
                             <h:commandButton value="Cancel" 
                                              action="/index?faces-redirect=true"

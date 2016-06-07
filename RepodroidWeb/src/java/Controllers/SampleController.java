@@ -12,7 +12,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.nio.file.Files;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,6 +34,7 @@ public class SampleController implements Serializable {
     private Part apkSample;
     private List<SampleReference> currentUserSamples;
     private SampleReference toShow;
+    private String description;
     //LISTS OF PARAMETERS FOR THE QUERY, needs to be converted to a list (SEPARAR POR COMAS PARA METER EN LISTA)
     private List<SampleReference> queryResult;
     private String permissions;
@@ -57,6 +60,14 @@ public class SampleController implements Serializable {
 
     public void setApkSample(Part apkSample) {
         this.apkSample = apkSample;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getPermissions() {
@@ -143,6 +154,8 @@ public class SampleController implements Serializable {
                     sample.setSamplePath(samplePath);
                     sample.setUser(this.userBean.getCurrentUser());
                     sample.setSampleName(this.apkSample.getSubmittedFileName());
+                    sample.setSampleDescription(this.description);
+                    sample.setSubmitDate(new SimpleDateFormat("dd-MM-yyyy").format(new Date()));
                     Sample sampleToAnalyze = new Sample(samplePath, SampleType.APK);
                     sampleToAnalyze.setId(SampleStore.computeNextSampleID());
                     sample.setStorerID(sampleToAnalyze.getId());
@@ -153,7 +166,7 @@ public class SampleController implements Serializable {
                     FacesContext.getCurrentInstance().addMessage(null, 
                             new FacesMessage(FacesMessage.SEVERITY_INFO, 
                                 "Your sample is being analyzed, you will receive"
-                                        + " a notification at the email" 
+                                        + " a notification at the email " 
                                         + this.userBean.getCurrentUser().getEmail()
                                         +" when the analysis is done", ""));
                 } catch (IOException ex) {

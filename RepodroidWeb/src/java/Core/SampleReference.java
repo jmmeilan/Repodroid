@@ -28,6 +28,10 @@ public class SampleReference implements Serializable {
     private String storerID;
     @Column(name = "SAMPLE_NAME")
     private String sampleName;
+    @Column(name = "SUBMIT_DATE")
+    private String submitDate;
+    @Column(name = "SAMPLE_DESCRIPTION")
+    private String sampleDescription;
 
     public SampleReference() {
         this.numSample = -1;
@@ -39,6 +43,11 @@ public class SampleReference implements Serializable {
         this.samplePath = samplePath;
         this.storerID = storerID;
         this.sampleName = sampleName;
+    }
+
+    public SampleReference(String submitDate, String sampleDescription) {
+        this.submitDate = submitDate;
+        this.sampleDescription = sampleDescription;
     }
 
     public String getSamplePath() {
@@ -80,11 +89,39 @@ public class SampleReference implements Serializable {
     }
 
     public void setSampleName(String sampleName) {
+        if (sampleName == null) {
+            throw new IllegalArgumentException("The name is null");
+        }
         this.sampleName = sampleName;
     }
 
     public void setStorerID(String storerID) {
+        if (storerID == null) {
+            throw new IllegalArgumentException("The id is null");
+        }
         this.storerID = storerID;
+    }
+
+    public String getSubmitDate() {
+        return submitDate;
+    }
+
+    public void setSubmitDate(String submitDate) {
+        if (submitDate == null) {
+            throw new IllegalArgumentException("The date is null");
+        }
+        this.submitDate = submitDate;
+    }
+
+    public String getSampleDescription() {
+        return sampleDescription;
+    }
+
+    public void setSampleDescription(String sampleDescription) {
+        if (sampleDescription == null) {
+            throw new IllegalArgumentException("The description is null");
+        }
+        this.sampleDescription = sampleDescription;
     }
 
     @Override

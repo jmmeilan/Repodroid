@@ -1,0 +1,3449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2016-06-06T16:32:24</date>
+  <millis>1465223544413</millis>
+  <sequence>7198</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>46</thread>
+  <message>Initializing analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:24</date>
+  <millis>1465223544435</millis>
+  <sequence>7200</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>46</thread>
+  <message>Initializing sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:24</date>
+  <millis>1465223544436</millis>
+  <sequence>7202</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>46</thread>
+  <message>Initializing json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:24</date>
+  <millis>1465223544437</millis>
+  <sequence>7204</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>46</thread>
+  <message>Initializing lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:25</date>
+  <millis>1465223545179</millis>
+  <sequence>7206</sequence>
+  <logger>org.omnifaces.ApplicationInitializer</logger>
+  <level>INFO</level>
+  <class>org.omnifaces.ApplicationInitializer</class>
+  <method>logOmniFacesVersion</method>
+  <thread>46</thread>
+  <message>Using OmniFaces version 2.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:25</date>
+  <millis>1465223545357</millis>
+  <sequence>7208</sequence>
+  <logger>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</logger>
+  <level>INFO</level>
+  <class>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</class>
+  <method>onStartup</method>
+  <thread>46</thread>
+  <message>Registering WebSocket filter for url pattern /*</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:25</date>
+  <millis>1465223545385</millis>
+  <sequence>7210</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.config</logger>
+  <level>INFO</level>
+  <class>com.sun.faces.config.ConfigureListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>Inicializando Mojarra 2.2.12 ( 20150720-0848 https://svn.java.net/svn/mojarra~svn/tags/2.2.12@14885) para el contexto '/RepodroidWeb'</message>
+  <key>jsf.config.listener.version</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:25</date>
+  <millis>1465223545608</millis>
+  <sequence>7212</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>46</thread>
+  <message>This application is running on BootsFaces 0.9.0.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:25</date>
+  <millis>1465223545609</millis>
+  <sequence>7214</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>46</thread>
+  <message>net.bootsfaces.listeners.AddResourcesListener ready for use.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:25</date>
+  <millis>1465223545634</millis>
+  <sequence>7216</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.managedbean</logger>
+  <level>WARNING</level>
+  <class>com.sun.faces.mgbean.BeanManager</class>
+  <method>addBean</method>
+  <thread>46</thread>
+  <message>JSF1074: ya se ha registrado el bean administrado denominado 'now'.  Sustituyendo el tipo de clase de bean administrado java.util.Date existente por java.util.Date.</message>
+  <key>jsf.managed.bean.duplicate</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>now</param>
+  <param>java.util.Date</param>
+  <param>java.util.Date</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:25</date>
+  <millis>1465223545901</millis>
+  <sequence>7218</sequence>
+  <logger>org.primefaces.webapp.PostConstructApplicationEventListener</logger>
+  <level>INFO</level>
+  <class>org.primefaces.webapp.PostConstructApplicationEventListener</class>
+  <method>processEvent</method>
+  <thread>46</thread>
+  <message>Running on PrimeFaces 5.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:26</date>
+  <millis>1465223546385</millis>
+  <sequence>7220</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebApplication</class>
+  <method>start</method>
+  <thread>46</thread>
+  <message>Loading application [RepodroidWeb] at [/RepodroidWeb]</message>
+  <key>AS-WEB-GLUE-00172</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>RepodroidWeb</param>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:26</date>
+  <millis>1465223546409</millis>
+  <sequence>7222</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>org.glassfish.deployment.admin.DeployCommand</class>
+  <method>execute</method>
+  <thread>46</thread>
+  <message>RepodroidWeb was successfully deployed in 6.832 milliseconds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:26</date>
+  <millis>1465223546560</millis>
+  <sequence>7224</sequence>
+  <logger>javax.enterprise.system.container.ejb.org.glassfish.ejb.startup</logger>
+  <level>INFO</level>
+  <class>org.glassfish.ejb.startup.EjbApplication</class>
+  <method>stop</method>
+  <thread>42</thread>
+  <message>keepstate options resolved to true, saving appId 96006704351346688 for application RepodroidWeb.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:26</date>
+  <millis>1465223546564</millis>
+  <sequence>7226</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:26</date>
+  <millis>1465223546565</millis>
+  <sequence>7228</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:26</date>
+  <millis>1465223546572</millis>
+  <sequence>7230</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:26</date>
+  <millis>1465223546573</millis>
+  <sequence>7232</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:26</date>
+  <millis>1465223546583</millis>
+  <sequence>7234</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>42</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU logout successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:26</date>
+  <millis>1465223546958</millis>
+  <sequence>7236</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547061</millis>
+  <sequence>7238</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547090</millis>
+  <sequence>7240</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547120</millis>
+  <sequence>7242</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547124</millis>
+  <sequence>7244</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547127</millis>
+  <sequence>7246</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547131</millis>
+  <sequence>7248</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547135</millis>
+  <sequence>7250</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547138</millis>
+  <sequence>7252</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547141</millis>
+  <sequence>7254</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547145</millis>
+  <sequence>7256</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547148</millis>
+  <sequence>7258</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547152</millis>
+  <sequence>7260</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547155</millis>
+  <sequence>7262</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547159</millis>
+  <sequence>7264</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547164</millis>
+  <sequence>7266</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547167</millis>
+  <sequence>7268</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547170</millis>
+  <sequence>7270</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547173</millis>
+  <sequence>7272</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547176</millis>
+  <sequence>7274</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547179</millis>
+  <sequence>7276</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547183</millis>
+  <sequence>7278</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547187</millis>
+  <sequence>7280</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547245</millis>
+  <sequence>7282</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU</logger>
+  <level>INFO</level>
+  <thread>42</thread>
+  <message>EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150605-31e8258</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:27</date>
+  <millis>1465223547276</millis>
+  <sequence>7284</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>42</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU login successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548086</millis>
+  <sequence>7286</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>42</thread>
+  <message>Portable JNDI names for EJB SampleReferenceDao: [java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>SampleReferenceDao</param>
+  <param>[java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548105</millis>
+  <sequence>7288</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>42</thread>
+  <message>Portable JNDI names for EJB UserDao: [java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>UserDao</param>
+  <param>[java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548131</millis>
+  <sequence>7290</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>42</thread>
+  <message>Portable JNDI names for EJB RepodroidService: [java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>RepodroidService</param>
+  <param>[java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548611</millis>
+  <sequence>7292</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548620</millis>
+  <sequence>7294</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548622</millis>
+  <sequence>7296</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548627</millis>
+  <sequence>7298</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548630</millis>
+  <sequence>7300</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548637</millis>
+  <sequence>7302</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548640</millis>
+  <sequence>7304</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548646</millis>
+  <sequence>7306</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:28</date>
+  <millis>1465223548998</millis>
+  <sequence>7308</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:29</date>
+  <millis>1465223549010</millis>
+  <sequence>7310</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:29</date>
+  <millis>1465223549011</millis>
+  <sequence>7312</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:29</date>
+  <millis>1465223549012</millis>
+  <sequence>7314</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:29</date>
+  <millis>1465223549683</millis>
+  <sequence>7316</sequence>
+  <logger>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</logger>
+  <level>INFO</level>
+  <class>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</class>
+  <method>onStartup</method>
+  <thread>42</thread>
+  <message>Registering WebSocket filter for url pattern /*</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:29</date>
+  <millis>1465223549836</millis>
+  <sequence>7318</sequence>
+  <logger>org.omnifaces.ApplicationInitializer</logger>
+  <level>INFO</level>
+  <class>org.omnifaces.ApplicationInitializer</class>
+  <method>logOmniFacesVersion</method>
+  <thread>42</thread>
+  <message>Using OmniFaces version 2.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:29</date>
+  <millis>1465223549870</millis>
+  <sequence>7320</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.config</logger>
+  <level>INFO</level>
+  <class>com.sun.faces.config.ConfigureListener</class>
+  <method>contextInitialized</method>
+  <thread>42</thread>
+  <message>Inicializando Mojarra 2.2.12 ( 20150720-0848 https://svn.java.net/svn/mojarra~svn/tags/2.2.12@14885) para el contexto '/RepodroidWeb'</message>
+  <key>jsf.config.listener.version</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550074</millis>
+  <sequence>7322</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>42</thread>
+  <message>This application is running on BootsFaces 0.9.0.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550074</millis>
+  <sequence>7324</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>42</thread>
+  <message>net.bootsfaces.listeners.AddResourcesListener ready for use.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550101</millis>
+  <sequence>7326</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.managedbean</logger>
+  <level>WARNING</level>
+  <class>com.sun.faces.mgbean.BeanManager</class>
+  <method>addBean</method>
+  <thread>42</thread>
+  <message>JSF1074: ya se ha registrado el bean administrado denominado 'now'.  Sustituyendo el tipo de clase de bean administrado java.util.Date existente por java.util.Date.</message>
+  <key>jsf.managed.bean.duplicate</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>now</param>
+  <param>java.util.Date</param>
+  <param>java.util.Date</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550402</millis>
+  <sequence>7328</sequence>
+  <logger>org.primefaces.webapp.PostConstructApplicationEventListener</logger>
+  <level>INFO</level>
+  <class>org.primefaces.webapp.PostConstructApplicationEventListener</class>
+  <method>processEvent</method>
+  <thread>42</thread>
+  <message>Running on PrimeFaces 5.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550660</millis>
+  <sequence>7330</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebApplication</class>
+  <method>start</method>
+  <thread>42</thread>
+  <message>Loading application [RepodroidWeb] at [/RepodroidWeb]</message>
+  <key>AS-WEB-GLUE-00172</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>RepodroidWeb</param>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550692</millis>
+  <sequence>7332</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>org.glassfish.deployment.admin.DeployCommand</class>
+  <method>execute</method>
+  <thread>42</thread>
+  <message>RepodroidWeb was successfully deployed in 4.157 milliseconds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550903</millis>
+  <sequence>7334</sequence>
+  <logger>javax.enterprise.system.container.ejb.org.glassfish.ejb.startup</logger>
+  <level>INFO</level>
+  <class>org.glassfish.ejb.startup.EjbApplication</class>
+  <method>stop</method>
+  <thread>44</thread>
+  <message>keepstate options resolved to true, saving appId 96006704351346688 for application RepodroidWeb.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550912</millis>
+  <sequence>7336</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>44</thread>
+  <message>Terminating sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550915</millis>
+  <sequence>7338</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>44</thread>
+  <message>Terminating json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550934</millis>
+  <sequence>7340</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>44</thread>
+  <message>Terminating lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550938</millis>
+  <sequence>7342</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>44</thread>
+  <message>Terminating analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:30</date>
+  <millis>1465223550956</millis>
+  <sequence>7344</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>44</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU logout successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551315</millis>
+  <sequence>7346</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551469</millis>
+  <sequence>7348</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551496</millis>
+  <sequence>7350</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551529</millis>
+  <sequence>7352</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551531</millis>
+  <sequence>7354</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551533</millis>
+  <sequence>7356</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551536</millis>
+  <sequence>7358</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551538</millis>
+  <sequence>7360</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551540</millis>
+  <sequence>7362</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551542</millis>
+  <sequence>7364</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551544</millis>
+  <sequence>7366</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551547</millis>
+  <sequence>7368</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551549</millis>
+  <sequence>7370</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551552</millis>
+  <sequence>7372</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551554</millis>
+  <sequence>7374</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551557</millis>
+  <sequence>7376</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551559</millis>
+  <sequence>7378</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551561</millis>
+  <sequence>7380</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551563</millis>
+  <sequence>7382</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551565</millis>
+  <sequence>7384</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551567</millis>
+  <sequence>7386</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551570</millis>
+  <sequence>7388</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551574</millis>
+  <sequence>7390</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>44</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551703</millis>
+  <sequence>7392</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU</logger>
+  <level>INFO</level>
+  <thread>44</thread>
+  <message>EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150605-31e8258</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551795</millis>
+  <sequence>7394</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>44</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU login successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551818</millis>
+  <sequence>7396</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>44</thread>
+  <message>Portable JNDI names for EJB SampleReferenceDao: [java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>SampleReferenceDao</param>
+  <param>[java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551832</millis>
+  <sequence>7398</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>44</thread>
+  <message>Portable JNDI names for EJB UserDao: [java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>UserDao</param>
+  <param>[java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:31</date>
+  <millis>1465223551849</millis>
+  <sequence>7400</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>44</thread>
+  <message>Portable JNDI names for EJB RepodroidService: [java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>RepodroidService</param>
+  <param>[java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552398</millis>
+  <sequence>7402</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552405</millis>
+  <sequence>7404</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552408</millis>
+  <sequence>7406</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552412</millis>
+  <sequence>7408</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552418</millis>
+  <sequence>7410</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552425</millis>
+  <sequence>7412</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552434</millis>
+  <sequence>7414</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552437</millis>
+  <sequence>7416</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>44</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552758</millis>
+  <sequence>7418</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>44</thread>
+  <message>Initializing analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552770</millis>
+  <sequence>7420</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>44</thread>
+  <message>Initializing sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552772</millis>
+  <sequence>7422</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>44</thread>
+  <message>Initializing json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:32</date>
+  <millis>1465223552773</millis>
+  <sequence>7424</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>44</thread>
+  <message>Initializing lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:33</date>
+  <millis>1465223553363</millis>
+  <sequence>7426</sequence>
+  <logger>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</logger>
+  <level>INFO</level>
+  <class>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</class>
+  <method>onStartup</method>
+  <thread>44</thread>
+  <message>Registering WebSocket filter for url pattern /*</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:33</date>
+  <millis>1465223553590</millis>
+  <sequence>7428</sequence>
+  <logger>org.omnifaces.ApplicationInitializer</logger>
+  <level>INFO</level>
+  <class>org.omnifaces.ApplicationInitializer</class>
+  <method>logOmniFacesVersion</method>
+  <thread>44</thread>
+  <message>Using OmniFaces version 2.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:33</date>
+  <millis>1465223553595</millis>
+  <sequence>7430</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.config</logger>
+  <level>INFO</level>
+  <class>com.sun.faces.config.ConfigureListener</class>
+  <method>contextInitialized</method>
+  <thread>44</thread>
+  <message>Inicializando Mojarra 2.2.12 ( 20150720-0848 https://svn.java.net/svn/mojarra~svn/tags/2.2.12@14885) para el contexto '/RepodroidWeb'</message>
+  <key>jsf.config.listener.version</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:33</date>
+  <millis>1465223553784</millis>
+  <sequence>7432</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>44</thread>
+  <message>This application is running on BootsFaces 0.9.0.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:33</date>
+  <millis>1465223553785</millis>
+  <sequence>7434</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>44</thread>
+  <message>net.bootsfaces.listeners.AddResourcesListener ready for use.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:33</date>
+  <millis>1465223553811</millis>
+  <sequence>7436</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.managedbean</logger>
+  <level>WARNING</level>
+  <class>com.sun.faces.mgbean.BeanManager</class>
+  <method>addBean</method>
+  <thread>44</thread>
+  <message>JSF1074: ya se ha registrado el bean administrado denominado 'now'.  Sustituyendo el tipo de clase de bean administrado java.util.Date existente por java.util.Date.</message>
+  <key>jsf.managed.bean.duplicate</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>now</param>
+  <param>java.util.Date</param>
+  <param>java.util.Date</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:34</date>
+  <millis>1465223554093</millis>
+  <sequence>7438</sequence>
+  <logger>org.primefaces.webapp.PostConstructApplicationEventListener</logger>
+  <level>INFO</level>
+  <class>org.primefaces.webapp.PostConstructApplicationEventListener</class>
+  <method>processEvent</method>
+  <thread>44</thread>
+  <message>Running on PrimeFaces 5.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:34</date>
+  <millis>1465223554102</millis>
+  <sequence>7440</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebApplication</class>
+  <method>start</method>
+  <thread>44</thread>
+  <message>Loading application [RepodroidWeb] at [/RepodroidWeb]</message>
+  <key>AS-WEB-GLUE-00172</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>RepodroidWeb</param>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:34</date>
+  <millis>1465223554106</millis>
+  <sequence>7442</sequence>
+  <level>SEVERE</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>83</thread>
+  <message>java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3042)
+	at java.net.URI.&lt;init&gt;(URI.java:588)
+	at com.sun.enterprise.v3.server.DynamicReloader$AppReloadInfo.&lt;init&gt;(DynamicReloader.java:292)
+	at com.sun.enterprise.v3.server.DynamicReloader$AppReloadInfo.&lt;init&gt;(DynamicReloader.java:279)
+	at com.sun.enterprise.v3.server.DynamicReloader.findOrCreateAppReloadInfo(DynamicReloader.java:217)
+	at com.sun.enterprise.v3.server.DynamicReloader.chooseAppsToReload(DynamicReloader.java:192)
+	at com.sun.enterprise.v3.server.DynamicReloader.reloadApps(DynamicReloader.java:163)
+	at com.sun.enterprise.v3.server.DynamicReloader.run(DynamicReloader.java:146)
+	at com.sun.enterprise.v3.server.DynamicReloadService$1.run(DynamicReloadService.java:164)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:34</date>
+  <millis>1465223554125</millis>
+  <sequence>7444</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>org.glassfish.deployment.admin.DeployCommand</class>
+  <method>execute</method>
+  <thread>44</thread>
+  <message>RepodroidWeb was successfully deployed in 3.267 milliseconds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555185</millis>
+  <sequence>7446</sequence>
+  <logger>javax.enterprise.system.container.ejb.org.glassfish.ejb.startup</logger>
+  <level>INFO</level>
+  <class>org.glassfish.ejb.startup.EjbApplication</class>
+  <method>stop</method>
+  <thread>42</thread>
+  <message>keepstate options resolved to true, saving appId 96006704351346688 for application RepodroidWeb.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555191</millis>
+  <sequence>7448</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555193</millis>
+  <sequence>7450</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555206</millis>
+  <sequence>7452</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555207</millis>
+  <sequence>7454</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555218</millis>
+  <sequence>7456</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>42</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU logout successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555611</millis>
+  <sequence>7458</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555698</millis>
+  <sequence>7460</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555724</millis>
+  <sequence>7462</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555756</millis>
+  <sequence>7464</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555760</millis>
+  <sequence>7466</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555764</millis>
+  <sequence>7468</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555768</millis>
+  <sequence>7470</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555772</millis>
+  <sequence>7472</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555775</millis>
+  <sequence>7474</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555778</millis>
+  <sequence>7476</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555780</millis>
+  <sequence>7478</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555783</millis>
+  <sequence>7480</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555786</millis>
+  <sequence>7482</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555790</millis>
+  <sequence>7484</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555793</millis>
+  <sequence>7486</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555797</millis>
+  <sequence>7488</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555801</millis>
+  <sequence>7490</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555804</millis>
+  <sequence>7492</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:35</date>
+  <millis>1465223555809</millis>
+  <sequence>7494</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556413</millis>
+  <sequence>7496</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556420</millis>
+  <sequence>7498</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556425</millis>
+  <sequence>7500</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556431</millis>
+  <sequence>7502</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556497</millis>
+  <sequence>7504</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU</logger>
+  <level>INFO</level>
+  <thread>42</thread>
+  <message>EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150605-31e8258</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556534</millis>
+  <sequence>7506</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>42</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU login successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556558</millis>
+  <sequence>7508</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>42</thread>
+  <message>Portable JNDI names for EJB SampleReferenceDao: [java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>SampleReferenceDao</param>
+  <param>[java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556573</millis>
+  <sequence>7510</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>42</thread>
+  <message>Portable JNDI names for EJB UserDao: [java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>UserDao</param>
+  <param>[java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556589</millis>
+  <sequence>7512</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>42</thread>
+  <message>Portable JNDI names for EJB RepodroidService: [java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>RepodroidService</param>
+  <param>[java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556974</millis>
+  <sequence>7514</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556978</millis>
+  <sequence>7516</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556980</millis>
+  <sequence>7518</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556984</millis>
+  <sequence>7520</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556991</millis>
+  <sequence>7522</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:36</date>
+  <millis>1465223556999</millis>
+  <sequence>7524</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:37</date>
+  <millis>1465223557004</millis>
+  <sequence>7526</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:37</date>
+  <millis>1465223557006</millis>
+  <sequence>7528</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:37</date>
+  <millis>1465223557320</millis>
+  <sequence>7530</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:37</date>
+  <millis>1465223557335</millis>
+  <sequence>7532</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:37</date>
+  <millis>1465223557336</millis>
+  <sequence>7534</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:37</date>
+  <millis>1465223557337</millis>
+  <sequence>7536</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:37</date>
+  <millis>1465223557923</millis>
+  <sequence>7538</sequence>
+  <logger>org.omnifaces.ApplicationInitializer</logger>
+  <level>INFO</level>
+  <class>org.omnifaces.ApplicationInitializer</class>
+  <method>logOmniFacesVersion</method>
+  <thread>42</thread>
+  <message>Using OmniFaces version 2.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:37</date>
+  <millis>1465223557932</millis>
+  <sequence>7540</sequence>
+  <logger>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</logger>
+  <level>INFO</level>
+  <class>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</class>
+  <method>onStartup</method>
+  <thread>42</thread>
+  <message>Registering WebSocket filter for url pattern /*</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:37</date>
+  <millis>1465223557957</millis>
+  <sequence>7542</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.config</logger>
+  <level>INFO</level>
+  <class>com.sun.faces.config.ConfigureListener</class>
+  <method>contextInitialized</method>
+  <thread>42</thread>
+  <message>Inicializando Mojarra 2.2.12 ( 20150720-0848 https://svn.java.net/svn/mojarra~svn/tags/2.2.12@14885) para el contexto '/RepodroidWeb'</message>
+  <key>jsf.config.listener.version</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558145</millis>
+  <sequence>7544</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>42</thread>
+  <message>This application is running on BootsFaces 0.9.0.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558146</millis>
+  <sequence>7546</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>42</thread>
+  <message>net.bootsfaces.listeners.AddResourcesListener ready for use.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558170</millis>
+  <sequence>7548</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.managedbean</logger>
+  <level>WARNING</level>
+  <class>com.sun.faces.mgbean.BeanManager</class>
+  <method>addBean</method>
+  <thread>42</thread>
+  <message>JSF1074: ya se ha registrado el bean administrado denominado 'now'.  Sustituyendo el tipo de clase de bean administrado java.util.Date existente por java.util.Date.</message>
+  <key>jsf.managed.bean.duplicate</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>now</param>
+  <param>java.util.Date</param>
+  <param>java.util.Date</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558427</millis>
+  <sequence>7550</sequence>
+  <logger>org.primefaces.webapp.PostConstructApplicationEventListener</logger>
+  <level>INFO</level>
+  <class>org.primefaces.webapp.PostConstructApplicationEventListener</class>
+  <method>processEvent</method>
+  <thread>42</thread>
+  <message>Running on PrimeFaces 5.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558592</millis>
+  <sequence>7552</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebApplication</class>
+  <method>start</method>
+  <thread>42</thread>
+  <message>Loading application [RepodroidWeb] at [/RepodroidWeb]</message>
+  <key>AS-WEB-GLUE-00172</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>RepodroidWeb</param>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558628</millis>
+  <sequence>7554</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>org.glassfish.deployment.admin.DeployCommand</class>
+  <method>execute</method>
+  <thread>42</thread>
+  <message>RepodroidWeb was successfully deployed in 3.474 milliseconds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558744</millis>
+  <sequence>7556</sequence>
+  <logger>javax.enterprise.system.container.ejb.org.glassfish.ejb.startup</logger>
+  <level>INFO</level>
+  <class>org.glassfish.ejb.startup.EjbApplication</class>
+  <method>stop</method>
+  <thread>45</thread>
+  <message>keepstate options resolved to true, saving appId 96006704351346688 for application RepodroidWeb.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558749</millis>
+  <sequence>7558</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>45</thread>
+  <message>Terminating sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558751</millis>
+  <sequence>7560</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>45</thread>
+  <message>Terminating json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558760</millis>
+  <sequence>7562</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>45</thread>
+  <message>Terminating lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558761</millis>
+  <sequence>7564</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>45</thread>
+  <message>Terminating analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:38</date>
+  <millis>1465223558770</millis>
+  <sequence>7566</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>45</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU logout successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559080</millis>
+  <sequence>7568</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559636</millis>
+  <sequence>7570</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559660</millis>
+  <sequence>7572</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559691</millis>
+  <sequence>7574</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559695</millis>
+  <sequence>7576</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559698</millis>
+  <sequence>7578</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559702</millis>
+  <sequence>7580</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559706</millis>
+  <sequence>7582</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559710</millis>
+  <sequence>7584</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559714</millis>
+  <sequence>7586</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559718</millis>
+  <sequence>7588</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559721</millis>
+  <sequence>7590</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559725</millis>
+  <sequence>7592</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559729</millis>
+  <sequence>7594</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559733</millis>
+  <sequence>7596</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559735</millis>
+  <sequence>7598</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559739</millis>
+  <sequence>7600</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559742</millis>
+  <sequence>7602</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559746</millis>
+  <sequence>7604</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559750</millis>
+  <sequence>7606</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559753</millis>
+  <sequence>7608</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559757</millis>
+  <sequence>7610</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559760</millis>
+  <sequence>7612</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>45</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559818</millis>
+  <sequence>7614</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU</logger>
+  <level>INFO</level>
+  <thread>45</thread>
+  <message>EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150605-31e8258</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559857</millis>
+  <sequence>7616</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>45</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU login successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559883</millis>
+  <sequence>7618</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>45</thread>
+  <message>Portable JNDI names for EJB UserDao: [java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>UserDao</param>
+  <param>[java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559905</millis>
+  <sequence>7620</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>45</thread>
+  <message>Portable JNDI names for EJB SampleReferenceDao: [java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>SampleReferenceDao</param>
+  <param>[java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:39</date>
+  <millis>1465223559923</millis>
+  <sequence>7622</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>45</thread>
+  <message>Portable JNDI names for EJB RepodroidService: [java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>RepodroidService</param>
+  <param>[java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:40</date>
+  <millis>1465223560813</millis>
+  <sequence>7624</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>45</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:40</date>
+  <millis>1465223560821</millis>
+  <sequence>7626</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>45</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:40</date>
+  <millis>1465223560830</millis>
+  <sequence>7628</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>45</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:40</date>
+  <millis>1465223560840</millis>
+  <sequence>7630</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>45</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:40</date>
+  <millis>1465223560846</millis>
+  <sequence>7632</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>45</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:40</date>
+  <millis>1465223560850</millis>
+  <sequence>7634</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>45</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:40</date>
+  <millis>1465223560852</millis>
+  <sequence>7636</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>45</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:40</date>
+  <millis>1465223560855</millis>
+  <sequence>7638</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>45</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:41</date>
+  <millis>1465223561138</millis>
+  <sequence>7640</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>45</thread>
+  <message>Initializing analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:41</date>
+  <millis>1465223561156</millis>
+  <sequence>7642</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>45</thread>
+  <message>Initializing sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:41</date>
+  <millis>1465223561157</millis>
+  <sequence>7644</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>45</thread>
+  <message>Initializing json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:41</date>
+  <millis>1465223561159</millis>
+  <sequence>7646</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>45</thread>
+  <message>Initializing lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:41</date>
+  <millis>1465223561968</millis>
+  <sequence>7648</sequence>
+  <logger>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</logger>
+  <level>INFO</level>
+  <class>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</class>
+  <method>onStartup</method>
+  <thread>45</thread>
+  <message>Registering WebSocket filter for url pattern /*</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:41</date>
+  <millis>1465223561970</millis>
+  <sequence>7650</sequence>
+  <logger>org.omnifaces.ApplicationInitializer</logger>
+  <level>INFO</level>
+  <class>org.omnifaces.ApplicationInitializer</class>
+  <method>logOmniFacesVersion</method>
+  <thread>45</thread>
+  <message>Using OmniFaces version 2.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:41</date>
+  <millis>1465223561995</millis>
+  <sequence>7652</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.config</logger>
+  <level>INFO</level>
+  <class>com.sun.faces.config.ConfigureListener</class>
+  <method>contextInitialized</method>
+  <thread>45</thread>
+  <message>Inicializando Mojarra 2.2.12 ( 20150720-0848 https://svn.java.net/svn/mojarra~svn/tags/2.2.12@14885) para el contexto '/RepodroidWeb'</message>
+  <key>jsf.config.listener.version</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:42</date>
+  <millis>1465223562217</millis>
+  <sequence>7654</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>45</thread>
+  <message>This application is running on BootsFaces 0.9.0.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:42</date>
+  <millis>1465223562646</millis>
+  <sequence>7656</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>45</thread>
+  <message>net.bootsfaces.listeners.AddResourcesListener ready for use.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:42</date>
+  <millis>1465223562682</millis>
+  <sequence>7658</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.managedbean</logger>
+  <level>WARNING</level>
+  <class>com.sun.faces.mgbean.BeanManager</class>
+  <method>addBean</method>
+  <thread>45</thread>
+  <message>JSF1074: ya se ha registrado el bean administrado denominado 'now'.  Sustituyendo el tipo de clase de bean administrado java.util.Date existente por java.util.Date.</message>
+  <key>jsf.managed.bean.duplicate</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>now</param>
+  <param>java.util.Date</param>
+  <param>java.util.Date</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:43</date>
+  <millis>1465223563037</millis>
+  <sequence>7660</sequence>
+  <logger>org.primefaces.webapp.PostConstructApplicationEventListener</logger>
+  <level>INFO</level>
+  <class>org.primefaces.webapp.PostConstructApplicationEventListener</class>
+  <method>processEvent</method>
+  <thread>45</thread>
+  <message>Running on PrimeFaces 5.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:43</date>
+  <millis>1465223563264</millis>
+  <sequence>7662</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebApplication</class>
+  <method>start</method>
+  <thread>45</thread>
+  <message>Loading application [RepodroidWeb] at [/RepodroidWeb]</message>
+  <key>AS-WEB-GLUE-00172</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>RepodroidWeb</param>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:43</date>
+  <millis>1465223563281</millis>
+  <sequence>7664</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>org.glassfish.deployment.admin.DeployCommand</class>
+  <method>execute</method>
+  <thread>45</thread>
+  <message>RepodroidWeb was successfully deployed in 4.568 milliseconds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:43</date>
+  <millis>1465223563408</millis>
+  <sequence>7666</sequence>
+  <logger>javax.enterprise.system.container.ejb.org.glassfish.ejb.startup</logger>
+  <level>INFO</level>
+  <class>org.glassfish.ejb.startup.EjbApplication</class>
+  <method>stop</method>
+  <thread>42</thread>
+  <message>keepstate options resolved to true, saving appId 96006704351346688 for application RepodroidWeb.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:43</date>
+  <millis>1465223563413</millis>
+  <sequence>7668</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:43</date>
+  <millis>1465223563414</millis>
+  <sequence>7670</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:43</date>
+  <millis>1465223563440</millis>
+  <sequence>7672</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:43</date>
+  <millis>1465223563441</millis>
+  <sequence>7674</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Terminating analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:43</date>
+  <millis>1465223563473</millis>
+  <sequence>7676</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>42</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU logout successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564042</millis>
+  <sequence>7678</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564573</millis>
+  <sequence>7680</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564603</millis>
+  <sequence>7682</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564640</millis>
+  <sequence>7684</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564646</millis>
+  <sequence>7686</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564650</millis>
+  <sequence>7688</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564654</millis>
+  <sequence>7690</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564658</millis>
+  <sequence>7692</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564852</millis>
+  <sequence>7694</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564857</millis>
+  <sequence>7696</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564861</millis>
+  <sequence>7698</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564867</millis>
+  <sequence>7700</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564871</millis>
+  <sequence>7702</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564875</millis>
+  <sequence>7704</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564879</millis>
+  <sequence>7706</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564881</millis>
+  <sequence>7708</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564884</millis>
+  <sequence>7710</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564888</millis>
+  <sequence>7712</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564892</millis>
+  <sequence>7714</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564895</millis>
+  <sequence>7716</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564899</millis>
+  <sequence>7718</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564903</millis>
+  <sequence>7720</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564905</millis>
+  <sequence>7722</sequence>
+  <logger>javax.enterprise.system.tools.deployment.common</logger>
+  <level>INFO</level>
+  <class>org.glassfish.hk2.classmodel.reflect.Parser</class>
+  <method>awaitTermination</method>
+  <thread>42</thread>
+  <message>visiting unvisited references</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:44</date>
+  <millis>1465223564964</millis>
+  <sequence>7724</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU</logger>
+  <level>INFO</level>
+  <thread>42</thread>
+  <message>EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150605-31e8258</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:45</date>
+  <millis>1465223565001</millis>
+  <sequence>7726</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>42</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU login successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:45</date>
+  <millis>1465223565169</millis>
+  <sequence>7728</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>42</thread>
+  <message>Portable JNDI names for EJB RepodroidService: [java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>RepodroidService</param>
+  <param>[java:global/RepodroidWeb/RepodroidService!Services.RepodroidService, java:global/RepodroidWeb/RepodroidService]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:45</date>
+  <millis>1465223565179</millis>
+  <sequence>7730</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>42</thread>
+  <message>Portable JNDI names for EJB SampleReferenceDao: [java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>SampleReferenceDao</param>
+  <param>[java:global/RepodroidWeb/SampleReferenceDao!Core.SampleReferenceDao, java:global/RepodroidWeb/SampleReferenceDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:45</date>
+  <millis>1465223565189</millis>
+  <sequence>7732</sequence>
+  <logger>javax.enterprise.ejb.container</logger>
+  <level>INFO</level>
+  <class>com.sun.ejb.containers.BaseContainer</class>
+  <method>initializeHome</method>
+  <thread>42</thread>
+  <message>Portable JNDI names for EJB UserDao: [java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</message>
+  <key>AS-EJB-00054</key>
+  <catalog>org.glassfish.ejb.LogMessages</catalog>
+  <param>UserDao</param>
+  <param>[java:global/RepodroidWeb/UserDao!Core.UserDao, java:global/RepodroidWeb/UserDao]</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:45</date>
+  <millis>1465223565746</millis>
+  <sequence>7734</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566109</millis>
+  <sequence>7736</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566114</millis>
+  <sequence>7738</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566117</millis>
+  <sequence>7740</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566125</millis>
+  <sequence>7742</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.omnifaces.VetoAnnotatedTypeExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566129</millis>
+  <sequence>7744</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566135</millis>
+  <sequence>7746</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566139</millis>
+  <sequence>7748</sequence>
+  <logger>org.jboss.weld.Event</logger>
+  <level>WARN</level>
+  <class>org.jboss.weld.event.ExtensionObserverMethodImpl</class>
+  <method>checkRequiredTypeAnnotations</method>
+  <thread>42</thread>
+  <message>WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566684</millis>
+  <sequence>7750</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566710</millis>
+  <sequence>7752</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566713</millis>
+  <sequence>7754</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:46</date>
+  <millis>1465223566744</millis>
+  <sequence>7756</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>42</thread>
+  <message>Initializing lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:48</date>
+  <millis>1465223568300</millis>
+  <sequence>7758</sequence>
+  <logger>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</logger>
+  <level>INFO</level>
+  <class>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</class>
+  <method>onStartup</method>
+  <thread>42</thread>
+  <message>Registering WebSocket filter for url pattern /*</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:48</date>
+  <millis>1465223568302</millis>
+  <sequence>7760</sequence>
+  <logger>org.omnifaces.ApplicationInitializer</logger>
+  <level>INFO</level>
+  <class>org.omnifaces.ApplicationInitializer</class>
+  <method>logOmniFacesVersion</method>
+  <thread>42</thread>
+  <message>Using OmniFaces version 2.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:48</date>
+  <millis>1465223568325</millis>
+  <sequence>7762</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.config</logger>
+  <level>INFO</level>
+  <class>com.sun.faces.config.ConfigureListener</class>
+  <method>contextInitialized</method>
+  <thread>42</thread>
+  <message>Inicializando Mojarra 2.2.12 ( 20150720-0848 https://svn.java.net/svn/mojarra~svn/tags/2.2.12@14885) para el contexto '/RepodroidWeb'</message>
+  <key>jsf.config.listener.version</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:48</date>
+  <millis>1465223568496</millis>
+  <sequence>7764</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>42</thread>
+  <message>This application is running on BootsFaces 0.9.0.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:48</date>
+  <millis>1465223568819</millis>
+  <sequence>7766</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>42</thread>
+  <message>net.bootsfaces.listeners.AddResourcesListener ready for use.</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:48</date>
+  <millis>1465223568872</millis>
+  <sequence>7768</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.managedbean</logger>
+  <level>WARNING</level>
+  <class>com.sun.faces.mgbean.BeanManager</class>
+  <method>addBean</method>
+  <thread>42</thread>
+  <message>JSF1074: ya se ha registrado el bean administrado denominado 'now'.  Sustituyendo el tipo de clase de bean administrado java.util.Date existente por java.util.Date.</message>
+  <key>jsf.managed.bean.duplicate</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>now</param>
+  <param>java.util.Date</param>
+  <param>java.util.Date</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:49</date>
+  <millis>1465223569324</millis>
+  <sequence>7770</sequence>
+  <logger>org.primefaces.webapp.PostConstructApplicationEventListener</logger>
+  <level>INFO</level>
+  <class>org.primefaces.webapp.PostConstructApplicationEventListener</class>
+  <method>processEvent</method>
+  <thread>42</thread>
+  <message>Running on PrimeFaces 5.3</message>
+</record>
+<record>
+  <date>2016-06-06T16:32:49</date>
+  <millis>1465223569335</millis>
+  <sequence>7772</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebApplication</class>
+  <method>start</method>
+  <thread>42</thread>
+  <message>Loading application [RepodroidWeb] at [/RepodroidWeb]</message>
+  <key>AS-WEB-GLUE-00172</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>RepodroidWeb</param>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-06T16:32:49</date>
+  <millis>1465223569356</millis>
+  <sequence>7774</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>org.glassfish.deployment.admin.DeployCommand</class>
+  <method>execute</method>
+  <thread>42</thread>
+  <message>RepodroidWeb was successfully deployed in 5.999 milliseconds.</message>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672137</millis>
+  <sequence>7776</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.admin.StopServer</class>
+  <method>doExecute</method>
+  <thread>220</thread>
+  <message>Server shutdown initiated</message>
+  <key>NCLS-CORE-00092</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672145</millis>
+  <sequence>7778</sequence>
+  <logger>javax.enterprise.bootstrap</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl</class>
+  <method>unregisterService</method>
+  <thread>220</thread>
+  <message>Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@4930539b from service registry.</message>
+  <key>NCLS-BOOTSTRAP-00028</key>
+  <catalog>com.sun.enterprise.glassfish.bootstrap.LogMessages</catalog>
+  <param>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@4930539b</param>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672149</millis>
+  <sequence>7780</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>220</thread>
+  <message>FileMonitoring shutdown</message>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672155</millis>
+  <sequence>7782</sequence>
+  <logger>javax.enterprise.system.jmx</logger>
+  <level>INFO</level>
+  <class>org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread</class>
+  <method>shutdown</method>
+  <thread>220</thread>
+  <message>JMXStartupService: Stopped JMXConnectorServer: null</message>
+  <key>NCLS-JMX-00002</key>
+  <catalog>org.glassfish.admin.mbeanserver.LogMessages</catalog>
+  <param>???</param>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672159</millis>
+  <sequence>7784</sequence>
+  <logger>javax.enterprise.system.jmx</logger>
+  <level>INFO</level>
+  <class>org.glassfish.admin.mbeanserver.JMXStartupService</class>
+  <method>shutdown</method>
+  <thread>220</thread>
+  <message>JMXStartupService and JMXConnectors have been shut down.</message>
+  <key>NCLS-JMX-00001</key>
+  <catalog>org.glassfish.admin.mbeanserver.LogMessages</catalog>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672204</millis>
+  <sequence>7786</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>224</thread>
+  <message>Terminating sample store...</message>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672205</millis>
+  <sequence>7788</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>224</thread>
+  <message>Terminating json storer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672213</millis>
+  <sequence>7790</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>224</thread>
+  <message>Terminating lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672214</millis>
+  <sequence>7792</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>224</thread>
+  <message>Terminating analyzer...</message>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672227</millis>
+  <sequence>7794</sequence>
+  <logger>org.eclipse.persistence.session./file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU.connection</logger>
+  <level>INFO</level>
+  <thread>224</thread>
+  <message>/file:/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/build/web/WEB-INF/classes/_repodroidPU logout successful</message>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672356</millis>
+  <sequence>7796</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>223</thread>
+  <message>JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]</message>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672361</millis>
+  <sequence>7798</sequence>
+  <logger>javax.enterprise.resource.resourceadapter.com.sun.enterprise.connectors.service</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.connectors.service.ResourceAdapterAdminServiceImpl</class>
+  <method>sendStopToResourceAdapter</method>
+  <thread>227</thread>
+  <message>RAR7094: __ds_jdbc_ra shutdown successful.</message>
+  <key>ra.stop-successful</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>__ds_jdbc_ra</param>
+</record>
+<record>
+  <date>2016-06-06T16:34:32</date>
+  <millis>1465223672368</millis>
+  <sequence>7800</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.server.AppServerStartup</class>
+  <method>stop</method>
+  <thread>220</thread>
+  <message>Shutdown procedure finished</message>
+  <key>NCLS-CORE-00013</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+</record>
+</log>

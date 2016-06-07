@@ -70,7 +70,7 @@ public class TestSampleReference {
     @Test(expected = IllegalArgumentException.class)
     public void TestSetNullUser() {
         SampleReference reference = new SampleReference();
-        reference.setSamplePath(null);
+        reference.setUser(null);
     }
 
     @Test
@@ -99,7 +99,7 @@ public class TestSampleReference {
     @Test(expected = IllegalArgumentException.class)
     public void TestSetNullStorerId() {
         SampleReference reference = new SampleReference();
-        reference.setSamplePath(null);
+        reference.setStorerID(null);
     }
 
     @Test
@@ -126,7 +126,7 @@ public class TestSampleReference {
     @Test(expected = IllegalArgumentException.class)
     public void TestSetNullSampleName() {
         SampleReference reference = new SampleReference();
-        reference.setSamplePath(null);
+        reference.setSampleName(null);
     }
 
     @Test
@@ -140,7 +140,45 @@ public class TestSampleReference {
         assertThat("nuevoSampleName", is(equalTo(reference.getSampleName())));
     }
 
-   /* @Test
+    @Test
+    public void TestGetSubmitDate() {
+        SampleReference reference = new SampleReference("date", "description");
+        assertThat("date", is(equalTo(reference.getSubmitDate())));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void TestSetNullSubmitDate() {
+        SampleReference reference = new SampleReference();
+        reference.setSubmitDate(null);
+    }
+
+    @Test
+    public void TestSetSubmitDate() {
+        SampleReference reference = new SampleReference("date", "description");
+        reference.setSubmitDate("newDate");
+        assertThat("newDate", is(equalTo(reference.getSubmitDate())));
+    }
+
+    @Test
+    public void TestGetDescription() {
+        SampleReference reference = new SampleReference("date", "description");
+        assertThat("description", is(equalTo(reference.getSampleDescription())));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void TestSetNullDescription() {
+        SampleReference reference = new SampleReference();
+        reference.setSampleDescription(null);
+    }
+
+    @Test
+    public void TestSetDescription() {
+        SampleReference reference = new SampleReference("date", "description");
+        reference.setSampleDescription("newDescription");
+        assertThat("newDescription", is(equalTo(reference.getSampleDescription())));
+    }
+
+    /* @Test
     public void TestHashCode() {
         SampleReference reference = new SampleReference(0,
                 new User(),
