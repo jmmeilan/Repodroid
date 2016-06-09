@@ -1,0 +1,12 @@
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/entities/UserDao.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/controllers/UserController.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/controllers/SampleViewHelper.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/entities/User.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/entities/SampleRepresentation.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/entities/SampleReference.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/entities/SampleReferenceDao.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/services/RepodroidService.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/services/AnalysisWorker.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/entities/GenericDao.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/controllers/SampleController.java
+/home/jmmeilan/NetBeansProjects/repodroid/repodroid-web/src/main/java/es/uvigo/esei/tfg/repodroid/web/entities/WrongAnalysisViewException.java

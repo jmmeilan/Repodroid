@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <ui:composition template="globalTemplate.xhtml">
+        <ui:define name="contenido">
+            <!-- Inicio de div de formulario para enviar muestra-->
+            <div class="divAddSample">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div id="divThumbnail" class="thumbnail"><!-- CAMBIAR COLOR DEL BORDE-->
+                            <label for="firstname">Permissions:</label>
+                            <div class="input-group">
+                                <input type="text" id="permissions" class="form-control" jsf:value=""></input>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('permissions', 'SelectedPermissions')">Add</button> 
+                                </span>
+                            </div>
+                            <br/>
+                            <input id="SelectedPermissions" class="form-control" readonly="true" jsf:value=""></input>
+                        </div>
+                        <!-- inicio de formulario envio de muestras -->
+                        <h:form class="form-horizontal" enctype="multipart/form-data" onkeypress="return event.keyCode !== 13;">
+                            <div class="form-group">
+                                <label for="firstname">Permissions:</label>
+                                <b:inputText type="text" id="permissions" class="input-xlarge" value="#{SampleController.permissions}"></b:inputText>
+                                <p class="help-block">Permissions the samples should have</p>
+                                <input id="tags" value="foo,bar,baz" />
+                                <script>
+                                    $('document').ready(function () {
+                                        var tags = $('#tags');
+                                        tags.tagsInput();
+                                        //$('#permissions').tagsInput({width: 'auto'});
+                                    });
+                                </script>
+                            </div>
+                            <div class="form-group">
+                                <label>Names of the classes</label>
+                                <b:inputText type="text" id="classes" class="input-xlarge" value="#{SampleController.classes}"></b:inputText>
+                                <p class="help-block">Name of the classes the samples should have</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Output connections:</label>
+                                <b:inputText type="text" id="outputConnections" class="input-xlarge" value="#{SampleController.outputConnections}"></b:inputText>
+                                <p class="help-block">DNS queries or external hosts the samples should connect with</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Antiviruses:</label>
+                                <b:inputText type="text" id="antiviruses" class="input-xlarge" value="#{SampleController.antiViruses}"></b:inputText>
+                                <p class="help-block">List of antiviruses that should detect the sample as malware</p>
+                            </div>
+                            <h:commandButton value="Cancel" 
+                                             action="/index?faces-redirect=true"
+                                             class="btn btn-default btn-primary btnCancelAddSample"/>
+                            <h:commandButton value="Submit" 
+                                             action="#{SampleController.doParametrizedQuery()}"
+                                             class="btn btn-default btn-primary btn-success btnSubmitAddSample"/>
+                        </h:form>
+                        <!-- final de formulario de envio de muestras -->                                               
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div> 
+            <!-- final div de envio de muestras-->
+        </ui:define>
+    </ui:composition>
+</html>
+
+

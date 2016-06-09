@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="globalTemplate.xhtml">
+        <ui:define name="contenido">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3><h:outputText value="Sample report: #{SampleController.toShow.sampleName}"/></h3>
+                    <hr/> <!-- Poner de color negro -->
+                    <!-- INICIO GENERAL INFO -->
+                    <h4>General information</h4>
+                    <a id="hideGeneral" href="javascript:toggle2('generalInfoDiv','hideGeneral');">Hide</a>
+                    <div class="row" id="generalInfoDiv">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-7">
+                            <table class="table divAnalysis">
+                                <tbody>
+                                    <tr>
+                                        <td>Sample's id:</td>
+                                        <td><h:outputText value="#{SampleController.toShow.numSample}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sample's type:</td>
+                                        <td>APK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Analysis' date:</td>
+                                        <td><h:outputText value="#{SampleController.representation.scanDate}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:toggle('tablaClases');">Apk's classes:</a></td>
+                                        <td>
+                                            <p:dataTable id="tablaClases" var="class" tableStyleClass="sample-table" emptyMessage="This sample doesn't have any classes."
+                                                         value="${SampleController.representation.classes}">
+                                                <p:column headerText="" styleClass="">
+                                                    <h:outputLabel value="${class}"/>
+                                                </p:column>
+                                            </p:dataTable>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <!-- FIN GENERAL INFO -->
+                    <hr/> <!-- Poner de color negro -->
+                    <!-- ANTIVIRUS INFO INICIO -->
+                    <h4>Antivirus Analysis</h4>
+                    <a id="hideAntivirus" href="javascript:toggle2('antivirusInfoDiv','hideAntivirus');">Hide</a>
+                    <div class="row" id="antivirusInfoDiv">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-7">
+                            <table class="table divAnalysis"> 
+                                <tbody>
+                                    <tr>
+                                        <td>Number of antiviruses:</td>
+                                        <td><h:outputText value="#{SampleController.representation.numberAntiviruses}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Number of positives:</td>
+                                        <td><h:outputText value="#{SampleController.representation.positives}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:toggle('tablaAntivirus');">Positive antiviruses:</a></td>
+                                        <td> <!-- hacer ocultable -->
+                                            <p:dataTable id="tablaAntivirus" var="antivirus" tableStyleClass="sample-table" emptyMessage="This sample was not detected as a virus."
+                                                         value="${SampleController.representation.antiViruses}">
+                                                <p:column headerText="" styleClass="">
+                                                    <h:outputLabel value="${antivirus}"/>
+                                                </p:column>
+                                            </p:dataTable>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <!-- FIN ANTIVIRUS INFO -->
+                    <hr/> <!-- Poner de color negro -->
+                    <!-- INICIO PERMISSION INFO -->
+                    <h4>Application permissions</h4>
+                    <a id="hidePermissions" href="javascript:toggle2('apkPermissionsDiv','hidePermissions');">Hide</a>
+                    <div class="row" id="apkPermissionsDiv">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <table class="table divAnalysis"> 
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p:dataTable id="tablaPermisos" var="permiso" tableStyleClass="sample-table" emptyMessage="This sample does not ask for permissions."
+                                                         value="${SampleController.representation.permissions}">
+                                                <p:column headerText="Permissions" styleClass="">
+                                                    <h:outputLabel value="${permiso}"/>
+                                                </p:column>
+                                            </p:dataTable>
+                                        </td>
+                                        <td>
+                                            <p:dataTable id="tablaSeveridad" var="severidad" tableStyleClass="sample-table" emptyMessage="This sample does not ask for permissions."
+                                                         value="${SampleController.representation.severities}">
+                                                <p:column headerText="Severity" styleClass="">
+                                                    <h:outputLabel value="${severidad}"/> <!-- PONERLE COLORES -->
+                                                </p:column>
+                                            </p:dataTable>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <!-- FIN PERMISSIONS INFO-->
+                    <hr/> <!-- Poner de color negro -->
+                    <!-- INICIO NETWORK INFO -->
+                    <h4>Network information</h4>
+                    <a id="hideNetwork" href="javascript:toggle2('networkAnalysisDiv','hideNetwork');">Hide</a>
+                    <div class="row" id="networkAnalysisDiv">
+                        <div class="col-md-6">
+                            <div id="dnsQueriesDiv">
+                                <span class="output-connection">DNS queries</span>
+                                <p:dataTable id="tablaDNS" var="dns" tableStyleClass="sample-table" emptyMessage="This sample doesn't have DNS queries."
+                                             value="${SampleController.representation.dnsQueries}">
+                                    <p:column headerText="" styleClass="">
+                                        <h:outputLabel value="${dns}"/>
+                                    </p:column>
+                                </p:dataTable>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="externalHostsDiv">
+                                <span class="output-connection">External Hosts</span>
+                                <div class="table-responsive">
+                                    <p:dataTable id="tablaHosts" var="host" tableStyleClass="sample-table" emptyMessage="This sample doesn't connect with external hosts."
+                                                 value="${SampleController.representation.externalHosts}">
+                                        <p:column headerText="" styleClass="">
+                                            <h:outputLabel value="${host}"/>
+                                        </p:column>
+                                    </p:dataTable>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>
+
+

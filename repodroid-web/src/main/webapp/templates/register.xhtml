@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="globalTemplate.xhtml">
+        <ui:define name="contenido">
+            <!-- Main div para el formulario de registro -->
+            <div id="legend">
+                <h2>Join Repodroid now!</h2>
+                <hr/>
+            </div>
+            <div class="col-lg-2 col-md-2"></div>
+            <div id="registroBody" class="col-lg-8 col-md-8">
+                <h:form class="form-horizontal" enctype="multipart/form-data">
+                    <div id="divThumbnail" class="thumbnail"><!-- CAMBIAR COLOR DEL BORDE-->
+                        <fieldset>
+                            <div class="control-group">
+                                <!-- Username -->
+                                <label class="control-label"  for="username">Username</label>
+                                <div class="controls">
+                                    <b:inputText type="text" id="nombreUsuario" class="input-xlarge" required="true" value="#{UserController.userName}"></b:inputText>
+                                    <p class="help-block">The username you will have in Repodroid</p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <!-- Password-->
+                                <label class="control-label" for="password">Password</label>
+                                <div class="controls">
+                                    <b:inputText validatorMessage="The password did not meet the requirements" type="password" id="contraseña" class="input-xlarge" required="true" value="#{UserController.form_pass}">
+                                         <f:validateRegex pattern="((?=.*\d)(?=.*[@#$%]).{6,20})" />
+                                    </b:inputText>
+                                    <p class="help-block">Password must be at least 6 characters long and it must include at least one number and one special symbol (@#~%)</p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <!-- E-mail -->
+                                <label class="control-label" for="email">Email</label>
+                                <div class="controls">
+                                    <b:inputText validatorMessage="That is not a valid email address" type="text" id="email" class="input-xlarge" required="true" value="#{UserController.form_email}">
+                                         <f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+                                    </b:inputText>
+                                    <p class="help-block">A valid email address</p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label for="avatar">Account picture</label>
+                                <div class="controls">
+                                    <!-- VER UPLOADER DE BOOTSTRAP -->
+                                    <h:inputFile id="avatar" value="#{UserController.picture}"></h:inputFile>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div  class="controls buttonRegistro">
+                                    <h:commandButton class="btn btn-success btnRegister" value="Register" action="#{UserController.register()}"></h:commandButton>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </h:form>
+            </div>
+            <div class="col-lg-2 col-md-2"></div>
+        </ui:define>
+    </ui:composition>
+</html>
+
+

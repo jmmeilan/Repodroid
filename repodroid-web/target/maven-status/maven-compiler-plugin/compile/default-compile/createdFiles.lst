@@ -1,0 +1,13 @@
+es/uvigo/esei/tfg/repodroid/web/entities/WrongAnalysisViewException.class
+es/uvigo/esei/tfg/repodroid/web/controllers/SampleController.class
+es/uvigo/esei/tfg/repodroid/web/services/AnalysisWorker$1.class
+es/uvigo/esei/tfg/repodroid/web/entities/SampleReference.class
+es/uvigo/esei/tfg/repodroid/web/entities/User.class
+es/uvigo/esei/tfg/repodroid/web/entities/UserDao.class
+es/uvigo/esei/tfg/repodroid/web/entities/SampleReferenceDao.class
+es/uvigo/esei/tfg/repodroid/web/entities/GenericDao.class
+es/uvigo/esei/tfg/repodroid/web/controllers/SampleViewHelper.class
+es/uvigo/esei/tfg/repodroid/web/controllers/UserController.class
+es/uvigo/esei/tfg/repodroid/web/entities/SampleRepresentation.class
+es/uvigo/esei/tfg/repodroid/web/services/AnalysisWorker.class
+es/uvigo/esei/tfg/repodroid/web/services/RepodroidService.class

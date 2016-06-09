@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2016-06-08T16:55:33</date>
+  <millis>1465397733262</millis>
+  <sequence>136</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Initializing analyzer...</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:33</date>
+  <millis>1465397733418</millis>
+  <sequence>138</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Initializing sample store...</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:33</date>
+  <millis>1465397733419</millis>
+  <sequence>140</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Initializing json storer...</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:33</date>
+  <millis>1465397733420</millis>
+  <sequence>142</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Initializing lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:34</date>
+  <millis>1465397734425</millis>
+  <sequence>144</sequence>
+  <logger>org.omnifaces.ApplicationInitializer</logger>
+  <level>INFO</level>
+  <class>org.omnifaces.ApplicationInitializer</class>
+  <method>logOmniFacesVersion</method>
+  <thread>15</thread>
+  <message>Using OmniFaces version 2.3</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:34</date>
+  <millis>1465397734875</millis>
+  <sequence>146</sequence>
+  <logger>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</logger>
+  <level>INFO</level>
+  <class>org.glassfish.tyrus.servlet.TyrusServletContainerInitializer</class>
+  <method>onStartup</method>
+  <thread>15</thread>
+  <message>Registering WebSocket filter for url pattern /*</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:34</date>
+  <millis>1465397734909</millis>
+  <sequence>148</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.config</logger>
+  <level>INFO</level>
+  <class>com.sun.faces.config.ConfigureListener</class>
+  <method>contextInitialized</method>
+  <thread>15</thread>
+  <message>Inicializando Mojarra 2.2.12 ( 20150720-0848 https://svn.java.net/svn/mojarra~svn/tags/2.2.12@14885) para el contexto '/RepodroidWeb'</message>
+  <key>jsf.config.listener.version</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:35</date>
+  <millis>1465397735778</millis>
+  <sequence>150</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>15</thread>
+  <message>This application is running on BootsFaces 0.9.0.</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:35</date>
+  <millis>1465397735779</millis>
+  <sequence>152</sequence>
+  <logger>net.bootsfaces.listeners.AddResourcesListener</logger>
+  <level>INFO</level>
+  <class>net.bootsfaces.listeners.AddResourcesListener</class>
+  <method>&lt;clinit&gt;</method>
+  <thread>15</thread>
+  <message>net.bootsfaces.listeners.AddResourcesListener ready for use.</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:35</date>
+  <millis>1465397735854</millis>
+  <sequence>154</sequence>
+  <logger>javax.enterprise.resource.webcontainer.jsf.managedbean</logger>
+  <level>WARNING</level>
+  <class>com.sun.faces.mgbean.BeanManager</class>
+  <method>addBean</method>
+  <thread>15</thread>
+  <message>JSF1074: ya se ha registrado el bean administrado denominado 'now'.  Sustituyendo el tipo de clase de bean administrado java.util.Date existente por java.util.Date.</message>
+  <key>jsf.managed.bean.duplicate</key>
+  <catalog>com.sun.faces.LogStrings</catalog>
+  <param>now</param>
+  <param>java.util.Date</param>
+  <param>java.util.Date</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:36</date>
+  <millis>1465397736429</millis>
+  <sequence>156</sequence>
+  <logger>org.primefaces.webapp.PostConstructApplicationEventListener</logger>
+  <level>INFO</level>
+  <class>org.primefaces.webapp.PostConstructApplicationEventListener</class>
+  <method>processEvent</method>
+  <thread>15</thread>
+  <message>Running on PrimeFaces 5.3</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:36</date>
+  <millis>1465397736446</millis>
+  <sequence>158</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebApplication</class>
+  <method>start</method>
+  <thread>15</thread>
+  <message>Loading application [RepodroidWeb] at [/RepodroidWeb]</message>
+  <key>AS-WEB-GLUE-00172</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>RepodroidWeb</param>
+  <param>/RepodroidWeb</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:36</date>
+  <millis>1465397736450</millis>
+  <sequence>160</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.server.ApplicationLoaderService</class>
+  <method>processApplication</method>
+  <thread>15</thread>
+  <message>Loading application RepodroidWeb done in 14.191 ms</message>
+  <key>NCLS-CORE-00022</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+  <param>RepodroidWeb</param>
+  <param>14191</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:36</date>
+  <millis>1465397736452</millis>
+  <sequence>162</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.server.AppServerStartup</class>
+  <method>postStartupJob</method>
+  <thread>1</thread>
+  <message>GlassFish Server Open Source Edition  4.1.1  (1) startup time : Felix (2.948ms), startup services(14.916ms), total(17.864ms)</message>
+  <key>NCLS-CORE-00017</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+  <param>GlassFish Server Open Source Edition  4.1.1 </param>
+  <param>1</param>
+  <param>Felix</param>
+  <param>2948</param>
+  <param>14916</param>
+  <param>17864</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:36</date>
+  <millis>1465397736524</millis>
+  <sequence>164</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.services.impl.GrizzlyProxy</class>
+  <method>start0</method>
+  <thread>15</thread>
+  <message>Grizzly Framework 2.3.23 started in: 4ms - bound to [/0.0.0.0:7676]</message>
+  <key>NCLS-CORE-00087</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+  <param>2.3.23</param>
+  <param>4</param>
+  <param>/0.0.0.0:7676</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:36</date>
+  <millis>1465397736671</millis>
+  <sequence>166</sequence>
+  <logger>javax.enterprise.bootstrap</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl</class>
+  <method>registerService</method>
+  <thread>1</thread>
+  <message>Registered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@6a84bc3f as OSGi service registration: org.apache.felix.framework.ServiceRegistrationImpl@2301b75.</message>
+  <key>NCLS-BOOTSTRAP-00027</key>
+  <catalog>com.sun.enterprise.glassfish.bootstrap.LogMessages</catalog>
+  <param>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@6a84bc3f</param>
+  <param>org.apache.felix.framework.ServiceRegistrationImpl@2301b75</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:37</date>
+  <millis>1465397737017</millis>
+  <sequence>168</sequence>
+  <logger>javax.enterprise.system.jmx</logger>
+  <level>INFO</level>
+  <class>org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread</class>
+  <method>startConnector</method>
+  <thread>80</thread>
+  <message>JMXStartupService has started JMXConnector on JMXService URL service:jmx:rmi://jmmeilan-Lenovo-G470:8686/jndi/rmi://jmmeilan-Lenovo-G470:8686/jmxrmi</message>
+  <key>NCLS-JMX-00005</key>
+  <catalog>org.glassfish.admin.mbeanserver.LogMessages</catalog>
+  <param>service:jmx:rmi://jmmeilan-Lenovo-G470:8686/jndi/rmi://jmmeilan-Lenovo-G470:8686/jmxrmi</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:37</date>
+  <millis>1465397737215</millis>
+  <sequence>170</sequence>
+  <logger>org.glassfish.grizzly.config.Utils</logger>
+  <level>WARNING</level>
+  <class>org.glassfish.grizzly.config.Utils</class>
+  <method>newInstance</method>
+  <thread>94</thread>
+  <message>Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-2, realClassName=org.glassfish.grizzly.http2.Http2AddOn</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:37</date>
+  <millis>1465397737230</millis>
+  <sequence>172</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebContainer</class>
+  <method>createHttpListener</method>
+  <thread>94</thread>
+  <message>Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181</message>
+  <key>AS-WEB-GLUE-00198</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>http-listener-2</param>
+  <param>0.0.0.0</param>
+  <param>8181</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:37</date>
+  <millis>1465397737273</millis>
+  <sequence>174</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.services.impl.GrizzlyProxy</class>
+  <method>start0</method>
+  <thread>94</thread>
+  <message>Grizzly Framework 2.3.23 started in: 8ms - bound to [/0.0.0.0:8181]</message>
+  <key>NCLS-CORE-00087</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+  <param>2.3.23</param>
+  <param>8</param>
+  <param>/0.0.0.0:8181</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:37</date>
+  <millis>1465397737390</millis>
+  <sequence>176</sequence>
+  <logger>org.glassfish.grizzly.config.Utils</logger>
+  <level>WARNING</level>
+  <class>org.glassfish.grizzly.config.Utils</class>
+  <method>newInstance</method>
+  <thread>93</thread>
+  <message>Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-1, realClassName=org.glassfish.grizzly.http2.Http2AddOn</message>
+</record>
+<record>
+  <date>2016-06-08T16:55:37</date>
+  <millis>1465397737396</millis>
+  <sequence>178</sequence>
+  <logger>javax.enterprise.web</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.web.WebContainer</class>
+  <method>createHttpListener</method>
+  <thread>93</thread>
+  <message>Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080</message>
+  <key>AS-WEB-GLUE-00198</key>
+  <catalog>com.sun.enterprise.web.LogMessages</catalog>
+  <param>http-listener-1</param>
+  <param>0.0.0.0</param>
+  <param>8080</param>
+</record>
+<record>
+  <date>2016-06-08T16:55:37</date>
+  <millis>1465397737448</millis>
+  <sequence>180</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.services.impl.GrizzlyProxy</class>
+  <method>start0</method>
+  <thread>93</thread>
+  <message>Grizzly Framework 2.3.23 started in: 18ms - bound to [/0.0.0.0:8080]</message>
+  <key>NCLS-CORE-00087</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+  <param>2.3.23</param>
+  <param>18</param>
+  <param>/0.0.0.0:8080</param>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342537</millis>
+  <sequence>182</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.admin.StopServer</class>
+  <method>doExecute</method>
+  <thread>180</thread>
+  <message>Server shutdown initiated</message>
+  <key>NCLS-CORE-00092</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342551</millis>
+  <sequence>184</sequence>
+  <logger>javax.enterprise.bootstrap</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl</class>
+  <method>unregisterService</method>
+  <thread>180</thread>
+  <message>Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@6a84bc3f from service registry.</message>
+  <key>NCLS-BOOTSTRAP-00028</key>
+  <catalog>com.sun.enterprise.glassfish.bootstrap.LogMessages</catalog>
+  <param>com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@6a84bc3f</param>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342553</millis>
+  <sequence>186</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>180</thread>
+  <message>FileMonitoring shutdown</message>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342559</millis>
+  <sequence>188</sequence>
+  <logger>javax.enterprise.system.jmx</logger>
+  <level>INFO</level>
+  <class>org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread</class>
+  <method>shutdown</method>
+  <thread>180</thread>
+  <message>JMXStartupService: Stopped JMXConnectorServer: null</message>
+  <key>NCLS-JMX-00002</key>
+  <catalog>org.glassfish.admin.mbeanserver.LogMessages</catalog>
+  <param>???</param>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342560</millis>
+  <sequence>190</sequence>
+  <logger>javax.enterprise.system.jmx</logger>
+  <level>INFO</level>
+  <class>org.glassfish.admin.mbeanserver.JMXStartupService</class>
+  <method>shutdown</method>
+  <thread>180</thread>
+  <message>JMXStartupService and JMXConnectors have been shut down.</message>
+  <key>NCLS-JMX-00001</key>
+  <catalog>org.glassfish.admin.mbeanserver.LogMessages</catalog>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342630</millis>
+  <sequence>192</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>185</thread>
+  <message>Terminating sample store...</message>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342631</millis>
+  <sequence>194</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>185</thread>
+  <message>Terminating json storer...</message>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342663</millis>
+  <sequence>196</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>185</thread>
+  <message>Terminating lucene indexer...</message>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342663</millis>
+  <sequence>198</sequence>
+  <logger></logger>
+  <level>INFO</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>185</thread>
+  <message>Terminating analyzer...</message>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342812</millis>
+  <sequence>200</sequence>
+  <logger>org.eclipse.persistence.default</logger>
+  <level>WARNING</level>
+  <thread>185</thread>
+  <message></message>
+  <exception>
+    <message>java.lang.NullPointerException</message>
+    <frame>
+      <class>org.eclipse.persistence.platform.server.ServerPlatformUtils</class>
+      <method>createServerPlatform</method>
+      <line>99</line>
+    </frame>
+    <frame>
+      <class>org.eclipse.persistence.sessions.factories.SessionManager</class>
+      <method>init</method>
+      <line>77</line>
+    </frame>
+    <frame>
+      <class>org.eclipse.persistence.sessions.factories.SessionManager</class>
+      <method>&lt;clinit&gt;</method>
+      <line>71</line>
+    </frame>
+    <frame>
+      <class>org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl</class>
+      <method>removeSessionFromGlobalSessionManager</method>
+      <line>558</line>
+    </frame>
+    <frame>
+      <class>org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl</class>
+      <method>undeploy</method>
+      <line>2982</line>
+    </frame>
+    <frame>
+      <class>org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate</class>
+      <method>close</method>
+      <line>268</line>
+    </frame>
+    <frame>
+      <class>org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl</class>
+      <method>close</method>
+      <line>288</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.persistence.jpa.JPADeployer</class>
+      <method>closeEMFs</method>
+      <line>414</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.persistence.jpa.JPADeployer</class>
+      <method>event</method>
+      <line>405</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.kernel.event.EventsImpl</class>
+      <method>send</method>
+      <line>131</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.server.ApplicationLifecycle</class>
+      <method>unload</method>
+      <line>1067</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.server.ApplicationLifecycle</class>
+      <method>disable</method>
+      <line>2128</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.server.ApplicationLifecycle</class>
+      <method>disable</method>
+      <line>113</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.server.ApplicationLoaderService</class>
+      <method>stopApplication</method>
+      <line>496</line>
+    </frame>
+    <frame>
+      <class>com.sun.enterprise.v3.server.ApplicationLoaderService</class>
+      <method>preDestroy</method>
+      <line>464</line>
+    </frame>
+    <frame>
+      <class>org.jvnet.hk2.internal.ClazzCreator</class>
+      <method>preDestroyMe</method>
+      <line>339</line>
+    </frame>
+    <frame>
+      <class>org.jvnet.hk2.internal.ClazzCreator</class>
+      <method>dispose</method>
+      <line>404</line>
+    </frame>
+    <frame>
+      <class>org.jvnet.hk2.internal.SystemDescriptor</class>
+      <method>dispose</method>
+      <line>526</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext</class>
+      <method>destroyOne</method>
+      <line>328</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.hk2.runlevel.RunLevelContext</class>
+      <method>destroyOne</method>
+      <line>101</line>
+    </frame>
+    <frame>
+      <class>org.jvnet.hk2.internal.ServiceHandleImpl</class>
+      <method>destroy</method>
+      <line>183</line>
+    </frame>
+    <frame>
+      <class>org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$DownQueueRunner</class>
+      <method>run</method>
+      <line>1270</line>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.ThreadPoolExecutor</class>
+      <method>runWorker</method>
+      <line>1142</line>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.ThreadPoolExecutor$Worker</class>
+      <method>run</method>
+      <line>617</line>
+    </frame>
+    <frame>
+      <class>java.lang.Thread</class>
+      <method>run</method>
+      <line>745</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342881</millis>
+  <sequence>202</sequence>
+  <level>INFO</level>
+  <class>com.sun.common.util.logging.LoggingOutputStream</class>
+  <method>log</method>
+  <thread>189</thread>
+  <message>JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]</message>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342894</millis>
+  <sequence>204</sequence>
+  <logger>javax.enterprise.resource.resourceadapter.com.sun.enterprise.connectors.service</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.connectors.service.ResourceAdapterAdminServiceImpl</class>
+  <method>sendStopToResourceAdapter</method>
+  <thread>191</thread>
+  <message>RAR7094: __ds_jdbc_ra shutdown successful.</message>
+  <key>ra.stop-successful</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>__ds_jdbc_ra</param>
+</record>
+<record>
+  <date>2016-06-08T21:15:42</date>
+  <millis>1465413342897</millis>
+  <sequence>206</sequence>
+  <logger>javax.enterprise.system.core</logger>
+  <level>INFO</level>
+  <class>com.sun.enterprise.v3.server.AppServerStartup</class>
+  <method>stop</method>
+  <thread>180</thread>
+  <message>Shutdown procedure finished</message>
+  <key>NCLS-CORE-00013</key>
+  <catalog>org.glassfish.kernel.LogMessages</catalog>
+</record>
+</log>
