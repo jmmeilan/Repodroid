@@ -1,3 +1,7 @@
+.optional-search{
+    display:none !important;
+}
+
 .ui-datatable tbody td, .ui-datatable tfoot td {
     border-bottom: 1px solid #ddd !important;
     padding: 15px;
@@ -12,6 +16,10 @@
 
 .sample-table > tbody > tr > td{
     border: none;
+}
+
+.one-menu-item{
+    width: 100% !important;
 }
 
 .body {
@@ -197,6 +205,10 @@ background-image: linear-gradient(to bottom, #4F4F4F 0%, #1A1A1A 100%);
 
 #divThumbnail{
     padding:25px;
+}
+
+.divsearch{
+    padding:25px !important;
 }
 
 /*Estilo para el sampleview*/

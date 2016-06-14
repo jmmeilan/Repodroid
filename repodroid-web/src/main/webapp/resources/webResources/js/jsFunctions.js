@@ -1,3 +1,24 @@
+ var input;
+
+ function setInput(datInput){
+     input = datInput;
+     $('div.bootstrap-tagsinput').css("width","100%");
+     $('div.bootstrap-tagsinput').css("height","35px");
+ }
+ 
+ function removeInput(){
+     input.remove();
+ }
+ 
+ function showSearchBox(menu){
+     var value = $("select[name$='"+menu+"_input'] option:selected").val();
+     if (value === 'Classes'){
+         $('#divClasses').removeClass('optional-search');
+     }
+     if (value === 'Connections'){
+         $('#divConnections').removeClass('optional-search');
+     }
+ }
 
 function toggle2(showHideDiv, switchTextDiv) {
     var ele = document.getElementById(showHideDiv);
@@ -11,12 +32,11 @@ function toggle2(showHideDiv, switchTextDiv) {
     }
 }
 
-function AddParameter(textToAdd, FieldToFill){
-    var parameter = document.getElementById(textToAdd).value;
-    var field = document.getElementById(FieldToFill);
-    field.readonly = false;
-    field.value = field.value + parameter; 
-    field.readonly = true;
+function AddParameter(textToAdd, FieldToFill, div){
+    var value = $("select[name$='"+textToAdd+"_input'] option:selected").val();
+    $('#'+div+' div.bootstrap-tagsinput').append(input);
+    $('#'+FieldToFill).tagsinput('add', value); 
+    removeInput();
 }
 
 function toggle(showHideDiv) {

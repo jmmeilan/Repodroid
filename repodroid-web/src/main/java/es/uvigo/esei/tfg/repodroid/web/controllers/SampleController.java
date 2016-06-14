@@ -14,8 +14,11 @@ import java.io.Serializable;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.EJB;
@@ -213,11 +216,12 @@ public class SampleController implements Serializable {
 
     public String doParametrizedQuery() {
         this.queryResult = new ArrayList();
-        List<Sample> result = this.repodroidService.parametrizedSearch(
-                this.antiViruses,
-                this.classes,
-                this.permissions,
-                this.outputConnections);
+        Map<String, List<String>> parameters = new HashMap();
+        parameters.put("AntiVirusAnalysis", Arrays.asList(this.antiViruses.split(",")));
+        parameters.put("ApkClassesAnalysis", Arrays.asList(this.classes.split(",")));
+        parameters.put("ApkPermissionsAnalysis", Arrays.asList(this.permissions.split(",")));
+        parameters.put("OutputConnectionsAnalysis", Arrays.asList(this.outputConnections.split(",")));
+        List<Sample> result = this.repodroidService.parametrizedSearch(parameters);
         for (Sample s : result) {
             this.queryResult.add(this.sampleDao.getReferenceFromStoreId(s.getId()));
         }

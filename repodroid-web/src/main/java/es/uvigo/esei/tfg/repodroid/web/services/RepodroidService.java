@@ -78,16 +78,7 @@ public class RepodroidService {
         return this.store.search(new SimilarityQuery(s, 50), 0, 5);
     }
 
-    public List<Sample> parametrizedSearch(String antiViruses,
-            String classes,
-            String permissions,
-            String outputConnections) {
-
-        Map<String, List<String>> parameters = new HashMap();
-        parameters.put("AntiVirusAnalysis", Arrays.asList(antiViruses.split(",")));
-        parameters.put("ApkClassesAnalysis", Arrays.asList(classes.split(",")));
-        parameters.put("ApkPermissionsAnalysis", Arrays.asList(permissions.split(",")));
-        parameters.put("OutputConnectionsAnalysis", Arrays.asList(outputConnections.split(",")));
+    public List<Sample> parametrizedSearch(Map<String, List<String>> parameters) {
         return this.store.search(new ParametrizedQuery(parameters), 5, 5);
     }
 }

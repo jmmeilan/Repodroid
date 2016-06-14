@@ -78,7 +78,6 @@ public class TestIndexer {
         indexer.search(null, 0, 0);
     }
 
-    //DA PROBLEMAS, ASSERT CON UNA SIMILARITYQUERY DEL MISMO SAMPLE QUE NO RETORNE NADA
     @Test
     public void testRemoveSample() throws IOException {
         if (indexer.numberOfDocuments() == 0) {
@@ -102,5 +101,15 @@ public class TestIndexer {
     @Test(expected = IllegalArgumentException.class)
     public void TestNullUpdate2() {
         indexer.updateSample("1", null);
+    }
+    
+    @Test
+    public void TestNumberOfDocuments(){
+         assertThat(indexer.numberOfDocuments(), is(equalTo(1)));
+    }
+    
+    @Test  
+    public void TestIndexValuesRetrieval(){
+        
     }
 }

@@ -4,54 +4,99 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:b="http://bootsfaces.net/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:jsf="http://xmlns.jcp.org/jsf">
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:composition template="globalTemplate.xhtml">
         <ui:define name="contenido">
             <!-- Inicio de div de formulario para enviar muestra-->
             <div class="divAddSample">
                 <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6">
-                        <div id="divThumbnail" class="thumbnail"><!-- CAMBIAR COLOR DEL BORDE-->
-                            <label for="firstname">Permissions:</label>
-                            <div class="input-group">
-                                <input type="text" id="permissions" class="form-control" jsf:value=""></input>
-                                <span class="input-group-btn">
-                                    <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('permissions', 'SelectedPermissions')">Add</button> 
-                                </span>
-                            </div>
-                            <br/>
-                            <input id="SelectedPermissions" class="form-control" readonly="true" jsf:value=""></input>
-                        </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <script>
+                            $('document').ready(function () {
+                                setInput($('div.bootstrap-tagsinput input'));
+                                removeInput();
+                            });
+                        </script>
                         <!-- inicio de formulario envio de muestras -->
                         <h:form class="form-horizontal" enctype="multipart/form-data" onkeypress="return event.keyCode !== 13;">
-                            <div class="form-group">
+                            <div id="divPermissions" class="thumbnail divsearch">
                                 <label for="firstname">Permissions:</label>
-                                <b:inputText type="text" id="permissions" class="input-xlarge" value="#{SampleController.permissions}"></b:inputText>
-                                <p class="help-block">Permissions the samples should have</p>
-                                <input id="tags" value="foo,bar,baz" />
-                                <script>
-                                    $('document').ready(function () {
-                                        var tags = $('#tags');
-                                        tags.tagsInput();
-                                        //$('#permissions').tagsInput({width: 'auto'});
-                                    });
-                                </script>
+                                <div class="input-group">
+                                    <p:selectOneMenu id="permissions" value="" class="one-menu-item">
+                                        <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="PS4" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                        <f:selectItems value=""/>
+                                    </p:selectOneMenu>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('permissions', 'SelectedPermissions', 'divPermissions')">Add</button> 
+                                    </span>
+                                </div>
+                                <br/>
+                                <input id="SelectedPermissions" class="form-control" data-role="tagsinput" jsf:value=""></input>
                             </div>
-                            <div class="form-group">
-                                <label>Names of the classes</label>
-                                <b:inputText type="text" id="classes" class="input-xlarge" value="#{SampleController.classes}"></b:inputText>
-                                <p class="help-block">Name of the classes the samples should have</p>
+                            <div id="divAntivirus" class="thumbnail divsearch">
+                                <label for="firstname">Antiviruses:</label>
+                                <div class="input-group">
+                                    <p:selectOneMenu id="antiviruses" value="" class="one-menu-item">
+                                        <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="PS4" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                        <f:selectItems value=""/>
+                                    </p:selectOneMenu>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('antiviruses', 'SelectedAntiviruses', 'divAntivirus')">Add</button> 
+                                    </span>
+                                </div>
+                                <br/>
+                                <input id="SelectedAntiviruses" class="form-control" data-role="tagsinput" jsf:value=""></input>
                             </div>
-                            <div class="form-group">
-                                <label>Output connections:</label>
-                                <b:inputText type="text" id="outputConnections" class="input-xlarge" value="#{SampleController.outputConnections}"></b:inputText>
-                                <p class="help-block">DNS queries or external hosts the samples should connect with</p>
+                            <label>Select an analysis to add the search box: </label>
+                            <div class="input-group">
+                                <p:selectOneMenu id="analysis" value="" class="one-menu-item">
+                                    <f:selectItem itemLabel="Classes Analysis" itemValue="Classes" />
+                                    <f:selectItem itemLabel="Connections Analysis" itemValue="Connections" />
+                                    <f:selectItems value=""/>
+                                </p:selectOneMenu>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-secondary btn-success" onclick="javascript:showSearchBox('analysis')">Add query</button> 
+                                </span>
+                            </div>  
+                            <br/>
+                            <div id="divClasses" class="thumbnail divsearch optional-search">
+                                <label for="firstname">Classes:</label>
+                                <div class="input-group">
+                                    <p:selectOneMenu id="classes" value="" class="one-menu-item">
+                                        <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="PS4" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                        <f:selectItems value=""/>
+                                    </p:selectOneMenu>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('classes', 'SelectedClasses', 'divClasses')">Add</button> 
+                                    </span>
+                                </div>
+                                <br/>
+                                <input id="SelectedClasses" class="form-control" data-role="tagsinput" jsf:value=""></input>
                             </div>
-                            <div class="form-group">
-                                <label>Antiviruses:</label>
-                                <b:inputText type="text" id="antiviruses" class="input-xlarge" value="#{SampleController.antiViruses}"></b:inputText>
-                                <p class="help-block">List of antiviruses that should detect the sample as malware</p>
+                            <div id="divConnections" class="thumbnail divsearch optional-search">
+                                <label for="firstname">Output connections:</label>
+                                <div class="input-group">
+                                    <p:selectOneMenu id="connections" value="" class="one-menu-item">
+                                        <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="PS4" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                        <f:selectItems value=""/>
+                                    </p:selectOneMenu>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('connections', 'SelectedConnections', 'divConnections')">Add</button> 
+                                    </span>
+                                </div>
+                                <br/>
+                                <input id="SelectedConnections" class="form-control" data-role="tagsinput" jsf:value=""></input>
                             </div>
                             <h:commandButton value="Cancel" 
                                              action="/index?faces-redirect=true"
@@ -62,7 +107,7 @@
                         </h:form>
                         <!-- final de formulario de envio de muestras -->                                               
                     </div>
-                    <div class="col-md-3"></div>
+                    <div class="col-md-2"></div>
                 </div>
             </div> 
             <!-- final div de envio de muestras-->
