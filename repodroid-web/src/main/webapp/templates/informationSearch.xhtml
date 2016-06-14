@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:b="http://bootsfaces.net/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
       xmlns:p="http://primefaces.org/ui"
@@ -21,16 +20,15 @@
                             });
                         </script>
                         <!-- inicio de formulario envio de muestras -->
-                        <h:form class="form-horizontal" enctype="multipart/form-data" onkeypress="return event.keyCode !== 13;">
+                        <h:form id="infSearch" class="form-horizontal" enctype="multipart/form-data" onkeypress="return event.keyCode !== 13;">
                             <div id="divPermissions" class="thumbnail divsearch">
                                 <label for="firstname">Permissions:</label>
                                 <div class="input-group">
-                                    <p:selectOneMenu id="permissions" value="" class="one-menu-item">
+                                    <h:selectOneMenu id="permissions" value="" class="one-menu-item">
                                         <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
                                         <f:selectItem itemLabel="PS4" itemValue="PS4" />
                                         <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-                                        <f:selectItems value=""/>
-                                    </p:selectOneMenu>
+                                    </h:selectOneMenu>
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('permissions', 'SelectedPermissions', 'divPermissions')">Add</button> 
                                     </span>
@@ -41,12 +39,11 @@
                             <div id="divAntivirus" class="thumbnail divsearch">
                                 <label for="firstname">Antiviruses:</label>
                                 <div class="input-group">
-                                    <p:selectOneMenu id="antiviruses" value="" class="one-menu-item">
+                                    <h:selectOneMenu id="antiviruses" value="" class="one-menu-item">
                                         <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
                                         <f:selectItem itemLabel="PS4" itemValue="PS4" />
                                         <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-                                        <f:selectItems value=""/>
-                                    </p:selectOneMenu>
+                                    </h:selectOneMenu>
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('antiviruses', 'SelectedAntiviruses', 'divAntivirus')">Add</button> 
                                     </span>
@@ -56,11 +53,10 @@
                             </div>
                             <label>Select an analysis to add the search box: </label>
                             <div class="input-group">
-                                <p:selectOneMenu id="analysis" value="" class="one-menu-item">
+                                <h:selectOneMenu id="analysis" value="" class="one-menu-item">
                                     <f:selectItem itemLabel="Classes Analysis" itemValue="Classes" />
                                     <f:selectItem itemLabel="Connections Analysis" itemValue="Connections" />
-                                    <f:selectItems value=""/>
-                                </p:selectOneMenu>
+                                </h:selectOneMenu>
                                 <span class="input-group-btn">
                                     <button type="button" class="btn btn-secondary btn-success" onclick="javascript:showSearchBox('analysis')">Add query</button> 
                                 </span>
@@ -69,12 +65,11 @@
                             <div id="divClasses" class="thumbnail divsearch optional-search">
                                 <label for="firstname">Classes:</label>
                                 <div class="input-group">
-                                    <p:selectOneMenu id="classes" value="" class="one-menu-item">
+                                    <h:selectOneMenu id="classes" value="" class="one-menu-item">
                                         <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
                                         <f:selectItem itemLabel="PS4" itemValue="PS4" />
                                         <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-                                        <f:selectItems value=""/>
-                                    </p:selectOneMenu>
+                                    </h:selectOneMenu>
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('classes', 'SelectedClasses', 'divClasses')">Add</button> 
                                     </span>
@@ -85,12 +80,11 @@
                             <div id="divConnections" class="thumbnail divsearch optional-search">
                                 <label for="firstname">Output connections:</label>
                                 <div class="input-group">
-                                    <p:selectOneMenu id="connections" value="" class="one-menu-item">
+                                    <h:selectOneMenu id="connections" value="" class="one-menu-item">
                                         <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
                                         <f:selectItem itemLabel="PS4" itemValue="PS4" />
                                         <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-                                        <f:selectItems value=""/>
-                                    </p:selectOneMenu>
+                                    </h:selectOneMenu>
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('connections', 'SelectedConnections', 'divConnections')">Add</button> 
                                     </span>

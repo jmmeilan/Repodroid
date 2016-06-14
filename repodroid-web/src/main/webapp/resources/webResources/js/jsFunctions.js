@@ -11,7 +11,7 @@
  }
  
  function showSearchBox(menu){
-     var value = $("select[name$='"+menu+"_input'] option:selected").val();
+     var value = $("select[name$='infSearch:"+menu+"'] option:selected").val();
      if (value === 'Classes'){
          $('#divClasses').removeClass('optional-search');
      }
@@ -33,7 +33,7 @@ function toggle2(showHideDiv, switchTextDiv) {
 }
 
 function AddParameter(textToAdd, FieldToFill, div){
-    var value = $("select[name$='"+textToAdd+"_input'] option:selected").val();
+    var value = $("select[name$='infSearch:"+textToAdd+"'] option:selected").val();
     $('#'+div+' div.bootstrap-tagsinput').append(input);
     $('#'+FieldToFill).tagsinput('add', value); 
     removeInput();

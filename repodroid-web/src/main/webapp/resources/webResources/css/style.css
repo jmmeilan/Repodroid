@@ -20,6 +20,8 @@
 
 .one-menu-item{
     width: 100% !important;
+    padding-bottom: 7px;
+    padding-top: 7px;
 }
 
 .body {
