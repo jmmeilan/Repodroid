@@ -22,8 +22,10 @@ import javax.servlet.http.Part;
 @SessionScoped
 public class UserController implements Serializable {
 
-    public static String picturesDir = "/home/jmmeilan/Descargas/Repodroid/RepodroidWeb/"
-            + "web/resources/webResources/img/";
+    public static String picturesDir = "/home/jmmeilan/NetBeansProjects/"
+            + "repodroid/repodroid-web/src/main/webapp/resources/webResources/"
+            + "img/";
+            
 
     private boolean authenticated;
     private User currentUser;

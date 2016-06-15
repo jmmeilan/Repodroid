@@ -5,6 +5,7 @@ import es.uvigo.esei.tfg.repodroid.core.model.ParametrizedQuery;
 import es.uvigo.esei.tfg.repodroid.core.model.Sample;
 import es.uvigo.esei.tfg.repodroid.core.model.SimilarityQuery;
 import es.uvigo.esei.tfg.repodroid.core.store.SampleStore;
+import es.uvigo.esei.tfg.repodroid.core.store.TermInfo;
 import es.uvigo.esei.tfg.repodroid.core.store.json.JSONStorer;
 import es.uvigo.esei.tfg.repodroid.core.store.lucene.LuceneIndexer;
 import java.io.IOException;
@@ -69,8 +70,8 @@ public class RepodroidService {
     public Sample retrieveSample(String id) {
         return this.store.retrieveSample(id);
     }
-    
-    public void saveSample(Sample s){
+
+    public void saveSample(Sample s) {
         this.store.storeSample(s);
     }
 
@@ -80,5 +81,13 @@ public class RepodroidService {
 
     public List<Sample> parametrizedSearch(Map<String, List<String>> parameters) {
         return this.store.search(new ParametrizedQuery(parameters), 5, 5);
+    }
+
+    public List<TermInfo> retrieveTermInfoForIndexableAnalysis(String indexableAnalysisName) {
+        return this.store.retrieveTermInfoForIndexableAnalysis(indexableAnalysisName);
+    }
+
+    public List<TermInfo> retrieveTermInfoForIndexableAnalysis(String indexableAnalysisName, int maxTerms) {
+        return this.store.retrieveTermInfoForIndexableAnalysis(indexableAnalysisName, maxTerms);
     }
 }

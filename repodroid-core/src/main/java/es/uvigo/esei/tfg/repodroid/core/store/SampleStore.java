@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class SampleStore {
+
     private String basePath;
     private Storer storer;
     private Indexer indexer;
@@ -34,7 +35,6 @@ public class SampleStore {
         return basePath;
     }
 
-    
     public void setStorer(Storer storer) {
         this.storer = storer;
     }
@@ -43,17 +43,15 @@ public class SampleStore {
         this.indexer = indexer;
     }
 
-    
-    
     public void initialize(Logger l) {
         this.logger = l;
-        this.logger.log(Level.INFO, "Initializing sample store..."); 
-        this.storer.initialize(this.basePath + File.separator + "STORE" , l);
+        this.logger.log(Level.INFO, "Initializing sample store...");
+        this.storer.initialize(this.basePath + File.separator + "STORE", l);
         this.indexer.initialize(this.basePath + File.separator + "INDEX", l);
     }
 
     public void close() {
-        this.logger.log(Level.INFO, "Terminating sample store..."); 
+        this.logger.log(Level.INFO, "Terminating sample store...");
         this.storer.close();
         this.indexer.close();
     }
@@ -85,15 +83,24 @@ public class SampleStore {
         if ((sampleIDs != null) && (!sampleIDs.isEmpty())) {
             List<Sample> result = new ArrayList<>();
             for (String sampleID : sampleIDs) {
-                System.out.println("ID ENCONTRAOS: "+sampleID);
+                System.out.println("ID ENCONTRAOS: " + sampleID);
                 result.add(this.storer.retrieveSample(sampleID));
             }
             return result;
-       }
-       return Collections.emptyList();
+        }
+        return Collections.emptyList();
     }
-    
+
     public static String computeNextSampleID() {
         return UUID.randomUUID().toString();
     }
+
+    public List<TermInfo> retrieveTermInfoForIndexableAnalysis(String indexableAnalysisName) {
+        return this.indexer.retrieveTermInfoForIndexableAnalysis(indexableAnalysisName, -1);
+    }
+
+    public List<TermInfo> retrieveTermInfoForIndexableAnalysis(String indexableAnalysisName, int maxTerms) {
+        return this.indexer.retrieveTermInfoForIndexableAnalysis(indexableAnalysisName, maxTerms);
+    }
+
 }

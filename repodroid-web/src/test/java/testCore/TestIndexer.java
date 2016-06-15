@@ -3,6 +3,7 @@ package testCore;
 import es.uvigo.esei.tfg.repodroid.core.model.ParametrizedQuery;
 import es.uvigo.esei.tfg.repodroid.core.model.Sample;
 import es.uvigo.esei.tfg.repodroid.core.model.SimilarityQuery;
+import es.uvigo.esei.tfg.repodroid.core.store.TermInfo;
 import es.uvigo.esei.tfg.repodroid.core.store.json.JSONStorer;
 import es.uvigo.esei.tfg.repodroid.core.store.lucene.LuceneIndexer;
 import java.io.File;
@@ -14,6 +15,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
 import org.junit.AfterClass;
 import static org.junit.Assert.assertThat;
 import org.junit.BeforeClass;
@@ -34,9 +36,9 @@ public class TestIndexer {
         sample = storer.retrieveSample("67afaa39-54b0-4038-9e48-26b1d0f4059e");
         sample.setId("1");
     }
-    
+
     @AfterClass
-    public static void terminate(){
+    public static void terminate() {
         indexer.close();
         storer.close();
     }
@@ -48,7 +50,7 @@ public class TestIndexer {
 
     @Test
     public void testIndexSample() {
-        if(indexer.numberOfDocuments() > 0){
+        if (indexer.numberOfDocuments() > 0) {
             indexer.removeSample("1");
         }
         indexer.indexSample(sample);
@@ -59,7 +61,7 @@ public class TestIndexer {
     public void TestNullIndexing() {
         indexer.indexSample(null);
     }
-    
+
     @Test
     public void testSearch() {
         if (indexer.numberOfDocuments() == 0) {
@@ -102,14 +104,32 @@ public class TestIndexer {
     public void TestNullUpdate2() {
         indexer.updateSample("1", null);
     }
-    
+
     @Test
-    public void TestNumberOfDocuments(){
-         assertThat(indexer.numberOfDocuments(), is(equalTo(1)));
+    public void TestNumberOfDocuments() {
+        assertThat(indexer.numberOfDocuments(), is(equalTo(1)));
     }
-    
-    @Test  
-    public void TestIndexValuesRetrieval(){
-        
+
+    @Test
+    public void testRetrieveTermInfoForIndexableAnalysis() {
+        if (indexer.numberOfDocuments() == 0) {
+            indexer.indexSample(sample);
+        }
+        List<TermInfo> result = indexer.retrieveTermInfoForIndexableAnalysis("ApkClassesAnalysis", -1);
+        assertThat(result, is(not(equalTo(null))));
+    }
+
+    @Test
+    public void testBoundedRetrieveTermInfoForIndexableAnalysis() {
+        if (indexer.numberOfDocuments() == 0) {
+            indexer.indexSample(sample);
+        }
+        List<TermInfo> result = indexer.retrieveTermInfoForIndexableAnalysis("ApkClassesAnalysis", 20);
+        assertThat(result.size(), is(equalTo(20)));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void TestNullRetrieveTermInfoForIndexableAnalysis() {
+        indexer.retrieveTermInfoForIndexableAnalysis(null, 20);
     }
 }

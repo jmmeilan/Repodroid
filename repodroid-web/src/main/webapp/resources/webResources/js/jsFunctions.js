@@ -1,5 +1,17 @@
  var input;
 
+function sendInfo(){
+    var permissions = $('#SelectedPermissions').val();
+    var antiviruses = $('#SelectedAntiviruses').val();
+    var classes = $('#SelectedClasses').val();
+    var connections = $('#SelectedConnections').val();
+    $("input[name$='infSearch:beanPermissions").val(permissions);
+    $("input[name$='infSearch:beanAntiviruses").val(antiviruses);
+    $("input[name$='infSearch:beanClasses").val(classes);
+    $("input[name$='infSearch:beanConnections").val(connections);
+
+}
+
  function setInput(datInput){
      input = datInput;
      $('div.bootstrap-tagsinput').css("width","100%");

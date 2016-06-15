@@ -7,6 +7,7 @@ import es.uvigo.esei.tfg.repodroid.web.services.RepodroidService;
 import es.uvigo.esei.tfg.repodroid.core.model.Sample;
 import es.uvigo.esei.tfg.repodroid.core.model.SampleType;
 import es.uvigo.esei.tfg.repodroid.core.store.SampleStore;
+import es.uvigo.esei.tfg.repodroid.core.store.TermInfo;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -166,12 +167,12 @@ public class SampleController implements Serializable {
                             this.userBean.getCurrentUser().getEmail());
                     this.sampleDao.create(sample);
                     this.apkSample.getInputStream().close();
-                    FacesContext.getCurrentInstance().addMessage(null, 
-                            new FacesMessage(FacesMessage.SEVERITY_INFO, 
-                                "Your sample is being analyzed, you will receive"
-                                        + " a notification at the email " 
-                                        + this.userBean.getCurrentUser().getEmail()
-                                        +" when the analysis is done", ""));
+                    FacesContext.getCurrentInstance().addMessage(null,
+                            new FacesMessage(FacesMessage.SEVERITY_INFO,
+                                    "Your sample is being analyzed, you will receive"
+                                    + " a notification at the email "
+                                    + this.userBean.getCurrentUser().getEmail()
+                                    + " when the analysis is done", ""));
                 } catch (IOException ex) {
                     Logger.getLogger(SampleController.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -192,7 +193,7 @@ public class SampleController implements Serializable {
     public String showSample() {
         this.representation = new SampleRepresentation();
         Sample samp = this.repodroidService.retrieveSample(this.toShow.getStorerID());
-            this.representation = new SampleViewHelper(samp).extractRepresentation();
+        this.representation = new SampleViewHelper(samp).extractRepresentation();
         return "sampleView.xhtml";
     }
 
@@ -230,5 +231,9 @@ public class SampleController implements Serializable {
         this.outputConnections = "";
         this.permissions = "";
         return "searchResult.xhtml";
+    }
+
+    public List<TermInfo> retrieveTermInfoForIndexableAnalysis(String indexableAnalysisName) {
+        return this.repodroidService.retrieveTermInfoForIndexableAnalysis(indexableAnalysisName);
     }
 }

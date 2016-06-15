@@ -12,4 +12,6 @@ public interface Indexer {
     public void removeSample(String sampleID);
     public void updateSample(String sampleID, Sample sample);      
     public List<String> search(SampleQuery query, int firstResult, int numberOfSamples);
+    
+    public List<TermInfo> retrieveTermInfoForIndexableAnalysis(String indexableAnalysisName, int maxTerms);
 }

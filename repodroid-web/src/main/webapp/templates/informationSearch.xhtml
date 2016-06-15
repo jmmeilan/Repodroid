@@ -24,36 +24,34 @@
                             <div id="divPermissions" class="thumbnail divsearch">
                                 <label for="firstname">Permissions:</label>
                                 <div class="input-group">
-                                    <h:selectOneMenu id="permissions" value="" class="one-menu-item">
-                                        <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="PS4" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                    <h:selectOneMenu id="permissions" class="one-menu-item">
+                                        <f:selectItems value="#{SampleController.retrieveTermInfoForIndexableAnalysis('ApkPermissionsAnalysis')}" var="termInfo" itemLabel="#{termInfo.term}" itemValue="#{termInfo.term}" />
                                     </h:selectOneMenu>
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('permissions', 'SelectedPermissions', 'divPermissions')">Add</button> 
                                     </span>
                                 </div>
                                 <br/>
-                                <input id="SelectedPermissions" class="form-control" data-role="tagsinput" jsf:value=""></input>
+                                <input id="SelectedPermissions" class="form-control" data-role="tagsinput"></input>
+                                <h:inputText id="beanPermissions" value="#{SampleController.permissions}" class="optional-search" />
                             </div>
                             <div id="divAntivirus" class="thumbnail divsearch">
                                 <label for="firstname">Antiviruses:</label>
                                 <div class="input-group">
-                                    <h:selectOneMenu id="antiviruses" value="" class="one-menu-item">
-                                        <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="PS4" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                    <h:selectOneMenu id="antiviruses" class="one-menu-item">
+                                        <f:selectItems value="#{SampleController.retrieveTermInfoForIndexableAnalysis('AntiVirusAnalysis')}" var="termInfo" itemLabel="#{termInfo.term}" itemValue="#{termInfo.term}" />
                                     </h:selectOneMenu>
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('antiviruses', 'SelectedAntiviruses', 'divAntivirus')">Add</button> 
                                     </span>
                                 </div>
                                 <br/>
-                                <input id="SelectedAntiviruses" class="form-control" data-role="tagsinput" jsf:value=""></input>
+                                <input id="SelectedAntiviruses" class="form-control" data-role="tagsinput"></input>
+                                <h:inputText id="beanAntiviruses" value="#{SampleController.antiViruses}" class="optional-search" />
                             </div>
                             <label>Select an analysis to add the search box: </label>
                             <div class="input-group">
-                                <h:selectOneMenu id="analysis" value="" class="one-menu-item">
+                                <h:selectOneMenu id="analysis" class="one-menu-item">
                                     <f:selectItem itemLabel="Classes Analysis" itemValue="Classes" />
                                     <f:selectItem itemLabel="Connections Analysis" itemValue="Connections" />
                                 </h:selectOneMenu>
@@ -65,37 +63,36 @@
                             <div id="divClasses" class="thumbnail divsearch optional-search">
                                 <label for="firstname">Classes:</label>
                                 <div class="input-group">
-                                    <h:selectOneMenu id="classes" value="" class="one-menu-item">
-                                        <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="PS4" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                    <h:selectOneMenu id="classes" class="one-menu-item">
+                                        <f:selectItems value="#{SampleController.retrieveTermInfoForIndexableAnalysis('ApkClassesAnalysis')}" var="termInfo" itemLabel="#{termInfo.term}" itemValue="#{termInfo.term}" />
                                     </h:selectOneMenu>
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('classes', 'SelectedClasses', 'divClasses')">Add</button> 
                                     </span>
                                 </div>
                                 <br/>
-                                <input id="SelectedClasses" class="form-control" data-role="tagsinput" jsf:value=""></input>
+                                <input id="SelectedClasses" class="form-control" data-role="tagsinput" jsf:value="#{SampleController.classes}"></input>
+                                <h:inputText id="beanClasses" value="#{SampleController.classes}" class="optional-search" />
                             </div>
                             <div id="divConnections" class="thumbnail divsearch optional-search">
                                 <label for="firstname">Output connections:</label>
                                 <div class="input-group">
-                                    <h:selectOneMenu id="connections" value="" class="one-menu-item">
-                                        <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="PS4" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                    <h:selectOneMenu id="connections" class="one-menu-item">
+                                        <f:selectItems value="#{SampleController.retrieveTermInfoForIndexableAnalysis('OutputConnectionsAnalysis')}" var="termInfo" itemLabel="#{termInfo.term}" itemValue="#{termInfo.term}" />
                                     </h:selectOneMenu>
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('connections', 'SelectedConnections', 'divConnections')">Add</button> 
                                     </span>
                                 </div>
                                 <br/>
-                                <input id="SelectedConnections" class="form-control" data-role="tagsinput" jsf:value=""></input>
+                                <input id="SelectedConnections" class="form-control" data-role="tagsinput" jsf:value="#{SampleController.outputConnections}"></input>
+                                <h:inputText id="beanConnections" value="#{SampleController.outputConnections}" class="optional-search" />
                             </div>
                             <h:commandButton value="Cancel" 
                                              action="/index?faces-redirect=true"
                                              class="btn btn-default btn-primary btnCancelAddSample"/>
                             <h:commandButton value="Submit" 
+                                             onclick="javascript:sendInfo()"
                                              action="#{SampleController.doParametrizedQuery()}"
                                              class="btn btn-default btn-primary btn-success btnSubmitAddSample"/>
                         </h:form>

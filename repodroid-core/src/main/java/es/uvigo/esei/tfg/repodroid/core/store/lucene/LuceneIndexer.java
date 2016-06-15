@@ -5,10 +5,14 @@ import es.uvigo.esei.tfg.repodroid.core.model.IndexableAnalysis;
 import es.uvigo.esei.tfg.repodroid.core.model.Sample;
 import es.uvigo.esei.tfg.repodroid.core.model.SampleQuery;
 import es.uvigo.esei.tfg.repodroid.core.store.Indexer;
+import es.uvigo.esei.tfg.repodroid.core.store.TermInfo;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.lucene.analysis.Analyzer;
@@ -21,7 +25,10 @@ import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.index.MultiFields;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.index.Terms;
+import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
@@ -29,6 +36,7 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.TotalHitCountCollector;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.BytesRef;
 
 public class LuceneIndexer implements Indexer {
 
@@ -39,6 +47,7 @@ public class LuceneIndexer implements Indexer {
     private String basePath;
     private Logger logger;
     private SampleQueryTranslator queryTranslator;
+    private Map<String, List<TermInfo>> termInfoCache = new HashMap<>();
 
     @Override
     public void initialize(String basePath, Logger l) {
@@ -191,4 +200,57 @@ public class LuceneIndexer implements Indexer {
         }
         return sb.toString();
     }
+
+    @Override
+    public List<TermInfo> retrieveTermInfoForIndexableAnalysis(String indexableAnalysisName, int maxTerms) {
+        if (termInfoCache == null) {
+            termInfoCache = new HashMap<>();
+        }
+
+        if (indexableAnalysisName == null) {
+            throw new IllegalArgumentException("The analysis name can't be null");
+        }
+
+        List<TermInfo> result;
+        if (termInfoCache.containsKey(indexableAnalysisName)) {
+            result = termInfoCache.get(indexableAnalysisName);
+        } else {
+            result = collectTermInfo(indexableAnalysisName);
+            termInfoCache.put(indexableAnalysisName, result);
+        }
+
+        if (maxTerms > 0) {
+            return result.subList(0, maxTerms);
+        } else {
+            return result;
+        }
+    }
+
+    private List<TermInfo> collectTermInfo(String indexableAnalysisName) {
+        List<TermInfo> result = new ArrayList<>();
+        try {
+            IndexReader reader = DirectoryReader.open(this.writer, true);
+            Terms terms = MultiFields.getTerms(reader, indexableAnalysisName);
+
+            if (terms != null) {
+                TermsEnum iterator = terms.iterator();
+                BytesRef byteRef = null;
+                while ((byteRef = iterator.next()) != null) {
+                    String term = byteRef.utf8ToString();
+                    int freq = iterator.docFreq();
+
+                    result.add(new TermInfo(term, freq));
+                }
+
+                Collections.sort(result,
+                        (TermInfo ti1, TermInfo ti2) -> -Integer.compare(ti1.ocurrences, ti2.ocurrences));
+
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(LuceneIndexer.class.getName()).log(Level.SEVERE, "Error extracting TermInfo for Indexable Analysis " + indexableAnalysisName, ex);
+        }
+
+        return result;
+    }
+
 }

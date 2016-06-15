@@ -21,8 +21,8 @@
                                     <!-- Password-->
                                     <label class="control-label" for="password"> Password</label>
                                     <div class="controls">
-                                        <b:inputText validatorMessage="The password did not meet the requirements" type="password" id="contraseña" class="input-xlarge" required="true" value="#{UserController.form_pass}">
-                                            <f:validateRegex pattern="((?=.*\d)(?=.*[@#$%]).{6,20})" />
+                                        <b:inputText validatorMessage="The password did not meet the requirements" type="password" id="contraseña" class="input-xlarge" value="#{UserController.form_pass}">
+                                            <f:validateRegex pattern="((?=.*\d)(?=.*[@#$%]).{6,20})?" />
                                         </b:inputText>
                                         <p class="help-block">Password must be at least 6 characters long and it must include at least one number and one special symbol (@#~%)</p>
                                     </div>
