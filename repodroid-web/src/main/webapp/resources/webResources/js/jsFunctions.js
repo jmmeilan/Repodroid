@@ -44,6 +44,13 @@ function toggle2(showHideDiv, switchTextDiv) {
     }
 }
 
+function AddAutoCompleteParameter(textToAdd, FieldToFill, div){
+    var value = $("#infSearch\\:"+textToAdd+"_input").val();
+     $('#'+div+' div.bootstrap-tagsinput').append(input);
+    $('#'+FieldToFill).tagsinput('add', value); 
+    removeInput();
+}
+
 function AddParameter(textToAdd, FieldToFill, div){
     var value = $("select[name$='infSearch:"+textToAdd+"'] option:selected").val();
     $('#'+div+' div.bootstrap-tagsinput').append(input);

@@ -7,6 +7,7 @@ import es.uvigo.esei.tfg.repodroid.core.model.Analysis;
 import es.uvigo.esei.tfg.repodroid.core.model.Sample;
 import java.util.List;
 import es.uvigo.esei.tfg.repodroid.core.analysis.Analyzer;
+import es.uvigo.esei.tfg.repodroid.core.model.AnalysisInfo;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,7 +33,7 @@ public class CuckooAnalyzer implements Analyzer, Serializable {
     private String urlView;
     private String urlReport;
     private ObjectMapper mapper;
-    private List<String> analysesNames;
+    private List<AnalysisInfo> analysisInfos;
     private Logger logger;
     
 
@@ -44,11 +45,23 @@ public class CuckooAnalyzer implements Analyzer, Serializable {
         this.urlView = "http://localhost:8090/tasks/view/";
         this.urlReport= "http://localhost:8090/tasks/report/";
         this.mapper = new ObjectMapper();
-        this.analysesNames = new LinkedList();
-        this.analysesNames.add(OutputConnectionsAnalysis.NAME);
-        this.analysesNames.add(AntiVirusAnalysis.NAME);
-        this.analysesNames.add(ApkClassesAnalysis.NAME);
-        this.analysesNames.add(ApkPermissionsAnalysis.NAME);
+        this.analysisInfos = new LinkedList();
+        this.analysisInfos.add(new AnalysisInfo(OutputConnectionsAnalysis.NAME, 
+                OutputConnectionsAnalysis.DESCRIPTION, 
+                OutputConnectionsAnalysis.TYPE, 
+                this.getClass().getName()));
+        this.analysisInfos.add(new AnalysisInfo(AntiVirusAnalysis.NAME, 
+                AntiVirusAnalysis.DESCRIPTION, 
+                AntiVirusAnalysis.TYPE, 
+                this.getClass().getName()));
+        this.analysisInfos.add(new AnalysisInfo(ApkClassesAnalysis.NAME, 
+                ApkClassesAnalysis.DESCRIPTION, 
+                ApkClassesAnalysis.TYPE, 
+                this.getClass().getName()));
+        this.analysisInfos.add(new AnalysisInfo(ApkPermissionsAnalysis.NAME, 
+                ApkPermissionsAnalysis.DESCRIPTION, 
+                ApkPermissionsAnalysis.TYPE, 
+                this.getClass().getName()));
     }
 
     @Override
@@ -57,8 +70,8 @@ public class CuckooAnalyzer implements Analyzer, Serializable {
     }
 
     @Override
-    public List<String> getAnalysesNames() {
-        return this.analysesNames;
+    public List<AnalysisInfo> getAnalysisInfos() {
+        return this.analysisInfos;
     }
 
     @Override

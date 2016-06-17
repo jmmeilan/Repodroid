@@ -31,7 +31,6 @@ import javax.inject.Named;
 import javax.servlet.http.Part;
 
 @Named(value = "SampleController")
-//DEBE SER ESTO REQUESTSCOPED O CONVERSATIONSCOPED???? 
 @SessionScoped
 public class SampleController implements Serializable {
 
@@ -45,6 +44,9 @@ public class SampleController implements Serializable {
     private String classes;
     private String outputConnections;
     private String antiViruses;
+
+    private String selectedClass;
+    private String selectedConnection;
 
     //PARA MOSTRAR
     SampleRepresentation representation;
@@ -76,6 +78,22 @@ public class SampleController implements Serializable {
 
     public String getPermissions() {
         return permissions;
+    }
+
+    public String getSelectedClass() {
+        return selectedClass;
+    }
+
+    public void setSelectedClass(String selectedClass) {
+        this.selectedClass = selectedClass;
+    }
+
+    public String getSelectedConnection() {
+        return selectedConnection;
+    }
+
+    public void setSelectedConnection(String selectedConnection) {
+        this.selectedConnection = selectedConnection;
     }
 
     public void setPermissions(String permissions) {
@@ -147,9 +165,7 @@ public class SampleController implements Serializable {
             String extension = this.apkSample.getSubmittedFileName()
                     .substring(apkSample.getSubmittedFileName().lastIndexOf(".") + 1, apkSample.getSubmittedFileName().length());
             if (extension.equals("apk")) {
-                String samplePath = RepodroidService.sampleStorePath + "/SAMPLES/"
-                        + this.userBean.getCurrentUser().getUsername() + "_"
-                        + this.apkSample.getSubmittedFileName();
+                String samplePath = repodroidService.composeSamplePath(this.userBean.getCurrentUser().getUsername(), this.apkSample.getSubmittedFileName());
                 try (InputStream input = this.apkSample.getInputStream()) {
                     File samp = new File(samplePath);
                     if (!samp.exists()) {
@@ -230,10 +246,43 @@ public class SampleController implements Serializable {
         this.classes = "";
         this.outputConnections = "";
         this.permissions = "";
+        this.selectedClass = "";
+        this.selectedConnection = "";
         return "searchResult.xhtml";
     }
 
     public List<TermInfo> retrieveTermInfoForIndexableAnalysis(String indexableAnalysisName) {
         return this.repodroidService.retrieveTermInfoForIndexableAnalysis(indexableAnalysisName);
+    }
+
+    private List<TermInfo> classesTermInfos;
+
+    public List<String> completeClass(String query) {
+        if (classesTermInfos == null) {
+            classesTermInfos = this.repodroidService.retrieveTermInfoForIndexableAnalysis("ApkClassesAnalysis");
+        }
+
+        List<String> result = new ArrayList();
+        for (TermInfo info : classesTermInfos) {
+            if (info.term.contains(query)) {
+                result.add(info.term);
+            }
+        }
+        return result;
+    }
+    
+    private List<TermInfo> connectionTermInfos;
+
+    public List<String> completeConnection(String query) {
+        if (connectionTermInfos == null) {
+            connectionTermInfos = this.repodroidService.retrieveTermInfoForIndexableAnalysis("OutputConnectionsAnalysis");
+        }
+        List<String> result = new ArrayList();
+        for (TermInfo info : connectionTermInfos) {
+            if (info.term.contains(query)) {
+                result.add(info.term);
+            }
+        }
+        return result;
     }
 }

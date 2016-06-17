@@ -63,11 +63,9 @@
                             <div id="divClasses" class="thumbnail divsearch optional-search">
                                 <label for="firstname">Classes:</label>
                                 <div class="input-group">
-                                    <h:selectOneMenu id="classes" class="one-menu-item">
-                                        <f:selectItems value="#{SampleController.retrieveTermInfoForIndexableAnalysis('ApkClassesAnalysis')}" var="termInfo" itemLabel="#{termInfo.term}" itemValue="#{termInfo.term}" />
-                                    </h:selectOneMenu>
+                                    <p:autoComplete id="classes" class="autocomplete-input" inputStyle = "width: 100%" value="#{SampleController.selectedClass}" completeMethod="#{SampleController.completeClass}" />
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('classes', 'SelectedClasses', 'divClasses')">Add</button> 
+                                        <button type="button" class="btn btn-secondary btn-sm btn-success btn-autocomplete" onclick="javascript:AddAutoCompleteParameter('classes', 'SelectedClasses', 'divClasses')">Add</button> 
                                     </span>
                                 </div>
                                 <br/>
@@ -77,11 +75,9 @@
                             <div id="divConnections" class="thumbnail divsearch optional-search">
                                 <label for="firstname">Output connections:</label>
                                 <div class="input-group">
-                                    <h:selectOneMenu id="connections" class="one-menu-item">
-                                        <f:selectItems value="#{SampleController.retrieveTermInfoForIndexableAnalysis('OutputConnectionsAnalysis')}" var="termInfo" itemLabel="#{termInfo.term}" itemValue="#{termInfo.term}" />
-                                    </h:selectOneMenu>
+                                    <p:autoComplete id="connections" class="autocomplete-input" inputStyle = "width: 100%" value="#{SampleController.selectedConnection}" completeMethod="#{SampleController.completeConnection}" />
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-secondary btn-success" onclick="javascript:AddParameter('connections', 'SelectedConnections', 'divConnections')">Add</button> 
+                                        <button type="button" class="btn btn-secondary btn-success btn-sm btn-autocomplete" onclick="javascript:AddAutoCompleteParameter('connections', 'SelectedConnections', 'divConnections')">Add</button> 
                                     </span>
                                 </div>
                                 <br/>

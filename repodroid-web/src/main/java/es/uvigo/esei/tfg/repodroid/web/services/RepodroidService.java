@@ -8,9 +8,8 @@ import es.uvigo.esei.tfg.repodroid.core.store.SampleStore;
 import es.uvigo.esei.tfg.repodroid.core.store.TermInfo;
 import es.uvigo.esei.tfg.repodroid.core.store.json.JSONStorer;
 import es.uvigo.esei.tfg.repodroid.core.store.lucene.LuceneIndexer;
+import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.FileHandler;
@@ -26,10 +25,8 @@ import javax.ejb.Startup;
 @Startup
 public class RepodroidService {
 
-    public static String logPath = "/home/jmmeilan/Descargas/Repodroid/"
-            + "RepodroidWeb/web/resources/webResources/log/system.log";
-    public static String sampleStorePath = "/home/jmmeilan/Descargas/Repodroid/"
-            + "RepodroidWeb/web/resources/sampleStore";
+    public static final String REPODROID_HOME = System.getProperty("user.home")
+            + File.separator + "REPODROID";
 
     private SampleStore store;
     private CuckooAnalyzer analyzer;
@@ -38,6 +35,21 @@ public class RepodroidService {
 
     @PostConstruct
     public void inicializar() {
+        File baseDir = new File(REPODROID_HOME);
+        baseDir.mkdirs();
+
+        File logDir = new File(baseDir, "log");
+        logDir.mkdirs();
+
+        File sampleStoreDir = new File(baseDir, "SAMPLE_STORE");
+        sampleStoreDir.mkdirs();
+
+        File samplesDir = new File(baseDir, "SAMPLES");
+        samplesDir.mkdirs();
+
+        String logPath = logDir.getAbsolutePath() + File.separator + "system.log";
+        String sampleStorePath = sampleStoreDir.getAbsolutePath();
+
         try {
             fh = new FileHandler(logPath);
             logger = Logger.getLogger("");
@@ -89,5 +101,10 @@ public class RepodroidService {
 
     public List<TermInfo> retrieveTermInfoForIndexableAnalysis(String indexableAnalysisName, int maxTerms) {
         return this.store.retrieveTermInfoForIndexableAnalysis(indexableAnalysisName, maxTerms);
+    }
+
+    public String composeSamplePath(String username, String sampleName) {
+        return REPODROID_HOME + File.separator + "SAMPLES" + File.separator
+                + username + "_" + sampleName;
     }
 }
